@@ -148,6 +148,26 @@ a:hover {
   opacity: 1;
 }
 
+h4.title-2 {
+  color: #fff;
+  position: relative;
+  font-size: 70px;
+  margin-top: -135px;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+h4.title-2.animate {
+  animation: fadeIn 1s ease 2s forwards;
+}
+
 #contact h2 {
   text-align: center;
 }
@@ -163,7 +183,6 @@ a:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 .sidebar {
@@ -411,10 +430,10 @@ a:hover {
 
 .home-section {
   position: relative;
-  max-width: 1200px;
+  max-width: 1250px;
   min-height: 100vh;
   top: 0;
-  left: 250px;
+  left: 260px;
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
@@ -439,7 +458,7 @@ main {
 }
 
 .sidebar.open + main {
-  margin-left: 250px;
+  margin-left: 160px;
 }
 
 #menu.container + .sidebar.open {
@@ -734,6 +753,7 @@ section {
 .competences-web h2 {
   margin-bottom: 60px;
   text-align: center;
+  font-size: 28px;
 }
 
 .progress-bar {
@@ -758,6 +778,7 @@ section {
 
 .progress span {
   font-size: 1.5rem;
+  font-weight: 500;
   margin-left: 10px;
   color: #2b2c30;
   position: absolute; /* ajouter une position absolute */
@@ -791,6 +812,7 @@ section {
 }
 
 .competences-web li {
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
@@ -809,7 +831,7 @@ section {
 }
 
 .domaines em {
-  font-size: normal;
+  font-size: 18px;
 }
 
 .domaines {
@@ -919,6 +941,10 @@ section {
   height: 60px;
 }
 
+.wrapp {
+  margin-top: 200px;
+}
+
 .numNav {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -931,18 +957,6 @@ section {
 
 .ml2 {
   z-index: -1;
-}
-
-#about1 {
-  height: 100vh;
-}
-
-.wrapp {
-  margin-top: 200px;
-}
-
-#start .developer {
-  padding-top: 150px;
 }
 
 .developer .container .name {
@@ -1018,6 +1032,59 @@ section {
   display: block;
 }
 
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-info {
+  width: 65%;
+  font-family: --title-font-stack;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 30px;
+  font-size: 22px;
+  color: #f4f1f1;
+  font-weight: 100;
+}
+
+.about-info p {
+  color: #f4f1f1;
+  font-weight: 100;
+  font-size: 22px;
+  margin-right: 20px;
+  text-align: justify;
+}
+
+.container h2 {
+  font-size: 3.9rem;
+  margin-bottom: -10px;
+}
+
+.about-separator {
+  border: 1px solid var(--light-pink);
+  margin-bottom: 40px;
+}
+
+.contact-info h4 {
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+
+.about-info span {
+  color: var(--light-pink);
+  font-weight: 400;
+}
+
 .contact p {
   color: #f4f1f1;
   margin-top: -150px;
@@ -1029,8 +1096,21 @@ section {
   margin-top: -100px;
   font-size: 22px;
   z-index: 999;
+  opacity: 0;
 }
 
+#contact p.animate {
+  animation: fadeIn 1s ease 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #animated-text {
   position: relative;
   z-index: -1;

@@ -1,4 +1,4 @@
-const phrases = ['Développeur web', 'Développeur full stack'];
+const phrases = ['Développeur web', 'Développeur logiciel','Développeur full stack', 'Designer graphique', 'Freelancer'];
 const delay = 50;
 const pause = 500;
 

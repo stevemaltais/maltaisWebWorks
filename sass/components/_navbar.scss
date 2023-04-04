@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+
 }
 
 .sidebar{
@@ -224,10 +224,10 @@
 }
 .home-section{
   position: relative;
-  max-width: 1200px;
+  max-width: 1250px;
   min-height: 100vh;
   top: 0;
-  left: 250px;
+  left: 260px;
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
@@ -251,7 +251,7 @@ main {
   transition: all 0.5s ease;
 }
 .sidebar.open + main {
-  margin-left: 250px;
+  margin-left: 160px;
 }
 
 

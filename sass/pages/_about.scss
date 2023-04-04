@@ -1,19 +1,4 @@
-#about1{   
-  
-    height:100vh;
-    
-}
-.wrapp{
-  
-  margin-top: 200px;
 
-}
-
-#start .developer{
-
-    padding-top:150px;
-   
-}
 .developer .container .name{
 
    font-size: 72px;
@@ -73,6 +58,7 @@
     #about section ul {
       list-style: none;
       margin-bottom: 50px;
+     
     }
     
     .about section li {
@@ -102,4 +88,64 @@ margin-top: 400px;
 
 .container{
   display: block;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-info {
+  width: 65%;
+  font-family: (--title-font-stack);
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 30px;
+  font-size: 22px;
+  color: $verylightgray;
+  font-weight: 100;
+}
+
+
+
+.about-info p{
+  color: $verylightgray;
+  font-weight: 100;
+  font-size: 22px;
+  margin-right: 20px;
+  text-align: justify;
+}
+
+
+.container h2{
+  font-size: $font-lg;
+  margin-bottom: -10px;
+}
+
+.about-separator{
+
+  border: 1px solid var(--light-pink) ;
+  margin-bottom: 40px;
+}
+
+
+
+.contact-info h4{
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+
+.about-info span{
+  color: var(--light-pink);
+  font-weight: 400;
 }

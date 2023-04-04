@@ -81,6 +81,7 @@ function init(animatedTexts) {
 
 let competenceAnimatedTexts = document.querySelectorAll('.ml2[data-text="Compétences"]');
 let contactAnimatedTexts = document.querySelectorAll('.ml2[data-text="Contact"]');
+let aboutAnimatedTexts = document.querySelectorAll('.ml2[data-text="A propos"]');
 
 const competenceObserver = new IntersectionObserver(
   (entries) => {
@@ -109,7 +110,24 @@ const contactObserver = new IntersectionObserver(
         contactObserver.unobserve(entry.target);
       }
     });
+   
   },
+  {
+    rootMargin: '-50px 0px',
+    threshold: 0,
+  }
+);
+  const aboutObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!aboutAnimatedTexts[0].querySelector('span[aria-label]')) {
+            init(aboutAnimatedTexts);
+          }
+          aboutObserver.unobserve(entry.target);
+        }
+      });
+    },
   {
     rootMargin: '-50px 0px',
     threshold: 0,
@@ -118,3 +136,4 @@ const contactObserver = new IntersectionObserver(
 
 competenceObserver.observe(document.getElementById('competence'));
 contactObserver.observe(document.getElementById('contact'));
+aboutObserver.observe(document.getElementById('about'));
