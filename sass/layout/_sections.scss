@@ -6,12 +6,15 @@
     color: var(--light-pink);
 
 
-    justify-items: left;
   
     
     }
 .wrapper{
     padding: 60px 0px;
-
+    
 }
 
+.ml2{
+
+    z-index: -1;
+}

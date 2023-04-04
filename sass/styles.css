@@ -249,11 +249,12 @@ a:hover {
   top: -20px;
   left: calc(100% + 15px);
   z-index: 3;
-  background: #939393;
+  background: #d6d6d6;
+  color: #2b2c30;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   opacity: 0;
   white-space: nowrap;
@@ -271,6 +272,18 @@ a:hover {
 
 .sidebar.open li .tooltip {
   display: none;
+}
+
+/* Ajouter un caret à gauche du tooltip */
+.sidebar li .tooltip:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px; /* distance entre le caret et le tooltip */
+  margin-top: -5px; /* ajustement pour centrer le caret */
+  border-top: 5px solid transparent;
+  border-right: 8px solid #d6d6d6; /* couleur de fond du tooltip */
+  border-bottom: 5px solid transparent;
 }
 
 .sidebar input {
@@ -398,9 +411,10 @@ a:hover {
 
 .home-section {
   position: relative;
+  max-width: 1200px;
   min-height: 100vh;
   top: 0;
-  left: 78px;
+  left: 250px;
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
@@ -602,6 +616,33 @@ section {
   z-index: 999;
 }
 
+.vertical-line-right {
+  position: fixed;
+  right: 52px; /* Décalez la ligne vers la droite */
+  top: 100%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 200px;
+  background-color: #d6d6d6;
+  z-index: 2;
+}
+
+.fixed-email {
+  position: fixed;
+  right: 40px; /* Décalez la ligne vers la droite */
+  top: 42%;
+  z-index: 2;
+  font-size: 16px;
+  writing-mode: vertical-rl; /* "rl" signifie "right-to-left" et fait pivoter le texte de 90 degrés vers la droite */
+  text-orientation: mixed; /* orientation du texte droit */
+  letter-spacing: 8px;
+  color: #d6d6d6;
+}
+
+.fixed-email:hover {
+  color: var(--light-pink);
+}
+
 #formation {
   background-color: #2b2c30;
   height: 100vh;
@@ -725,14 +766,14 @@ section {
 }
 
 .competences-web {
-  padding: 80px 250px;
+  padding: 80px 0px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .competences-software {
-  padding: 80px 250px;
+  padding: 0px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -834,10 +875,9 @@ section {
 }
 
 .title {
-  font-size: 3.9rem;
-  color: #f4f1f1;
+  font-size: 120px;
+  color: #2b2c30;
   text-align: center;
-  padding: 0px 250px;
 }
 
 .container .text {
@@ -875,22 +915,22 @@ section {
   text-transform: uppercase;
 }
 
-.COPYRIGHT p {
-  padding: 0px 250px;
-  text-align: right;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.space {
+  height: 60px;
 }
 
 .numNav {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: var(--light-pink);
-  justify-items: left;
 }
 
 .wrapper {
   padding: 60px 0px;
+}
+
+.ml2 {
+  z-index: -1;
 }
 
 #about1 {
@@ -898,7 +938,7 @@ section {
 }
 
 .wrapp {
-  margin: 0px 175px;
+  margin-top: 200px;
 }
 
 #start .developer {
@@ -976,6 +1016,51 @@ section {
 
 .container {
   display: block;
+}
+
+.contact p {
+  color: #f4f1f1;
+  margin-top: -150px;
+  font-weight: 100;
+  z-index: 444;
+}
+
+#contact p {
+  margin-top: -100px;
+  font-size: 22px;
+  z-index: 999;
+}
+
+#animated-text {
+  position: relative;
+  z-index: -1;
+}
+
+.ml2 {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.ml2 .letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.ml2 .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.ml2 .letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .preloader {
@@ -1114,33 +1199,6 @@ section {
 
 #color-8 {
   background-color: var(--pinkFluo);
-}
-
-#color-9 {
-  background-color: var(--pinkFluo);
-}
-
-#color-10 {
-  background-color: var(--pinkFluo);
-}
-
-#color-11 {
-  background-color: var(--pinkFluo);
-}
-
-#color-12 {
-  background-color: var(--pinkFluo);
-}
-
-.vertical-line-right {
-  position: fixed;
-  right: 52px; /* Décalez la ligne vers la droite */
-  top: 100%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 200px;
-  background-color: #d6d6d6;
-  z-index: 2;
 }
 
 #menu-toggle:hover {

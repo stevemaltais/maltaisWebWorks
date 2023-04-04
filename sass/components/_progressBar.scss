@@ -34,14 +34,15 @@
     transform: translateY(-50%); /* centrer verticalement */
   }
   .competences-web {
-    padding: 80px 250px;
+    padding: 80px 0px;
      display: flex;
      justify-content: space-between;
      align-items: flex-start;
+     
     
    }
    .competences-software {
-     padding: 80px 250px;
+     padding: 0px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;

@@ -106,30 +106,6 @@
   #color-8 {
     background-color: var(--pinkFluo);
   }
-  #color-9 {
-    background-color: var(--pinkFluo);
-  }
-  #color-10 {
-    background-color: var(--pinkFluo);
-  }
-  #color-11 {
-    background-color: var(--pinkFluo);
-  }
-  #color-12 {
-    background-color: var(--pinkFluo);
-  }
-
-  .vertical-line-right {
-    position: fixed;
-    right: 52px; /* Décalez la ligne vers la droite */
-    top: 100%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 200px;
-    background-color: $lightGray;
-    z-index: 2;
-}
-
   #menu-toggle:hover {
     transform: rotate(90deg);
   }

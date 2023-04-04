@@ -2,8 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Steve Maltais</title>
-  <meta name="description" content="">
+  <title>Steve Maltais | Portfolio</title>
+  <meta name="description" content="vCard / Resume / Personal Template">
+  <meta name="keywords" content="vcard, resume, personal, portfolio, cv, card, responsive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/sass/styles.css">
   <meta property="og:title" content="">
@@ -11,7 +12,7 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,900,900italic,700italic%7COswald:400,300,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,900,900italic,700italic%7COswald:400,300,700" rel="stylesheet" type="text/css">
   
   
 </head>
@@ -96,10 +97,7 @@
     
   <main>
     <section class="home-section">
-
-    <section id="start">
    
-        <!-- Contenu de la section À propos -->
         <div class="wrapp">
           
           <div class="developer">
@@ -142,14 +140,16 @@
               <a class="btn" href="mon_cv.pdf" download>Télécharger mon CV</a>
             </div>
             
-          </section>
+ 
          
           
-      </section>
+          </section>
      
       <section class="wrapper">
-      <section class="title">
-        <h2 >Mes Compétences</h2>
+      <section class="title"id="competence">
+
+        
+        <h2  class="ml2" data-text="Compétences"></h2>
         <h4 >En Developpement.</h4>
       </section>
     
@@ -211,7 +211,7 @@
                </section>
               </section>
           
-      </section>
+     
       <section id="travail">
         <!-- Contenu de la section Où j'ai travaillé -->
       </section>
@@ -219,33 +219,30 @@
         <!-- Contenu de la section Autres projets -->
       </section>
       <section class= title id="contact">
-        <h2 class="numNav">04. La Suite</h2>
-        <h2 id="animated-text" class="ml2"></h2>
-        
-          <div class="contact"> 
-            
-            <p>Je vous remercie de l'intérêt que vous portez à mon profil. Si vous souhaitez en savoir plus sur mes compétences, discuter de vos projets ou échanger sur des opportunités, n'hésitez pas à me contacter. Je suis à votre disposition pour répondre à toutes vos questions et évaluer ensemble comment nous pouvons travailler en synergie.
+        <h2 class="numNav">Entrer en contact</h2>
+        <h2 class="ml2" data-text="Contact"></h2>
 
-              La méthode la plus simple et efficace pour me joindre est par courriel. Vous trouverez ci-dessous mon adresse e-mail. N'hésitez pas à me fournir des détails sur votre entreprise, vos besoins et les objectifs que vous souhaitez atteindre. Je m'engage à vous répondre dans les meilleurs délais.
-              
-                  
-              Je suis impatient de discuter avec vous et d'explorer ensemble les possibilités de collaboration pour réaliser de grandes choses. N'hésitez pas à me solliciter pour toute information complémentaire. À très bientôt !</p>
+          <div class="contact"> 
+            <p>Je vous remercie de l'intérêt que vous portez à mon profil. Si vous souhaitez en savoir plus sur mes compétences, 
+              discuter de vos projets ou échanger sur des opportunités, n'hésitez pas à me contacter. Je suis à votre disposition pour 
+              répondre à toutes vos questions et évaluer ensemble comment nous pouvons travailler en synergie.
+              La méthode la plus simple et efficace pour me joindre est par courriel. Vous trouverez ci-dessous mon adresse e-mail. 
+              N'hésitez pas à me fournir des détails sur votre entreprise, vos besoins et les objectifs que vous souhaitez atteindre. 
+              Je m'engage à vous répondre dans les meilleurs délais.         
+              Je suis impatient de discuter avec vous et d'explorer ensemble les possibilités de collaboration pour réaliser de
+              grandes choses. N'hésitez pas à me solliciter pour toute information complémentaire. À très bientôt !</p>
 
               <a href="#" class="btn" data-text="Dites moi Bonjour!">Dites moi Bonjour!</a>
              
             </div>
 
       </section>
-     
+    </section>
   
   </main>
   <footer>
-    <div class="COPYRIGHT">
+    <div class="space"></div>
 
-      <p>Steve Maltais - COPYRIGHT © 2023</p>
-
-   
-  </div>
     <a href="https://www.facebook.com/yourusername" target="_blank" class="fixed-icon icon-facebook">
       <i class="fab fa-facebook-f"></i>
   </a>
@@ -275,10 +272,7 @@
           <div class="color" id="color-6" data-color="var(--pinkFluo)"></div>
           <div class="color" id="color-7" data-color="var(--pinkFluo)"></div>
           <div class="color" id="color-8" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-9" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-10" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-11" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-12" data-color="var(--pinkFluo)"></div>
+
           <!-- Ajoutez les couleurs appropriées pour les autres divs .color -->
         
           <a href="#"id="reset-button" class="btn" data-text="Reset !">Reset !</a>
@@ -286,10 +280,12 @@
       </div>
     </div>
     <div class="vertical-line-right"></div>
+    <a class="fixed-email" href="mailto:stevemaltais@icloud.com">stevemaltais@icloud.com</a>
   </footer>
+  <script src="/Script/textWrapper.js"></script>
   <script src="/Script/progressBare.js"></script>
   <script src="/Script/navBar.js"></script>
-  <script src="/Script/textWrapper.js"></script>
+ 
   <script src="/Script/setupPage.js"></script>
   <script src="/Script/textScriptor.js"></script>
   <script src="/Script/loadingPage.js"></script>

@@ -1,12 +1,7 @@
 .title{
-    font-size: $font-lg;
-    color: $verylightgray;
+    font-size: 120px;
+    color: $darkBlue;
     text-align: center;
- 
-    padding: 0px 250px;
-    
-  
-    
     }
  
     .container .text{
@@ -16,11 +11,8 @@
       
     }
     #text-target {
-      text-decoration: underline;
-
-      
-   
-    }
+      text-decoration: underline;   
+       }
 
     .content .name{
       font-size: 72px;
@@ -47,4 +39,5 @@
       text-underline-offset: 12px;
       font-weight: 700 !important;
       text-transform: uppercase;
+
     }

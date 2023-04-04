@@ -43,3 +43,29 @@
     background-color: $lightGray;
     z-index: 999;
 }
+
+.vertical-line-right {
+    position: fixed;
+    right: 52px; /* Décalez la ligne vers la droite */
+    top: 100%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 200px;
+    background-color: $lightGray;
+    z-index: 2;
+}
+
+.fixed-email{
+    position: fixed;
+    right: 40px; /* Décalez la ligne vers la droite */
+    top: 42%;
+    z-index: 2;
+    font-size: 16px;
+    writing-mode: vertical-rl; /* "rl" signifie "right-to-left" et fait pivoter le texte de 90 degrés vers la droite */
+    text-orientation: mixed; /* orientation du texte droit */
+    letter-spacing: 8px;
+    color: $lightGray;
+}
+.fixed-email:hover{
+    color: var(--light-pink);
+}
