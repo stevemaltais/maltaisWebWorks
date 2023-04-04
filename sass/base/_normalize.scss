@@ -1,0 +1,28 @@
+html {
+    font-size: 62.5%;
+
+  }
+
+  
+body {
+    //font-family: $title-font-stack;
+    font-size: $font-std;
+  
+    color: $lightGray;
+    background-color:black;
+  
+  
+   
+
+  }
+
+a {
+    color: rgb(136, 146, 176);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: $verylightgray;
+    text-decoration: none;
+
+  }

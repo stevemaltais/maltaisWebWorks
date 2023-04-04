@@ -1,0 +1,103 @@
+#about1{   
+  
+    height:100vh;
+    
+}
+.wrapp{
+  
+    margin: 0px 175px;
+}
+
+#start .developer{
+
+    padding-top:150px;
+   
+}
+.developer .container .name{
+
+   font-size: 72px;
+   text-transform: uppercase;
+   color: var(--light-pink);
+   font-weight: 700;
+}
+.developer span {
+
+  font-size: 43.68px;
+ font-weight: 300;
+}
+
+.titre{ 
+    margin-top: -10px;
+
+   
+}
+.developer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+
+  }
+
+
+  
+  .content {
+    display: bloc;
+    padding-right: 60px;
+   align-items: center;
+
+  }
+   
+
+.developer img {
+    width: 25%;
+    height: auto;
+    border-radius: 14px;
+    border: 10px solid $lightGray;
+    box-shadow:1em 11px 11px rgb(0,0,0,0.3);
+    float: right;
+    
+
+  
+  }
+ 
+    #about section {
+      margin: 50px auto;
+      width: 80%;
+    }
+    
+
+    
+    #about section ul {
+      list-style: none;
+      margin-bottom: 50px;
+    }
+    
+    .about section li {
+      margin-bottom: 20px;
+    }
+    
+    #about section label {
+      display: inline-block;
+      width: 150px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+    
+    #about section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    
+
+    
+    
+    #about  {
+margin-top: 400px;
+    }
+
+.container{
+  display: block;
+}

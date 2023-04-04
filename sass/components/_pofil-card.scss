@@ -1,0 +1,45 @@
+.fixed-icon {
+    position: fixed;
+    left: 45px;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.icon-linkedin {
+    top: calc(80% - 72px); /* 72px = 24px (hauteur de l'icône) + 20px (marge inférieure) + 28px (moitié de la hauteur totale des icônes et marges) */
+    color: $lightGray;
+}
+
+.icon-github {
+    top: calc(80% - 28px); /* 28px = 24px (hauteur de l'icône) + 4px (moitié de la marge inférieure) */
+    color: $lightGray;
+}
+
+.icon-facebook {
+    top: calc(80% + 16px); /* 16px = 4px (moitié de la marge inférieure) */
+    color: $lightGray;
+}
+
+.icon-linkedin:hover {
+    color: var(--light-pink);
+}
+
+.icon-github:hover {
+    color: var(--light-pink);
+}
+
+.icon-facebook:hover {
+    color: var(--light-pink);
+}
+.vertical-line-left {
+    position: fixed;
+    left: 52px; /* Décalez la ligne vers la droite */
+    top: 100%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 200px;
+    background-color: $lightGray;
+    z-index: 999;
+}

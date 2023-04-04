@@ -1,0 +1,54 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Text
+
+$font-sm: 1rem;
+$font-std: 1.5rem;
+$font-lg: 3.9rem;
+
+// Line Height
+
+$fontHeight-std: normal;
+$fontHeight-med: 1.6;
+$fontHeight-sm: 80%;
+
+
+:root {
+  --title-font-stack: 'Roboto', sans-serif;
+  --title2-font-stack: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title2-font-stack);
+}
+
+a,p, span, div, body {
+  font-family: var(--title-font-stack);
+}
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
