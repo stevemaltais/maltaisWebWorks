@@ -1,26 +1,22 @@
 @charset "UTF-8";
-/* Primary Color */
 :root {
-  --primary-color:$lightPink;
-  --dark-cyan: hsl(184, 100%, 22%);
-  --very-dark-cyan: hsl(179, 100%, 13%);
-}
-
-/* Neutral Color */
-:root {
-  --light-gray: #d6d6d6; /* (paragraphs) */
-  --very-light-gray: #f4f1f1; /* (headings, buttons) */
-  --light-pink: #64d8ff; /* (background, headings, buttons) */
-  --darkBlue: #17181B;
+  --primary-color: #2b2c30;
+  --secondary-color: #f58f7c;
+  --accent-color: #64d8ff;
 }
 
 :root {
-  /* Autres variables ici */
+  --light-gray: #d6d6d6;
+  --very-light-gray: #f4f1f1;
+  --white: #fff;
+}
+
+:root {
+  /* Ajoutez d'autres variables ici */
   --btn-text-color: #64d8ff;
   --btn-border-color: #64d8ff;
 }
 
-/* Changed Color */
 :root {
   --title-font-stack: "Roboto", sans-serif;
   --title2-font-stack: "Oswald", sans-serif;
@@ -35,17 +31,16 @@ a, p, span, div, body {
 }
 
 /**
- * Set up a decent box model on the root element
+ * Mettre en place un modèle de boîte décent sur l'élément racine
  */
 html {
   box-sizing: border-box;
 }
 
 /**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ * Faire en sorte que tous les éléments du DOM héritent du box-sizing du parent
+ * Comme `*` a une spécificité de 0, il ne remplace pas la valeur `html`
+ * ce qui fait que tous les éléments héritent de la valeur box-sizing de la racine
  */
 *,
 *::before,
@@ -54,7 +49,7 @@ html {
 }
 
 /**
- * Basic styles for links
+ * Styles de base pour les liens
  */
 a {
   color: #d6d6d6;
@@ -70,7 +65,7 @@ html {
 }
 
 body {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #d6d6d6;
   background-color: black;
 }
@@ -92,22 +87,22 @@ a:hover {
 
 /* Style du bouton */
 .btn {
-  margin-top: 40px;
   position: relative;
   display: inline-block;
-  font-size: 16px;
-  border-radius: 4px;
-  border: 1px solid var(--light-pink);
-  padding: 10px 20px;
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
   text-decoration: none;
-  color: var(--light-pink);
+  color: var(--accent-color);
   cursor: pointer;
   overflow: hidden;
 }
 
 /* Effet au survol */
 .btn:hover {
-  color: transparent; /* Rendre le texte transparent au survol */
+  color: transparent;
 }
 
 /* Pseudo-élément pour l'animation */
@@ -118,7 +113,7 @@ a:hover {
   left: -170%;
   width: 170%;
   height: 100%;
-  background-color: var(--light-pink);
+  background-color: var(--accent-color);
   transition: left 0.6s;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 0% 100%);
@@ -151,8 +146,8 @@ a:hover {
 h4.title-2 {
   color: #fff;
   position: relative;
-  font-size: 70px;
-  margin-top: -135px;
+  font-size: 7.2rem;
+  margin-top: -13.5rem;
   opacity: 0;
 }
 
@@ -168,112 +163,211 @@ h4.title-2.animate {
   animation: fadeIn 1s ease 2s forwards;
 }
 
-#contact h2 {
-  text-align: center;
-}
-
-#contact p {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
-* {
-  margin: 0;
-  padding: 0;
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 0.5px solid #eeeeee;
+  border-radius: 4.4rem;
   box-sizing: border-box;
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+  resize: vertical;
 }
 
+.input__field {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  text-align: left;
+  background-color: rgb(136, 146, 176);
+  color: #fff;
+  border: 0.5px solid #999;
+  border-radius: 1rem;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.input__label {
+  font-weight: 500;
+  top: 0.7px;
+  left: 1.2rem;
+  transition: all 0.2s ease;
+  z-index: 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 3.5rem;
+}
+
+.form-contact {
+  display: block;
+  position: relative;
+}
+
+.form-title {
+  font-size: 30px;
+  margin-bottom: 4.5rem;
+}
+
+form .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f4f1f1;
+}
+
+.modal-content {
+  background-color: #2b2c30;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  height: auto;
+  max-width: 60rem;
+}
+
+.close {
+  color: #d6d6d6;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* -----------------------------------------------------------------------------
+ * Ce fichier contient toutes les styles CSS de la barre de navigation
+ * -----------------------------------------------------------------------------
+ */
+/* Style de la barre latérale */
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
-  width: 78px;
+  width: 7.8rem;
   background: #17181B;
-  padding: 6px 14px;
+  padding: 0.6rem 1.4rem;
   z-index: 9999;
   transition: all 0.5s ease;
 }
 
+/* Style de la barre latérale ouverte */
 .sidebar.open {
-  width: 250px;
+  width: 25rem;
 }
 
+/* Style du logo et détails de la barre latérale */
 .sidebar .logo-details {
-  height: 60px;
+  height: 6rem;
   display: flex;
   align-items: center;
   position: relative;
 }
 
+/* Style de l'icône du logo */
 .sidebar .logo-details .icon {
   opacity: 0;
   transition: all 0.5s ease;
 }
 
+/* Style du nom du logo */
 .sidebar .logo-details .logo_name {
-  color: var(--light-pink);
-  font-size: 25px;
+  color: var(--accent-color);
+  font-size: 2.5rem;
   font-weight: 900;
   opacity: 0;
   transition: all 0.5s ease;
 }
 
+/* Style de l'icône et du nom du logo lorsque la barre latérale est ouverte */
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name {
   opacity: 1;
 }
 
+/* Style du bouton de la barre latérale */
 .sidebar .logo-details #btn {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  font-size: 22px;
+  font-size: 2.2rem;
   transition: all 0.4s ease;
-  font-size: 23px;
+  font-size: 2.2rem;
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 
+/* Style du bouton lorsque la barre latérale est ouverte */
 .sidebar.open .logo-details #btn {
   text-align: right;
 }
 
+/* Style des icônes de la barre latérale */
 .sidebar i {
   color: #fff;
-  height: 60px;
+  height: 6rem;
   min-width: 50px;
-  font-size: 28px;
+  font-size: 2.6rem;
   text-align: center;
-  line-height: 60px;
+  line-height: 6rem;
 }
 
+/* Style de la liste de navigation de la barre latérale */
 .sidebar .nav-list {
-  margin-top: 20px;
+  margin-top: 2rem;
   height: 100%;
 }
 
+/* Style des éléments de la liste */
 .sidebar li {
   position: relative;
-  margin: 8px 0;
+  margin: 0.8rem 0rem;
   list-style: none;
 }
 
+/* Style des infobulles */
 .sidebar li .tooltip {
   position: absolute;
-  top: -20px;
+  top: -2rem;
   left: calc(100% + 15px);
   z-index: 3;
   background: #d6d6d6;
   color: #2b2c30;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
   opacity: 0;
   white-space: nowrap;
@@ -281,6 +375,7 @@ h4.title-2.animate {
   transition: 0s;
 }
 
+/* Style des infobulles au survol */
 .sidebar li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
@@ -289,11 +384,12 @@ h4.title-2.animate {
   transform: translateY(-50%);
 }
 
+/* Style des infobulles lorsque la barre latérale est ouverte */
 .sidebar.open li .tooltip {
   display: none;
 }
 
-/* Ajouter un caret à gauche du tooltip */
+/* Ajout d'un caret à gauche du tooltip */
 .sidebar li .tooltip:before {
   content: "";
   position: absolute;
@@ -305,43 +401,48 @@ h4.title-2.animate {
   border-bottom: 5px solid transparent;
 }
 
+/* Style des inputs de la barre latérale */
 .sidebar input {
   font-size: 15px;
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   outline: none;
-  height: 50px;
+  height: 5rem;
   width: 100%;
-  width: 50px;
+  width: 5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 1.2rem;
   transition: all 0.5s ease;
   background: #2b2c30;
 }
 
+/* Style des inputs lorsque la barre latérale est ouverte */
 .sidebar.open input {
-  padding: 0 20px 0 50px;
+  padding: 0 2rem 0 5rem;
   width: 100%;
 }
 
+/* Style des liens de la liste de navigation */
 .sidebar li a {
   display: flex;
   height: 100%;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 1.2rem;
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
   background: #2b2c30;
 }
 
+/* Style des liens de la liste de navigation au survol */
 .sidebar li a:hover {
-  background: #FFF;
+  background: #fff;
 }
 
+/* Style des noms de liens de la liste de navigation */
 .sidebar li a .links_name {
   color: #fff;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 400;
   white-space: nowrap;
   opacity: 0;
@@ -349,55 +450,63 @@ h4.title-2.animate {
   transition: 0.4s;
 }
 
+/* Style des noms de liens lorsque la barre latérale est ouverte */
 .sidebar.open li a .links_name {
   opacity: 1;
   pointer-events: auto;
 }
 
+/* Style des noms de liens et icônes de la liste de navigation au survol */
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
   transition: all 0.5s ease;
   color: #2b2c30;
 }
 
+/* Style des icônes de la liste de navigation */
 .sidebar li i {
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  border-radius: 12px;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 1.8rem;
+  border-radius: 1.2rem;
 }
 
+/* Style du profil dans la barre latérale */
 .sidebar li.profile {
   position: fixed;
-  height: 60px;
-  width: 78px;
+  height: 6rem;
+  width: 7.8rem;
   left: 0;
-  bottom: -8px;
-  padding: 10px 14px;
+  bottom: -0.8rem;
+  padding: 1rem 1.4rem;
   background: #2b2c30;
   transition: all 0.5s ease;
   overflow: hidden;
 }
 
+/* Style du profil lorsque la barre latérale est ouverte */
 .sidebar.open li.profile {
-  width: 250px;
+  width: 25rem;
 }
 
+/* Style des détails du profil dans la barre latérale */
 .sidebar li .profile-details {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
 }
 
+/* Style de l'image du profil */
 .sidebar li img {
-  height: 45px;
-  width: 45px;
+  height: 4.5rem;
+  width: 4.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 6px;
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
+/* Style du nom et du métier du profil */
 .sidebar li.profile .name,
 .sidebar li.profile .job {
   font-size: 15px;
@@ -406,10 +515,12 @@ h4.title-2.animate {
   white-space: nowrap;
 }
 
+/* Style du métier du profil */
 .sidebar li.profile .job {
   font-size: 12px;
 }
 
+/* Style du bouton de déconnexion */
 .sidebar .profile #log_out {
   position: absolute;
   top: 50%;
@@ -417,52 +528,46 @@ h4.title-2.animate {
   transform: translateY(-50%);
   background: #2b2c30;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 0px;
+  height: 6rem;
+  line-height: 6rem;
   transition: all 0.5s ease;
 }
 
+/* Style du bouton de déconnexion lorsque la barre latérale est ouverte */
 .sidebar.open .profile #log_out {
-  width: 50px;
+  width: 5rem;
   background: none;
 }
 
+/* Style de la section principale */
 .home-section {
-  position: relative;
-  max-width: 1250px;
-  min-height: 100vh;
-  top: 0;
-  left: 260px;
-  width: calc(100% - 78px);
+  left: 7.8rem;
   transition: all 0.5s ease;
-  z-index: 2;
 }
 
+/* Style de la section principale lorsque la barre latérale est ouverte */
 .sidebar.open ~ .home-section {
-  left: 250px;
-  width: calc(100% - 250px);
+  left: 25rem;
+  width: calc(100% - 25rem);
 }
 
+/* Style du texte dans la section principale */
 .home-section .text {
   display: inline-block;
   color: #f4f1f1;
-  font-size: 25px;
+  font-size: 2.6rem;
   font-weight: 500;
-  margin-right: 18px;
+  margin-right: 1.8rem;
 }
 
-main {
-  margin-left: 78px;
-  transition: all 0.5s ease;
-}
-
+/* Style du contenu principal lorsque la barre latérale est ouverte */
 .sidebar.open + main {
-  margin-left: 160px;
+  margin-left: 16rem;
 }
 
+/* Style du menu déroulant */
 #menu.container + .sidebar.open {
-  margin-left: 250px;
+  margin-left: 25rem;
 }
 
 /* Styles pour les sections */
@@ -470,8 +575,9 @@ section {
   transition: all 0.5s ease;
 }
 
+/* Styles pour les sections lorsque la barre latérale est ouverte */
 .sidebar.open section {
-  margin-left: 172px;
+  margin-left: 17.2rem;
 }
 
 /* Styles pour les titres de section */
@@ -479,8 +585,9 @@ section {
   transition: all 0.5s ease;
 }
 
+/* Styles pour les titres de section lorsque la barre latérale est ouverte */
 .sidebar.open .title {
-  margin-left: 172px;
+  margin-left: 17.2rem;
 }
 
 /* Styles pour les sections avec une classe fade-in */
@@ -490,89 +597,24 @@ section {
   transition: all 0.5s ease;
 }
 
+/* Styles pour les sections avec une classe fade-in lorsque la barre latérale est ouverte */
 .sidebar.open .fade-in {
   opacity: 1;
   transform: none;
 }
 
-.sidebar .nav-links li .sub-menu {
-  padding: 6px 6px 14px 80px;
-  margin-top: -10px;
-  background: #1d1b31;
-  display: none;
-}
-
-.sidebar .nav-links li.showMenu .sub-menu {
-  display: block;
-}
-
-.sidebar .nav-links li .sub-menu a {
-  font-family: var(--);
-  color: #fff;
-  font-size: 15px;
-  padding: 5px 0;
-  white-space: nowrap;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.sidebar .nav-links li .sub-menu a:hover {
-  opacity: 1;
-}
-
-.sidebar.close .nav-links li .sub-menu #menu .active {
-  position: absolute;
-  left: 100%;
-  top: -10px;
-  margin-top: 0;
-  padding: 10px 20px;
-  border-radius: 0 6px 6px 0;
-  opacity: 0;
-  display: block;
-  pointer-events: none;
-  transition: 0s;
-}
-
-.sidebar.close .nav-links li:hover .sub-menu #menu .active {
-  top: 0;
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s ease;
-}
-
-.sidebar .nav-links li .sub-menu .link_name {
-  display: none;
-}
-
-.sidebar.close .nav-links li .sub-menu .link_name {
-  font-size: 18px;
-  opacity: 1;
-  display: block;
-}
-
-.sidebar .nav-links li .sub-menu.blank {
-  opacity: 1;
-  pointer-events: auto;
-  padding: 3px 20px 6px 16px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar .nav-links li:hover .sub-menu.blank {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
+/* Styles pour le nom du logo */
 .logo_name {
-  border: #FFF solid 2px;
+  border: #fff solid 0.2rem;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Styles pour l'animation de rotation */
 .rotate {
   animation-name: rotation;
   animation-duration: 2s;
@@ -580,6 +622,7 @@ section {
   animation-iteration-count: 1;
 }
 
+/* Définition de l'animation de rotation */
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -777,7 +820,7 @@ section {
 }
 
 .progress span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-left: 10px;
   color: #2b2c30;
@@ -900,41 +943,7 @@ section {
   font-size: 120px;
   color: #2b2c30;
   text-align: center;
-}
-
-.container .text {
-  text-transform: uppercase;
-  font-size: 3.9rem;
-}
-
-#text-target {
-  text-decoration: underline;
-}
-
-.content .name {
-  font-size: 72px;
-  text-transform: uppercase;
-  color: var(--light-pink);
-  line-height: 90%;
-  font-weight: 700;
-}
-
-.content .name span {
-  font-size: 62px;
-  text-transform: uppercase;
-  color: #f4f1f1;
-  font-weight: 400;
-}
-
-.animated-text {
-  margin-top: 20px;
-  display: inline-block;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--light-pink);
-  text-underline-offset: 12px;
-  font-weight: 700 !important;
-  text-transform: uppercase;
+  margin-top: -10px;
 }
 
 .space {
@@ -942,59 +951,42 @@ section {
 }
 
 .wrapp {
-  margin-top: 200px;
+  margin-top: 20rem;
 }
 
 .numNav {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: var(--light-pink);
+  color: var(--primeColor);
 }
 
 .wrapper {
-  padding: 60px 0px;
+  padding: 6rem 0rem;
 }
 
 .ml2 {
   z-index: -1;
 }
 
-.developer .container .name {
-  font-size: 72px;
-  text-transform: uppercase;
-  color: var(--light-pink);
-  font-weight: 700;
+.home-section {
+  position: relative;
+  max-width: 1250px;
+  min-height: 100vh;
+  top: 0;
+  left: 16rem;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
 }
 
-.developer span {
-  font-size: 43.68px;
-  font-weight: 300;
+/* Style du contenu principal */
+main {
+  margin-left: 7.8rem;
+  transition: all 0.5s ease;
 }
 
-.titre {
-  margin-top: -10px;
-}
-
-.developer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.content {
-  display: bloc;
-  padding-right: 60px;
-  align-items: center;
-}
-
-.developer img {
-  width: 25%;
-  height: auto;
-  border-radius: 14px;
-  border: 10px solid #d6d6d6;
-  box-shadow: 1em 11px 11px rgba(0, 0, 0, 0.3);
-  float: right;
+#about {
+  margin-top: 400px;
 }
 
 #about section {
@@ -1022,10 +1014,6 @@ section {
 #about section p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-}
-
-#about {
-  margin-top: 400px;
 }
 
 .container {
@@ -1066,12 +1054,12 @@ li {
 }
 
 .container h2 {
-  font-size: 3.9rem;
+  font-size: 2.6rem;
   margin-bottom: -10px;
 }
 
 .about-separator {
-  border: 1px solid var(--light-pink);
+  border: 1px solid var(--accent-color);
   margin-bottom: 40px;
 }
 
@@ -1081,8 +1069,19 @@ li {
 }
 
 .about-info span {
-  color: var(--light-pink);
+  color: var(--accent-color);
   font-weight: 400;
+}
+
+#contact h2 {
+  text-align: center;
+}
+
+#contact p {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.6;
 }
 
 .contact p {
@@ -1176,6 +1175,75 @@ li {
     transform: rotate(360deg);
   }
 }
+.developer .container .name {
+  font-size: 7.2rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.developer span {
+  font-size: 4.4rem;
+  font-weight: 300;
+}
+
+.developer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: bloc;
+  padding-right: 6rem;
+  align-items: center;
+}
+
+.developer img {
+  width: 25%;
+  height: auto;
+  border-radius: 1.6rem;
+  border: 10px solid #d6d6d6;
+  box-shadow: 1em 11px 11px rgba(0, 0, 0, 0.3);
+  float: right;
+}
+
+.container .text {
+  text-transform: uppercase;
+  font-size: 3.9rem;
+}
+
+.content .name {
+  font-size: 72px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  line-height: 90%;
+  font-weight: 700;
+}
+
+.content .name span {
+  font-size: 62px;
+  text-transform: uppercase;
+  color: #f4f1f1;
+  font-weight: 400;
+}
+
+.animated-text {
+  margin-top: 2rem;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  text-decoration-color: var(--accent-color);
+  text-underline-offset: 1.2rem;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+#text-target {
+  text-decoration: underline;
+}
+
 #menu-container {
   position: fixed;
   top: calc(80% + 16px); /* 16px = 4px (moitié de la marge inférieure) */
@@ -1293,7 +1361,7 @@ li {
     transform: rotate(360deg);
   }
 }
-label {
+.theme-label {
   position: relative;
   width: 80px;
   height: 30px;
@@ -1305,7 +1373,7 @@ label {
   margin-bottom: 10px;
 }
 
-label:after {
+.theme-label:after {
   content: "";
   position: absolute;
   height: 25px;
@@ -1318,13 +1386,13 @@ label:after {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-input:checked ~ label:after {
+input:checked ~ .theme-label:after {
   left: 75px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-input:checked ~ label {
+input:checked ~ .theme-label {
   background: #242424;
 }
 
@@ -1337,10 +1405,10 @@ input:checked ~ label {
   transition: 1s;
 }
 
-input:checked + label + .background {
+input:checked + .theme-label + .background {
   background: #242424;
 }
 
-input {
+.theme-label input {
   display: none;
 }/*# sourceMappingURL=styles.css.map */

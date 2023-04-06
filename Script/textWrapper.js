@@ -1,3 +1,4 @@
+// Crée un élément span pour chaque caractère du texte donné
 function createSplitText(text) {
   const container = document.createElement('span');
   container.setAttribute('aria-label', text);
@@ -15,6 +16,7 @@ function createSplitText(text) {
   return container;
 }
 
+// Initialise les animations pour les éléments de texte donnés
 function init(animatedTexts) {
   animatedTexts.forEach(animatedText => {
     const text = animatedText.dataset.text;
@@ -40,6 +42,7 @@ function init(animatedTexts) {
     observer.observe(splitText);
   });
 
+  // Ajoute les styles d'animation au document
   const style = document.createElement('style');
   style.innerHTML = `
     .hidden span[data-char] {
@@ -61,28 +64,30 @@ function init(animatedTexts) {
       0% {
         bottom: -0.2em;
         opacity: 1;
-        color: var(--light-pink);
+        color: var(--accent-color);
       }
 
       50% {
         bottom: 0.2em;
-        color: var(--light-pink);
+        color: var(--accent-color);
       }
 
       100% {
         bottom: 0;
         opacity: 1;
-        color: $darklight;
+        color: var(--primary-color);
       }
     }
   `;
   document.head.appendChild(style);
 }
 
+// Sélectionne les éléments de texte à animer
 let competenceAnimatedTexts = document.querySelectorAll('.ml2[data-text="Compétences"]');
 let contactAnimatedTexts = document.querySelectorAll('.ml2[data-text="Contact"]');
 let aboutAnimatedTexts = document.querySelectorAll('.ml2[data-text="A propos"]');
 
+// Initialise les observateurs d'intersection pour chaque élément de texte
 const competenceObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -110,30 +115,30 @@ const contactObserver = new IntersectionObserver(
         contactObserver.unobserve(entry.target);
       }
     });
-   
   },
   {
     rootMargin: '-50px 0px',
-    threshold: 0,
-  }
-);
-  const aboutObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!aboutAnimatedTexts[0].querySelector('span[aria-label]')) {
-            init(aboutAnimatedTexts);
+    threshold: 0 }
+    );
+    
+    const aboutObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (!aboutAnimatedTexts[0].querySelector('span[aria-label]')) {
+              init(aboutAnimatedTexts);
+            }
+            aboutObserver.unobserve(entry.target);
           }
-          aboutObserver.unobserve(entry.target);
-        }
-      });
-    },
-  {
-    rootMargin: '-50px 0px',
-    threshold: 0,
-  }
-);
-
-competenceObserver.observe(document.getElementById('competence'));
-contactObserver.observe(document.getElementById('contact'));
-aboutObserver.observe(document.getElementById('about'));
+        });
+      },
+      {
+        rootMargin: '-50px 0px',
+        threshold: 0,
+      }
+    );
+    
+    // Observe les éléments pour déclencher les animations
+    competenceObserver.observe(document.getElementById('competence'));
+    contactObserver.observe(document.getElementById('contact'));
+    aboutObserver.observe(document.getElementById('about'));

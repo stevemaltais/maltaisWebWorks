@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
   colorPalette.addEventListener('click', function (event) {
     if (event.target.classList.contains('color')) {
       const selectedColor = getComputedStyle(event.target).getPropertyValue('background-color');
-      document.documentElement.style.setProperty('--light-pink', selectedColor);
+      document.documentElement.style.setProperty('--accent-color', selectedColor);
     
       const progressElements = document.querySelectorAll('.progress');
-      const progressColor = colorMap[selectedColor] || '--light-pink';
+      const progressColor = colorMap[selectedColor] || '--accent-color';
     
       progressElements.forEach(function(progressElement) {
         progressElement.style.backgroundColor = progressColor;
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 resetButton.addEventListener('click', function (event) {
   event.preventDefault();
-  document.documentElement.style.setProperty('--light-pink', '#64d8ff');
+  document.documentElement.style.setProperty('--accent-color', '#64d8ff');
   const progressElements = document.querySelectorAll('.progress');
   progressElements.forEach(function(progressElement) {
     progressElement.style.backgroundColor = "#f58f7c";

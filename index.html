@@ -78,7 +78,7 @@
       </li>
        <li class="profile">
            <div class="profile-details">
-             <!--<img src="profile.jpg" alt="profileImg">-->
+             
              <div class="name_job">
                <div class="name">Steve Maltais</div>
                <div class=job COPYRIGHT >Steve Maltais - COPYRIGHT © 2023</div>
@@ -88,8 +88,6 @@
        </li>
       </ul>
       </div>
- 
-
  
     
   <main>
@@ -106,7 +104,7 @@
             </div>
             <img src="/images/9.jpg"> 
           </div>
-
+      
 
     <section id="about">
         <div class="container"id="about-info">
@@ -114,12 +112,12 @@
         <div class="about-separator"></div>
         <!--   <h2  class="ml2" data-text="A propos"></h2> -->    
     
-        
+      
         <div class="about-wrapper">
           <div class="about-info">
             
             <p>Bonjour, je suis Steve, développeur web freelance passionné par la création de sites web dynamiques et fonctionnels. Avec une formation universitaire récemment terminée, je poursuis actuellement mes études pour continuer à développer mes compétences et rester à jour avec les dernières tendances en matière de développement web.
-
+        
              <br><br> J'ai acquis des compétences solides dans les langages <span>HTML</span>, <span>CSS</span>, <span>SCSS</span> et <span>JavaScript</span>, ainsi que dans les bases de données <span>SQL</span> et le développement logiciel par <span>UML</span> et <span>RUP</span>. De plus, j'ai une expérience pratique avec <span>Java</span>, <span>C++</span> et leurs bibliothèques associées.
               
              <br><br> Passionné par l'interface utilisateur (<span>UI</span>) et l'expérience utilisateur (<span>UX</span>), je suis constamment à la recherche de nouveaux moyens de créer des designs modernes et esthétiques pour mes clients. Je m'efforce toujours de maintenir une communication ouverte et transparente avec mes clients pour m'assurer que leur vision est réalisée à la perfection.
@@ -138,7 +136,8 @@
               <li><strong>Nationalité:</strong> Canadien</li>
               <li><strong>Profil professionnel:</strong> Développeur Web</li>
             </ul>
-            <a class="btn" href="mon_cv.pdf" download>Télécharger mon CV</a>
+            <a  href="#" class="btn" data-text="Télécharger mon CV" href="mon_cv.pdf" download>Télécharger mon CV</a>
+
           </div>
         </div>
  
@@ -222,7 +221,7 @@
       <section class= title id="contact">
  
         <h2 class="ml2" data-text="Contact"></h2>
-
+     
           <div class="contact"> 
             <p>Je vous remercie de l'intérêt que vous portez à mon profil. Si vous souhaitez en savoir plus sur mes compétences, 
               discuter de vos projets ou échanger sur des opportunités, n'hésitez pas à me contacter. Je suis à votre disposition pour 
@@ -233,10 +232,19 @@
               Je suis impatient de discuter avec vous et d'explorer ensemble les possibilités de collaboration pour réaliser de
               grandes choses. N'hésitez pas à me solliciter pour toute information complémentaire. À très bientôt !</p>
 
-              <a href="#" class="btn" data-text="Dites moi Bonjour!">Dites moi Bonjour!</a>
+              <a href="#" class="btn" data-text="Dites moi Bonjour!" onclick="openModal()">Dites moi Bonjour!</a>
              
             </div>
-
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+               
+              
+             
+                  </div>
+                </form>
+              </div>
+            </div>
       </section>
     </section>
   
@@ -261,7 +269,7 @@
       <div id="menu">
         <h3>Style Theme</h3>
         <input type="checkbox" id="dark-mode">
-        <label for="dark-mode"></label>
+        <label class="theme-label" for="dark-mode"></label>
         <hr>
         <h4>Couleurs Theme</h4>
         <div id="color-palette">
@@ -291,6 +299,7 @@
   <script src="/Script/textScriptor.js"></script>
   <script src="/Script/loadingPage.js"></script>
   <script src="/Script/menu.js"></script>
+  <script src="/Script/modalForm.js"></script>
 
 </section>
 </body>

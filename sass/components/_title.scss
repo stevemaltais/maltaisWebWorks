@@ -1,43 +1,10 @@
 .title{
     font-size: 120px;
-    color: $darkBlue;
+    color: $darkGrey;
     text-align: center;
+    margin-top: -10px;
     }
- 
-    .container .text{
-      text-transform: uppercase;
-      font-size: $font-lg;
+  
 
-      
-    }
-    #text-target {
-      text-decoration: underline;   
-       }
-
-    .content .name{
-      font-size: 72px;
-      text-transform: uppercase;
-      color: var(--light-pink);
-      line-height: 90%;
-     
-      font-weight: 700;
-    }
     
-    .content .name span{
-      font-size: 62px;
-      text-transform: uppercase;
-      color: $verylightgray;
-      font-weight: 400;
-      
-    }
-    .animated-text {
-      margin-top: 20px;
-      display: inline-block;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-decoration-color: var(--light-pink);
-      text-underline-offset: 12px;
-      font-weight: 700 !important;
-      text-transform: uppercase;
 
-    }

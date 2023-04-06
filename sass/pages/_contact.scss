@@ -1,3 +1,17 @@
+#contact h2 {
+  text-align: center;
+
+}
+
+#contact p{
+  margin-top: 2rem;
+  text-align: center;
+  font-size: $font-std;
+
+  line-height: $fontHeight-med;
+}
+
+
 .contact p{
     color: $verylightgray;
     margin-top: -150px;

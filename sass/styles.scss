@@ -4,8 +4,8 @@
 // Base
 @import 'base/base',
         'base/normalize', 
-        'base/reset',
-        'base/typography';
+        'base/reset';
+
 
 // Components
 @import "components/alert";
@@ -13,11 +13,9 @@
 @import "components/competences";
 @import "components/carousel";
 @import "components/form";
-@import "components/infobox";
 @import "components/label";
 @import "components/modal";
 @import "components/navbar";
-@import "components/pagination";
 @import "components/pofil-card";
 @import "components/succes-poppup";
 @import "components/tabs";
@@ -40,6 +38,7 @@
 @import "pages/product-single";
 @import "pages/products";
 @import "pages/signup";
+@import "pages/hero";
 
 // Themes
 @import "themes/dark-theme";

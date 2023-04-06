@@ -1,43 +1,43 @@
-  // Primary Color
+// -----------------------------------------------------------------------------
+// Ce fichier contient toutes les couleurs Sass de l'application.
+// -----------------------------------------------------------------------------
+ 
+  
+  // Couleurs principales
+$darkGrey: #2b2c30;
+$black: black; // Couleur d'arrière-plan foncé
+$primeColor: #64d8ff; // (titres, boutons, couleur d'accentuation)
+$primeColorProgressBar: #f58f7c; // Couleur de la barre de progression
+$titleColor: rgb(136, 146, 176);
 
-$darkBlue: #2b2c30;
-$darkcyan: hsl(184, 100%, 22%);
-$verydarkcyan: hsl(179, 100%, 13%);
+// Couleurs neutres
+$White: #fff;
+$lightGray: #d6d6d6;
+$verylightgray: #f4f1f1; // (titres, paragraphes)
 
-// Neutral Color
-
-$lightGray: #d6d6d6; //(paragraphs)
-$verylightgray: #f4f1f1; //(headings, buttons)
-$lightPink: #64d8ff; //(background, headings, buttons)
-
-/* Primary Color */
+// Variables CSS personnalisées pour les couleurs principales
 :root {
-  --primary-color:$lightPink;
-  --dark-cyan: hsl(184, 100%, 22%);
-  --very-dark-cyan: hsl(179, 100%, 13%);
+  --primary-color: #{$darkGrey};
+  --secondary-color: #{$primeColorProgressBar};
+  --accent-color: #{$primeColor};
 }
 
-/* Neutral Color */
+// Variables CSS personnalisées pour les couleurs neutres
 :root {
-  --light-gray: #d6d6d6; /* (paragraphs) */
-  --very-light-gray: #f4f1f1; /* (headings, buttons) */
-  --light-pink: #64d8ff; /* (background, headings, buttons) */
-  --darkBlue: #17181B;
-
+  --light-gray: #{$lightGray}; // (paragraphes)
+  --very-light-gray: #{$verylightgray}; // (titres, boutons)
+  --white: #{$White};
 }
 
+// Variables CSS personnalisées supplémentaires
 :root {
-  /* Autres variables ici */
+  /* Ajoutez d'autres variables ici */
   --btn-text-color: #64d8ff;
   --btn-border-color: #64d8ff;
 }
 
-
-/* Changed Color */
-
-
-  $greenFluo: #64ff6e;
-  $pinkFluo: #ff64f5;
-  $purpleFluo: #6464ff;
-  $yellowFluo: #e8ff64;
-  
+// Couleurs modifiées
+$greenFluo: #64ff6e;
+$pinkFluo: #ff64f5;
+$purpleFluo: #6464ff;
+$yellowFluo: #e8ff64;
