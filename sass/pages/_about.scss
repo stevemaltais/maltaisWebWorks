@@ -1,32 +1,32 @@
 #about  {
-margin-top: 400px;
+margin-top: 40rem;
 }
 
 #about section {
-margin: 50px auto;
+margin: 5rem auto;
 width: 80%;
 }
 
 #about section ul {
 list-style: none;
-margin-bottom: 50px;
+margin-bottom: 5rem;
 }
 
 .about section li {
-margin-bottom: 20px;
+margin-bottom: 20rem;
 }
 
 #about section label {
 display: inline-block;
-width: 150px;
+width: 1.5rem;
 font-size: 1.2rem;
 font-weight: bold;
-margin-right: 20px;
+margin-right: 2rem;
 }
 
 #about section p {
 font-size: 1.2rem;
-margin-bottom: 20px;
+margin-bottom: 2rem;
 }
 
 .container{
@@ -53,8 +53,8 @@ margin: 0;
 }
 
 li {
-margin-bottom: 30px;
-font-size: 22px;
+margin-bottom: 3rem;
+font-size: $font-md;
 color: $verylightgray;
 font-weight: 100;
 }
@@ -62,28 +62,28 @@ font-weight: 100;
 .about-info p{
 color: $verylightgray;
 font-weight: 100;
-font-size: 22px;
-margin-right: 20px;
+font-size: $font-md;
+margin-right: 2rem;
 text-align: justify;
 }
 
 
 .container h2{
-font-size: $font-lg;
-margin-bottom: -10px;
+font-size: $font-title-xs;
+margin-bottom: -1rem;
 }
 
 .about-separator{
 
 border: 1px solid var(--accent-color) ;
-margin-bottom: 40px;
+margin-bottom: 4rem;
 }
 
 
 
 .contact-info h4{
-margin-bottom: 40px;
-font-size: 26px;
+margin-bottom: 4rem;
+font-size: $font-lg;
 }
 
 .about-info span{

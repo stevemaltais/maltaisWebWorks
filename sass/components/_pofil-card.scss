@@ -57,8 +57,8 @@
 
 .fixed-email{
     position: fixed;
-    right: 40px; /* Décalez la ligne vers la droite */
-    top: 42%;
+    right: 42px; /* Décalez la ligne vers la droite */
+    top: 40%;
     z-index: 2;
     font-size: 16px;
     writing-mode: vertical-rl; /* "rl" signifie "right-to-left" et fait pivoter le texte de 90 degrés vers la droite */
@@ -67,5 +67,5 @@
     color: $lightGray;
 }
 .fixed-email:hover{
-    color: var(--light-pink);
+    color: var(--accent-color);
 }

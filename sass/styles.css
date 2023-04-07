@@ -276,7 +276,7 @@ body.modal-open {
   width: 7.8rem;
   background: #17181B;
   padding: 0.6rem 1.4rem;
-  z-index: 9999;
+  z-index: 9998;
   transition: all 0.5s ease;
 }
 
@@ -691,8 +691,8 @@ section {
 
 .fixed-email {
   position: fixed;
-  right: 40px; /* Décalez la ligne vers la droite */
-  top: 42%;
+  right: 42px; /* Décalez la ligne vers la droite */
+  top: 40%;
   z-index: 2;
   font-size: 16px;
   writing-mode: vertical-rl; /* "rl" signifie "right-to-left" et fait pivoter le texte de 90 degrés vers la droite */
@@ -702,7 +702,7 @@ section {
 }
 
 .fixed-email:hover {
-  color: var(--light-pink);
+  color: var(--accent-color);
 }
 
 #formation {
@@ -986,34 +986,34 @@ main {
 }
 
 #about {
-  margin-top: 400px;
+  margin-top: 40rem;
 }
 
 #about section {
-  margin: 50px auto;
+  margin: 5rem auto;
   width: 80%;
 }
 
 #about section ul {
   list-style: none;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 .about section li {
-  margin-bottom: 20px;
+  margin-bottom: 20rem;
 }
 
 #about section label {
   display: inline-block;
-  width: 150px;
+  width: 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 #about section p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -1039,8 +1039,8 @@ ul {
 }
 
 li {
-  margin-bottom: 30px;
-  font-size: 22px;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
   color: #f4f1f1;
   font-weight: 100;
 }
@@ -1048,24 +1048,24 @@ li {
 .about-info p {
   color: #f4f1f1;
   font-weight: 100;
-  font-size: 22px;
-  margin-right: 20px;
+  font-size: 2.2rem;
+  margin-right: 2rem;
   text-align: justify;
 }
 
 .container h2 {
-  font-size: 2.6rem;
-  margin-bottom: -10px;
+  font-size: 4.4rem;
+  margin-bottom: -1rem;
 }
 
 .about-separator {
   border: 1px solid var(--accent-color);
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .contact-info h4 {
-  margin-bottom: 40px;
-  font-size: 26px;
+  margin-bottom: 4rem;
+  font-size: 2.6rem;
 }
 
 .about-info span {
@@ -1142,7 +1142,25 @@ li {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.wra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.preload-name {
+  position: absolute;
+  color: #f4f1f1;
+  top: 45%;
+  left: 50%;
+  font-size: 3.9rem;
+  transform: translate(-50%, -50%);
+  font-family: var(--title2-font-stack);
+}
+
 .preloader {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -1151,7 +1169,7 @@ li {
   background-color: #2b2c30;
   z-index: 9999;
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 1000s ease-out;
 }
 
 .spinner {
@@ -1161,7 +1179,7 @@ li {
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
-  border: 8px solid #f3f3f3;
+  border: 8px solid #fff;
   border-top: 8px solid #3498db;
   border-radius: 50%;
   animation: spin 1s linear infinite;

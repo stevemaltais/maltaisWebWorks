@@ -1,4 +1,23 @@
+.wra{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.preload-name{
+  position: absolute;
+  color: $verylightgray;
+  top: 45%;
+  left: 50%;
+  font-size:$font-xg ;
+  transform: translate(-50%, -50%);
+  font-family: var(--title2-font-stack);
+ }
+
+
 .preloader {
+  display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,7 +26,9 @@
     background-color: $darkGrey;
     z-index: 9999;
     opacity: 1;
-    transition: opacity 1s ease-out;
+    transition: opacity 1000s ease-out;
+    
+
   }
   .spinner {
     position: absolute;
@@ -16,10 +37,10 @@
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
-    border: 8px solid #f3f3f3;
+    border: 8px solid $White;
     border-top: 8px solid #3498db;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+   animation: spin 1s linear infinite;
   }
   
   @keyframes spin {
