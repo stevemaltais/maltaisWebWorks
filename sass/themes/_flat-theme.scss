@@ -1,4 +1,4 @@
-#menu-container {
+ #menu-container{
     position: fixed;
     top: calc(80% + 16px); /* 16px = 4px (moitié de la marge inférieure) */
     left: 60px;
@@ -16,12 +16,14 @@
     transition: background-color 0.3s ease;
     animation: rotate 2s linear infinite;
   }
+
+
   
   #menu-toggle:hover {
     color: var(--light-pink);
   }
   
-  #menu {
+   #menu  {
     position: fixed;
    
     left: -345px;
@@ -34,12 +36,18 @@
     z-index: 1;
     padding: 20px;
   }
+
   
   #menu.active {
-
-    
     left: 20px;
   }
+
+  .sidebar.open ~ #menu.active {
+ 
+    left: 150px;
+  }
+
+
   
   #menu h3,
   #menu h4 {
