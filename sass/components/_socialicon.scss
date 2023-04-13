@@ -53,19 +53,32 @@
     height: 200px;
     background-color: $lightGray;
     z-index: 2;
+    
+    @include breakpoint-down('small') {
+        
+       display: none;
+      }
+
 }
 
-.fixed-email{
+.fixed-email {
     position: fixed;
-    right: 42px; /* Décalez la ligne vers la droite */
-    top: 40%;
+    right: 42px;
     z-index: 2;
     font-size: 16px;
-    writing-mode: vertical-rl; /* "rl" signifie "right-to-left" et fait pivoter le texte de 90 degrés vers la droite */
-    text-orientation: mixed; /* orientation du texte droit */
+    text-orientation: mixed;
     letter-spacing: 8px;
     color: $lightGray;
-}
+  
+    top: 40%;
+    writing-mode: vertical-rl;
+  
+    @include breakpoint-down('small') {
+      top: 41%;
+      right: 12px;
+    }
+  }
+
 .fixed-email:hover{
     color: var(--accent-color);
 }

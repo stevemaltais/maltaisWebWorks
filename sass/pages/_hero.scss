@@ -1,13 +1,19 @@
+
+
 .developer .container .name{
     font-size: $font-title-xl   ;
     text-transform: uppercase;
     color: var(--accent-color);
     font-weight: 700;
+
+    
+
  }
 
  .developer span {
-   font-size: $font-title-xs;
+
    font-weight: 300;
+
  }
 
  .developer {
@@ -15,12 +21,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    @include breakpoint-down('medium') {
+      flex-direction: column;
+    }
   }
 
 .content {
     display: bloc;
     padding-right: 6rem;
     align-items: center;
+    @include breakpoint-down('small') {
+      padding-right: 0rem;
+    }
   }
    
 .developer img {
@@ -30,27 +42,51 @@
     border: 10px solid $lightGray;
     box-shadow:1em 11px 11px rgb(0,0,0,0.3);
     float: right;
+    @include breakpoint-down('small') {
+  
+      margin-top: 4rem;
+      width: 75%;
+      border: 8px solid $lightGray;
+    }
   }
 
 .container .text{
     text-transform: uppercase;
     font-size: $font-xg;
+  
+    @include breakpoint-down('small') {
+     font-size: $font-sm;
+
+    }
+   
   }
   .content .name{
-    font-size: 72px;
+    font-size: 7.2rem;
     text-transform: uppercase;
     color: var(--accent-color);
     line-height: 90%;
     font-weight: 700;
+    @include breakpoint-down('small') {
+      font-size: 6rem;
+      text-align: center;
+      line-height: 70%;
+    }
   }
+
+
   .content .name span{
     font-size: 62px;
     text-transform: uppercase;
     color: $verylightgray;
     font-weight: 400;
-    
+    @include breakpoint-down('small') {
+      font-size: 5rem;
+   
+
+    }
   }
   .animated-text {
+    font-size: 42px;
     margin-top: 2rem;
     display: inline-block;
     text-decoration: underline;
@@ -59,7 +95,10 @@
     text-underline-offset: 1.2rem;
     font-weight: 700 !important;
     text-transform: uppercase;
+
+    @include breakpoint-down(small) {
+      font-size: 2rem;
+      
+    }
   }
-  #text-target {
-    text-decoration: underline;   
-     }
+  

@@ -1,11 +1,16 @@
 .wrapp{
     margin-top: 20rem;
+    @include breakpoint-down(small) {
+      margin: 15rem 14px 0px 14px;
+      
+    }  
   }
   
 .numNav{ 
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--primeColor);
+    
 
     }
 .wrapper{
@@ -24,9 +29,20 @@
     width: calc(100% - 78px);
     transition: all 0.5s ease;
     z-index: 2;
+
+    @include breakpoint-down(small) {
+     left: 0;
+     width: calc(100% - 0px);
+      max-width: 370px;
+     
+    }
   }
   /* Style du contenu principal */
 main {
     margin-left: 7.8rem;
     transition: all 0.5s ease;
+    @include breakpoint-down(small) {
+      margin-left: 0;
+      
+    }
   }

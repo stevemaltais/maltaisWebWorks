@@ -42,6 +42,7 @@
   font-weight: 900;
   opacity: 0;
   transition: all 0.5s ease;
+  
 }
 
 /* Style de l'icône et du nom du logo lorsque la barre latérale est ouverte */
@@ -77,6 +78,7 @@
   font-size: $font-lg;
   text-align: center;
   line-height: 6rem;
+  
 }
 
 /* Style de la liste de navigation de la barre latérale */
@@ -251,6 +253,7 @@
   color: $White;
   opacity: 0;
   white-space: nowrap;
+  
 }
 
 .sidebar.open li.profile .name,
@@ -260,6 +263,7 @@
   color: $titleColor;;
   opacity: 1;
   white-space: nowrap;
+  
  
 }
 
@@ -291,7 +295,12 @@
   font-size: $font-lg;
   font-weight: 500;
   margin-right: 1.8rem;
+  @include breakpoint-down('medium') {
+
+    margin-right: .1rem;
+  }
 }
+
 
 /* Style du contenu principal lorsque la barre latérale est ouverte */
 .sidebar.open + main {
@@ -366,11 +375,25 @@ section {
 
 
 
+/* Styles par défaut pour tous les navigateurs */
 .sidebar .nav-list .social-icons {
   display: flex;
   justify-content: center;
-  margin-top: 26rem;
-  
+  margin-top: 28vh;
+}
+
+/* Styles spécifiques pour Firefox */
+@supports (-moz-appearance: none) {
+  .sidebar .nav-list .social-icons {
+    margin-top: 33vh;
+  }
+}
+
+/* Styles spécifiques pour Chrome */
+@supports (-webkit-appearance: none) {
+  .sidebar .nav-list .social-icons {
+    margin-top: 28vh;
+  }
 }
 
 .sidebar .nav-list .social-icons a {
@@ -392,4 +415,13 @@ section {
 .sidebar.open .nav-list .social-icons i {
   opacity: 1;
   pointer-events: auto;
+}
+
+@include breakpoint-down(small) {
+  /* Positionne le sidebar en haut de l'écran et étend sa largeur à 100% */
+  .sidebar {
+   display: none;
+  }
+
+  
 }

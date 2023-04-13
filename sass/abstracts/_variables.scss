@@ -44,15 +44,8 @@ $radius-lg: 1.6rem;
 // Marges et espacements
 
 // Breakpoints
-$breakpoints: (
-  'mobile-portrait': 320px,
-  'mobile-landscape': 480px,
-  'tablet-portrait': 768px,
-  'tablet-landscape': 1024px,
-  'laptop': 1280px,
-  'desktop': 1440px,
-  'tv': 1920px,
-) !default;
+
+
 
 // URL relative ou absolue où tous les actifs sont servis
 $base-url: '/assets/' !default;

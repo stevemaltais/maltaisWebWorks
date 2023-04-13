@@ -12,6 +12,7 @@ body {
   font-size: $font-std; // Taille de police par défaut
   color: $lightGray; // Couleur du texte
   background-color: $black; // Couleur d'arrière-plan
+
 }
 
 // Styles de base pour les liens
@@ -25,3 +26,4 @@ a:hover {
   color: $verylightgray; // Couleur du lien au survol
   text-decoration: none; // Pas de soulignement
 }
+
