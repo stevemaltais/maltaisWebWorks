@@ -68,6 +68,12 @@ body {
   font-size: 2rem;
   color: #d6d6d6;
   background-color: black;
+  margin: 0rem 12rem;
+}
+@media (max-width: 63.9375em) {
+  body {
+    margin: 0rem 0rem;
+  }
 }
 
 a {
@@ -83,6 +89,90 @@ a:hover {
 * {
   margin: 0px;
   padding: 0px;
+}
+
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: grabbing;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 /* Style du bouton */
@@ -111,12 +201,12 @@ a:hover {
   position: absolute;
   top: 0;
   left: -170%;
-  width: 170%;
-  height: 100%;
+  min-width: 170%;
+  min-height: 100%;
   background-color: var(--accent-color);
   transition: left 0.6s;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
 }
 
 /* Animation au survol */
@@ -150,6 +240,12 @@ h4.title-2 {
   margin-top: -13.5rem;
   opacity: 0;
 }
+@media (max-width: 39.937em) {
+  h4.title-2 {
+    font-size: 2.6rem;
+    margin-top: -3rem;
+  }
+}
 
 @keyframes fadeIn {
   from {
@@ -166,57 +262,86 @@ h4.title-2.animate {
 input[type=text],
 select,
 textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 0.5px solid #eeeeee;
-  border-radius: 4.4rem;
-  box-sizing: border-box;
-  margin-top: 0.8rem;
-  margin-bottom: 1.6rem;
-  resize: vertical;
+  margin-bottom: 12px;
 }
 
 .input__field {
-  width: 100%;
+  height: 4rem;
   padding: 0.8rem;
   font-size: 1.6rem;
   text-align: left;
   background-color: rgb(129, 129, 129);
   color: #fff;
   border: 0.5px solid #999;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   transition: all 0.5s ease;
   z-index: 1;
+}
+
+form .btn {
+  margin-top: 0rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#message {
+  height: 10rem;
 }
 
 .input__label {
   font-weight: 500;
   top: 0.7px;
-  left: 1.2rem;
+  font-size: 2.2rem;
   transition: all 0.2s ease;
   z-index: 0;
 }
 
-label {
-  display: inline-block;
-  margin-bottom: 3.5rem;
-}
-
-.form-contact {
-  display: block;
-  position: relative;
-}
-
 .form-title {
   font-size: 30px;
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
-form .container {
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: black;
+}
+
+input::placeholder, textarea::placeholder {
+  color: black;
+}
+
+/* Pour Firefox */
+input::-moz-placeholder {
+  color: black;
+}
+
+/* Pour Chrome, Safari, Opera */
+input::-webkit-input-placeholder {
+  color: black;
+}
+
+/* Pour IE et Edge */
+input:-ms-input-placeholder {
+  color: black;
+}
+
+input::-ms-input-placeholder {
+  color: black;
+}
+
+/* Pour les rangées du formulaire */
+.form-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+
+/* Pour les champs de formulaire */
+.input__field {
+  width: 48%; /* Par défaut, tous les champs occupent la moitié de l'espace disponible */
+}
+
+/* Le texte du champ 'message' sera différent */
+#message {
+  width: 100%; /* Le champ Message prendra toute la largeur disponible */
 }
 
 .modal {
@@ -317,7 +442,7 @@ body.modal-open {
 /* Style du bouton de la barre latérale */
 .sidebar .logo-details #btn {
   position: absolute;
-  top: 50%;
+  margin-top: 6rem;
   right: 0;
   transform: translateY(-50%);
   font-size: 2.2rem;
@@ -468,7 +593,7 @@ body.modal-open {
   height: 5rem;
   line-height: 5rem;
   font-size: 1.8rem;
-  border-radius: 1.2rem;
+  border-radius: 4rem;
 }
 
 /* Style du profil dans la barre latérale */
@@ -542,6 +667,12 @@ body.modal-open {
 .sidebar.open ~ .home-section {
   left: 25rem;
   width: calc(100% - 25rem);
+}
+@media (max-width: 39.937em) {
+  .sidebar.open ~ .home-section {
+    left: 0;
+    width: 100%;
+  }
 }
 
 /* Style du texte dans la section principale */
@@ -671,10 +802,90 @@ section {
 }
 
 @media (max-width: 39.937em) {
-  /* Positionne le sidebar en haut de l'écran et étend sa largeur à 100% */
   .sidebar {
+    width: 100%;
+    height: 5.5rem;
+    bottom: auto;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar.open {
+    width: 100%; /* Fait que le menu occupe 100% de la largeur de l'écran */
+    height: 100vh; /* Fait que le menu occupe 100% de la hauteur de l'écran */
+    position: fixed;
+    top: 0;
+    left: 0; /* Assure que le menu commence à gauche de l'écran */
+    overflow: hidden;
+    transition: all 0.5s ease;
+    flex-direction: column;
+  }
+  .sidebar .logo-details {
+    height: 3.5rem;
+  }
+  .sidebar .nav-list {
     display: none;
   }
+  .sidebar.open .nav-list {
+    display: block;
+    margin-top: 30%;
+  }
+  .sidebar li.profile {
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+  }
+  .sidebar .nav-list .social-icons {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-top: 1vh;
+  }
+  .sidebar.open .logo-details #btn {
+    position: fixed;
+    margin-top: 8rem;
+    left: 10px;
+    margin-right: 20px;
+    z-index: 999;
+  }
+  .sidebar #btn {
+    display: fixed;
+    left: 0;
+    position: absolute;
+    right: 1rem;
+  }
+  .fixed-icon {
+    position: fixed;
+    left: 15px; /* adjust as needed */
+    top: 15px; /* adjust as needed */
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1000;
+  }
+  .sidebar .logo-details .logo_name {
+    margin-top: 40px;
+    margin-left: -150px;
+    left: 0;
+  }
+  .icon-linkedin {
+    color: #d6d6d6;
+  }
+  .icon-github {
+    top: auto;
+    bottom: 88px; /* adjust as needed */
+    color: #d6d6d6;
+  }
+  .icon-facebook {
+    top: auto;
+    bottom: 44px; /* adjust as needed */
+    color: #d6d6d6;
+  }
+  /* Ajoutez le JavaScript pour gérer le comportement du scroll ici. */
 }
 .fixed-icon {
   position: fixed;
@@ -735,7 +946,8 @@ section {
 }
 @media (max-width: 39.937em) {
   .vertical-line-right {
-    display: none;
+    right: 18px; /* Décalez la ligne vers la droite */
+    height: 350px;
   }
 }
 
@@ -752,8 +964,8 @@ section {
 }
 @media (max-width: 39.937em) {
   .fixed-email {
-    top: 41%;
-    right: 12px;
+    top: 33%;
+    right: 8px;
   }
 }
 
@@ -850,9 +1062,15 @@ section {
 }
 
 .competences-web h2 {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   text-align: center;
   font-size: 28px;
+}
+@media (max-width: 39.937em) {
+  .competences-web h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
 }
 
 .progress-bar {
@@ -862,6 +1080,11 @@ section {
   margin-bottom: 25px;
   overflow: hidden;
   position: relative;
+}
+@media (max-width: 39.937em) {
+  .progress-bar {
+    width: 95%;
+  }
 }
 
 .progress {
@@ -884,12 +1107,25 @@ section {
   top: 50%; /* placer le texte au milieu */
   transform: translateY(-50%); /* centrer verticalement */
 }
+@media (max-width: 39.937em) {
+  .progress span {
+    font-size: 1.6rem;
+  }
+}
 
 .competences-web {
   padding: 80px 0px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+@media (max-width: 39.937em) {
+  .competences-web {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0px);
+    margin: 2rem 3rem 3rem 2rem;
+  }
 }
 
 .competences-software {
@@ -903,6 +1139,12 @@ section {
 .developpement {
   width: 45%;
 }
+@media (max-width: 39.937em) {
+  .domaines,
+  .developpement {
+    width: 100%;
+  }
+}
 
 .competences-web ul {
   list-style: none;
@@ -913,6 +1155,11 @@ section {
 .competences-web li {
   font-size: 20px;
   margin-bottom: 20px;
+}
+@media (max-width: 39.937em) {
+  .competences-web li {
+    font-size: 1.6rem;
+  }
 }
 
 .competences-web li strong {
@@ -931,6 +1178,11 @@ section {
 
 .domaines em {
   font-size: 18px;
+}
+@media (max-width: 39.937em) {
+  .domaines em {
+    font-size: 1.6rem;
+  }
 }
 
 .domaines {
@@ -1001,17 +1253,22 @@ section {
   text-align: center;
   margin-top: -10px;
 }
+@media (max-width: 39.937em) {
+  .title {
+    font-size: 34px;
+  }
+}
 
 .space {
   height: 60px;
 }
 
 .wrapp {
-  margin-top: 20rem;
+  padding-top: 20rem;
 }
 @media (max-width: 39.937em) {
   .wrapp {
-    margin: 15rem 14px 0px 14px;
+    margin: 5rem 14px 0px 14px;
   }
 }
 
@@ -1024,23 +1281,24 @@ section {
 .wrapper {
   padding: 6rem 0rem;
 }
+@media (max-width: 39.937em) {
+  .wrapper {
+    padding: 0rem;
+  }
+}
 
 .ml2 {
   z-index: -1;
 }
 
 .home-section {
-  position: relative;
-  max-width: 1250px;
-  min-height: 100vh;
-  top: 0;
-  left: 16rem;
-  width: calc(100% - 78px);
+  margin-top: 30rem;
   transition: all 0.5s ease;
   z-index: 2;
 }
 @media (max-width: 39.937em) {
   .home-section {
+    margin-top: 3rem;
     left: 0;
     width: calc(100% - 0px);
     max-width: 370px;
@@ -1058,8 +1316,19 @@ main {
   }
 }
 
+@media (max-width: 39.937em) {
+  #travail {
+    margin: 12rem 3rem 3rem 2rem;
+  }
+}
+
 #about {
   margin-top: 40rem;
+}
+@media (max-width: 39.937em) {
+  #about {
+    margin: 12rem 3rem 3rem 2rem;
+  }
 }
 
 #about section {
@@ -1089,6 +1358,12 @@ main {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 39.937em) {
+  #about-info .about-separator {
+    width: 95%;
+  }
+}
+
 .container {
   display: block;
 }
@@ -1099,10 +1374,21 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 39.937em) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 .about-info {
   width: 65%;
   font-family: --title-font-stack;
+}
+@media (max-width: 39.937em) {
+  .about-info {
+    width: 100%;
+  }
 }
 
 ul {
@@ -1117,6 +1403,12 @@ li {
   color: #f4f1f1;
   font-weight: 100;
 }
+@media (max-width: 39.937em) {
+  li {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+}
 
 .about-info p {
   color: #f4f1f1;
@@ -1125,20 +1417,44 @@ li {
   margin-right: 2rem;
   text-align: justify;
 }
+@media (max-width: 39.937em) {
+  .about-info p {
+    font-size: 1.6rem;
+    margin-right: 0rem;
+  }
+}
 
 .container h2 {
   font-size: 4.4rem;
   margin-bottom: -1rem;
 }
+@media (max-width: 39.937em) {
+  .container h2 {
+    font-size: 2.6rem;
+    margin-bottom: -0.5rem;
+  }
+}
 
 .about-separator {
   border: 1px solid var(--accent-color);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .contact-info h4 {
   margin-bottom: 4rem;
   font-size: 2.6rem;
+}
+@media (max-width: 39.937em) {
+  .contact-info h4 {
+    margin: 3rem 0rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 39.937em) {
+  .contact-info ul {
+    text-align: left;
+  }
 }
 
 .about-info span {
@@ -1146,12 +1462,16 @@ li {
   font-weight: 400;
 }
 
-#contact h2 {
+#contact {
   text-align: center;
+}
+@media (max-width: 39.937em) {
+  #contact {
+    margin: 2rem 3rem 3rem 2rem;
+  }
 }
 
 #contact p {
-  margin-top: 2rem;
   text-align: center;
   font-size: 2rem;
   line-height: 1.6;
@@ -1169,6 +1489,13 @@ li {
   font-size: 22px;
   z-index: 999;
   opacity: 0;
+}
+@media (max-width: 39.937em) {
+  #contact p {
+    font-size: 1.6rem;
+    margin-top: 0px;
+    text-align: justify;
+  }
 }
 
 #contact p.animate {
@@ -1291,7 +1618,7 @@ li {
 
 .content {
   display: bloc;
-  padding-right: 6rem;
+  padding-right: 1rem;
   align-items: center;
 }
 @media (max-width: 39.937em) {
@@ -1300,20 +1627,47 @@ li {
   }
 }
 
-.developer img {
-  width: 25%;
-  height: auto;
-  border-radius: 1.6rem;
-  border: 10px solid #d6d6d6;
-  box-shadow: 1em 11px 11px rgba(0, 0, 0, 0.3);
-  float: right;
+/*.developer img {
+    width: 35%;
+    height: auto;
+    border-radius: $radius-std;
+    border: 10px solid $lightGray;
+    box-shadow:1em 11px 11px rgb(0,0,0,0.3);
+    float: right;
+    @include breakpoint-down('small') {
+
+      margin-top: 4rem;
+      width: 75%;
+      border: 8px solid $lightGray;
+    }
+  }*/
+.developer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
 }
-@media (max-width: 39.937em) {
-  .developer img {
-    margin-top: 4rem;
-    width: 75%;
-    border: 8px solid #d6d6d6;
-  }
+
+.content {
+  flex: 1;
+}
+
+.el {
+  flex: 1;
+  height: 550px;
+  background-image: url(/images/9.jpg);
+  background-size: 40%;
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-mask-image: url(/images/pngkit_grunge-frame-png_988055.png);
+          mask-image: url(/images/pngkit_grunge-frame-png_988055.png);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
 }
 
 .container .text {
@@ -1406,7 +1760,11 @@ li {
 }
 
 #menu.active {
-  left: 20px;
+  display: inline-block !important;
+}
+
+#menu.inactive {
+  display: none !important;
 }
 
 .sidebar.open ~ #menu.active {
@@ -1539,6 +1897,6 @@ input:checked + .theme-label + .background {
   background: #242424;
 }
 
-.theme-label input {
+#menu input {
   display: none;
 }/*# sourceMappingURL=styles.css.map */

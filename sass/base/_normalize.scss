@@ -12,7 +12,11 @@ body {
   font-size: $font-std; // Taille de police par défaut
   color: $lightGray; // Couleur du texte
   background-color: $black; // Couleur d'arrière-plan
+  margin: 0rem 12rem;
+  @include breakpoint-down('medium') {
 
+    margin: 0rem 0rem;
+  }
 }
 
 // Styles de base pour les liens

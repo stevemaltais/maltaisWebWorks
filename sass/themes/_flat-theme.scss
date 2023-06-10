@@ -8,6 +8,7 @@
   
   #menu-toggle {
     //display: flex;
+  
     justify-content: center;
     align-items: center;
     font-size: 18px;
@@ -39,8 +40,12 @@
 
   
   #menu.active {
-    left: 20px;
+      display: inline-block !important;
   }
+
+  #menu.inactive {
+    display: none !important;
+}
 
   .sidebar.open ~ #menu.active {
  
@@ -168,6 +173,6 @@
   input:checked + .theme-label + .background{
     background: #242424;
   }
-  .theme-label  input{
+ #menu  input{
     display: none;
   }

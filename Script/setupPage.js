@@ -1,18 +1,46 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const colorPalette = document.getElementById('color-palette');
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-  const body = document.querySelector('body');
 
-  menuToggle.addEventListener('click', function () {
-    menu.classList.toggle('active');
-  });
 
-  body.addEventListener('click', function (event) {
-    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-      menu.classList.remove('active');
+  document.addEventListener('DOMContentLoaded', function () {
+    const colorPalette = document.getElementById('color-palette');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const body = document.querySelector('body');
+    const sidebar = document.querySelector(".sidebar");
+  
+    // Ajuster la position du menu en fonction de l'état de la sidebar
+    function adjustMenuPosition() {
+      if(sidebar.classList.contains("open")){
+        menu.style.left = "190px";
+      } else {
+        menu.style.left = "20px";
+      }
     }
-  });
+  
+    // Initialiser l'état du menu
+    menu.classList.add('inactive');
+    adjustMenuPosition();
+  
+    menuToggle.addEventListener('click', function () {
+      if (menu.classList.contains('inactive')) {
+        menu.classList.remove('inactive');
+        menu.classList.add('active');
+      } else {
+        menu.classList.remove('active');
+        menu.classList.add('inactive');
+      }
+      adjustMenuPosition();
+    });
+  
+    body.addEventListener('click', function (event) {
+      if (!menu.contains(event.target) && !menuToggle.contains(event.target) && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        menu.classList.add('inactive');
+      }
+    });
+  
+    // Observer les changements de classe de la sidebar
+    new MutationObserver(adjustMenuPosition)
+      .observe(sidebar, { attributes: true, attributeFilter: ['class'] });
   const colorMap = {
     'rgb(100, 255, 110)': 'rgb(207, 124, 245)',
     'rgb(255, 100, 245)': 'rgb(111, 136, 227)',

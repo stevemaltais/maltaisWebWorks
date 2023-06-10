@@ -6,7 +6,9 @@
     <meta name="description" content="Bienvenue sur mon portfolio en ligne. Découvrez mes compétences et réalisations en développement web.">
     <meta name="keywords" content="Steve Maltais, portfolio, développement web, compétences, réalisations">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/sass/locomotive-scroll.css">
     <link rel="stylesheet" href="/sass/styles.css">
+  
     <meta property="og:title" content="Steve Maltais | Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.stevemaltais.com/">
@@ -20,313 +22,333 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,900,900italic,700italic%7COswald:400,300,700" rel="stylesheet" type="text/css">
   </head>
-<body>
-  <div id="preloader" class="preloader">
-    <div class="wra">
-    <div class="preload-name">Steve Maltais</div>
-    <div class="spinner"> </div>
-  </div>
-  </div>
+  <body>
 
-    <div id="content" style="display: none">
-      <div class="scroll-trigger"></div>
-    <div class="sidebar">
-      <div class="logo-details">
-       
-          <div class="logo_name">M</div>
-             <i class='bx bx-menu' id="btn" ></i>
-             
-      </div>
-      <ul class="nav-list">
-        
-        <li>
-          <a href="#">
-         
-            <i class='bx bx-home'></i>
-            <span class="links_name">Acceuil</span>
-          </a>
-           <span class="tooltip">Acceuil</span>
-        </li>
-     <li>
-         <a href="#">
-       
-           <i class="bx bx-user"></i>
-           <span class="links_name">A propos</span>
-         </a>
-         <span class="tooltip">A propos</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-news' ></i>
-           <span class="links_name">Curiculum</span>
-         </a>
-         <span class="tooltip">Curiculum</span>
-       </li>
-       <li>
-         <a href="#">
-          <i class='bx bx-briefcase-alt'></i>
-           <span class="links_name">Portfolio</span>
-         </a>
-         <span class="tooltip">Portfolio</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-envelope' ></i>
-           <span class="links_name">Contact</span>
-         </a>
-         <span class="tooltip">Contact</span>
-       </li>
-       <li>
-        <a href="#">
-          <i class='bx bx-cog' id="menu-toggle"></i>
-          <span class="links_name">Parametre</span>
-        </a>
-      
-        <span class="tooltip" >Parametre</span>
-      </li>
-      
-       <li class="profile">
-           <div class="profile-details">
-             
-             <div class="name_job">
-               <div class="name">2023 © Steve Maltais</div>
-               <div class=job COPYRIGHT >All Right Reserved.</div>
-             </div>
-           </div>
-           <i  id="log_out" ></i>
-       </li>
-       <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank">
-          <i class='bx bxl-facebook-square'></i>
-        </a>
-        <a href="https://github.com" target="_blank">
-          <i class='bx bxl-git' ></i>
-        </a>
-        <a href="https://github.com" target="_blank">
-          <i class='bx bxl-linkedin-square'></i>
-        </a>
-        <a href="https://github.com" target="_blank">
-          <i class='bx bxl-codepen' ></i>
-        </a>
-      </div>
-      </ul>
-      </div>
- 
-    
-  <main>
-    <section class="home-section">
-           <div class="wrapp">
-            <div class="developer">
-              <div class="content">
-                <h1 class="name"><span>STEVE</span><br> Maltais</h1>
-                 
-              <div class="container">
-                <span class="text">Je suis </span>
-                <span id="text-target"><span class="animated-text"></span></span>
-              </div>
+        <!-- La barre latérale contenant le logo et les liens de navigation -->
+        <div class="sidebar">
+            <!-- Détails du logo -->
+            <div class="logo-details">
+                <!-- Le logo et le bouton du menu -->
+                <div class="logo_name">M
+                </div>
+                  <i class='bx bx-menu' id="btn"></i>
             </div>
-            <img src="/images/9.jpg"> 
-          </div>
-      
 
-    <section id="about">
-        <div class="container"id="about-info">
-        <h2>A propos</h2>
-        <div class="about-separator"></div>
-        <!--   <h2  class="ml2" data-text="A propos"></h2> -->    
-    
-      
-        <div class="about-wrapper">
-          <div class="about-info">
-            
-            <p>Bonjour, je suis Steve, développeur web freelance passionné par la création de sites web dynamiques et fonctionnels. Avec une formation universitaire récemment terminée, je poursuis actuellement mes études pour continuer à développer mes compétences et rester à jour avec les dernières tendances en matière de développement web.
-        
-             <br><br> J'ai acquis des compétences solides dans les langages <span>HTML</span>, <span>CSS</span>, <span>SCSS</span> et <span>JavaScript</span>, ainsi que dans les bases de données <span>SQL</span> et le développement logiciel par <span>UML</span> et <span>RUP</span>. De plus, j'ai une expérience pratique avec <span>Java</span>, <span>C++</span> et leurs bibliothèques associées.
-              
-             <br><br> Passionné par l'interface utilisateur (<span>UI</span>) et l'expérience utilisateur (<span>UX</span>), je suis constamment à la recherche de nouveaux moyens de créer des designs modernes et esthétiques pour mes clients. Je m'efforce toujours de maintenir une communication ouverte et transparente avec mes clients pour m'assurer que leur vision est réalisée à la perfection.
-              
-             <br><br> Je suis constamment à la recherche de nouveaux défis pour continuer à améliorer mes compétences et à offrir des solutions innovantes et personnalisées à mes clients. Si vous recherchez un développeur web passionné et motivé pour votre prochain projet, je serais ravi de discuter avec vous.</p>
-          </div> 
-                    
-          <div class="contact-info">
-            <h4>Personal Information</h4>
-            <ul>
-              <li><strong>Nom:</strong> Steve Maltais</li>
-              <li><strong>Courriel:</strong> stevemaltais@icloud.com</li>
-              <li><strong>Téléphone:</strong> 438-525-5695</li>
-              <li><strong>Date de naissance:</strong> 08/07/1980</li>
-              <li><strong>Adresse:</strong> Sur la route en Amérique</li>
-              <li><strong>Nationalité:</strong> Canadien</li>
-              <li><strong>Profil professionnel:</strong> Développeur Web</li>
+            <!-- La liste de navigation -->
+            <ul class="nav-list">
+                <!-- Chaque lien de navigation est contenu dans un élément li -->
+                <!-- Chaque lien contient une icône et un nom, ainsi qu'une infobulle pour plus de clarté -->
+
+                  <!-- Section de navigation Accueil -->
+                <li>
+                    <a href="#">
+                        <i class='bx bx-home'></i>
+                        <span class="links_name">Accueil</span>
+                    </a>
+                    <span class="tooltip">Accueil</span>
+                </li>
+
+                    <!-- Section de navigation À propos -->
+                <li>
+                    <a href="#about">
+                        <i class="bx bx-user"></i>
+                        <span class="links_name">À propos</span>
+                    </a>
+                    <span class="tooltip">À propos</span>
+                </li>
+
+                    <!-- Section de navigation Curriculum -->
+                <li>
+                    <a href="#competence">
+                        <i class='bx bx-news'></i>
+                        <span class="links_name">Curriculum</span>
+                    </a>
+                    <span class="tooltip">Curriculum</span>
+                </li>
+
+                   <!-- Section de navigation Portfolio -->
+                <li>
+                    <a href="#">
+                        <i class='bx bx-briefcase-alt'></i>
+                        <span class="links_name">Portfolio</span>
+                    </a>
+                    <span class="tooltip">Portfolio</span>
+                </li>
+
+                  <!-- Section de navigation Contact -->
+                <li>
+                    <a href="#contact">
+                        <i class='bx bx-envelope'></i>
+                        <span class="links_name">Contact</span>
+                    </a>
+                    <span class="tooltip">Contact</span>
+                </li>
+
+                   <!-- Section de navigation Paramètres -->
+                <li>
+                  <a href="#" onclick="method(); return false">
+                        <i class='bx bx-cog' id="menu-toggle"></i>
+                        <span class="links_name">Paramètres</span>
+                    </a>
+                    <span class="tooltip">Paramètres</span>
+                </li>
+
+                  <!-- Profil utilisateur -->
+                <li class="profile">
+                    <div class="profile-details">
+                        <div class="name_job">
+                            <div class="name">2023 © Steve Maltais</div>
+                            <div class="job">Tous droits réservés.</div>
+                        </div>
+                    </div>
+                </li>
+                <div class="social-icons">
+                      <!-- Liens vers les réseaux sociaux -->
+                      <a href="#"><i class='bx bxl-facebook'></i></a>
+                      <a href="#"><i class='bx bxl-instagram'></i></a>
+                      <a href="#"><i class='bx bxl-twitter'></i></a>
+                      <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
             </ul>
-            <a  href="#" class="btn" data-text="Télécharger mon CV" href="mon_cv.pdf" download>Télécharger mon CV</a>
-
-          </div>
         </div>
- 
-         </div>
-          
-      </section>
-     
-      <section class="wrapper">
-      <section class="title"id="competence">
-
-        
-        <h2  class="ml2" data-text="Compétences"></h2>
-        <h4 class="title-2">En Developpement.</h4>
-      </section>
-    
-      <section class="competences-web fade-in">
-         <div class="domaines">
-            <h2>Domaines de compétences</h2>
-            <ul class="fa-ul">
-            
-              <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>Développement Front-End</strong><br><em>HTML5, CSS3, SASS, Javascrip, React, Angular, jQuery, Bootstrap, Tailwind CSS</em> </li>
-              <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>DÉVELOPPEMENT BACK-END</strong><br><em>Java,C++, PHP, Swing, Spring, Lavarel</em> </li>
-              <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>BASES DE DONNÉES</strong><br><em>SQL, MySql, phpMyAdmin</em> </li>
-              <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>VERSIONING ET GESTION DE PROJET</strong><br><em>Git, GitHub, Scrum, Slack, Asana</em> </li>
-              <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>CONCEPTION ET GRAPHISME</strong><br><em>Suite Adobe, Figma</em> </li>
-              <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>RÉFÉRENCEMENT ET ANALYSE</strong><br><em>SEO : référencement naturel, optimisation de contenu, etc.<br>Analytics : Google Analytics, Mixpanel, etc.</em> </li>
-             
-            </ul>
-          </div>
-          <div class="developpement" id="dev-progress">
-            <h2>Compétences en développement</h2>
-            <ul>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%"  data-width="40"><span>React & Node.js</span></div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%" data-width="50"><span>Angular</span></div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%" data-width="30"><span>Tailwind CSS</span></div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%"  data-width="85"><span>Javascript</span></div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%"  data-width="65"><span>PHP</span></div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%"  data-width="95"><span>Java</span></div>
-                </div>
-              </li>
-              <li>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 0%"  data-width="75"><span>C++</span></div>
-                </div>
-              </li>
-            </ul>
-            </div>
-
-               </section>
-              </section>
-          
-     
-      <section id="travail">
-        <div class="container"id="about-info">
-          <h2>Mon CV.</h2>
-          <div class="about-separator"></div>
-        <!-- Contenu de la section Où j'ai travaillé -->
-      </section>
-      <section id="projets">
-        <!-- Contenu de la section Autres projets -->
-      </section>
-      <section class= title id="contact">
- 
-        <h2 class="ml2" data-text="Contact"></h2>
-     
-          <div class="contact"> 
-            <p>Je vous remercie de l'intérêt que vous portez à mon profil. Si vous souhaitez en savoir plus sur mes compétences, 
-              discuter de vos projets ou échanger sur des opportunités, n'hésitez pas à me contacter. Je suis à votre disposition pour 
-              répondre à toutes vos questions et évaluer ensemble comment nous pouvons travailler en synergie.
-              La méthode la plus simple et efficace pour me joindre est par courriel. Vous trouverez ci-dessous mon adresse e-mail. 
-              N'hésitez pas à me fournir des détails sur votre entreprise, vos besoins et les objectifs que vous souhaitez atteindre. 
-              Je m'engage à vous répondre dans les meilleurs délais.         
-              Je suis impatient de discuter avec vous et d'explorer ensemble les possibilités de collaboration pour réaliser de
-              grandes choses. N'hésitez pas à me solliciter pour toute information complémentaire. À très bientôt !</p>
-
-              <a href="#" class="btn" data-text="Dites moi Bonjour!" onclick="openModal()">Dites moi Bonjour!</a>
-             
-            </div>
-            <div id="myModal" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-               
-              
-             
-                  </div>
-                </form>
-              </div>
-            </div>
-      </section>
-    </section>
   
-  </main>
-  <footer>
-    <div class="space"></div>
-
-    <a href="https://www.facebook.com/yourusername" target="_blank" class="fixed-icon icon-facebook">
-      <i class="fab fa-facebook-f"></i>
-  </a>
-    <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="fixed-icon icon-linkedin">
-      <i class="fab fa-linkedin-in"></i>
-  </a>
-    <a href="https://github.com/yourusername" target="_blank" class="fixed-icon icon-github">
-        <i class="fab fa-github"></i>
-    </a>
-    <div class="vertical-line-left"></div>
-
-    <div id="menu-container">
-      <div class="fa fa-cog" id="menu-toggle">
-        </div>
-      <div id="menu">
-        <h3>Style Theme</h3>
-        <input type="checkbox" id="dark-mode">
-        <label class="theme-label" for="dark-mode"></label>
-        <hr>
-        <h4>Couleurs Theme</h4>
-        <div id="color-palette">
-          <div class="color" id="color-1" data-color="var(--greenFluo)"></div>
-          <div class="color" id="color-2" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-3" data-color="var(--purpleFluo)"></div>
-          <div class="color" id="color-4" data-color="var(--yellowFluo)"></div>
-          <div class="color" id="color-5" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-6" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-7" data-color="var(--pinkFluo)"></div>
-          <div class="color" id="color-8" data-color="var(--pinkFluo)"></div>
-
-          <!-- Ajoutez les couleurs appropriées pour les autres divs .color -->
+    <!-- Section principale -->
+    <main data-scroll-container>
+         <!-- Section d'accueil -->
+      <section data-scroll-section class="home-section">
+     
+              <div class="developer">
+                <div class="content">
+                  <!-- Titre de la page -->
+                  <h1 data-scroll data-scroll-speed="15" class="name"><span>STEVE</span><br> Maltais</h1>
+                  
+                  <!-- Conteneur du message de bienvenue -->
+                  <div  data-scroll-container class="container">
+                    <span  data-scroll class="text">Je suis </span>
+                    <span  data-scroll id="text-target"><span class="animated-text"></span></span>
+                  </div>
+                
+                </div>
+              <!-- Image de profil -->
+              <!--<img src="/images/9.jpg"> -->
+              <div class="el"></div>
+            </div>
+          </div>
+      </section>
         
-          <a href="#"id="reset-button" class="btn" data-text="Reset !">Reset !</a>
+      <!-- Section 'A propos' -->
+      <section data-scroll-section id="about">
+          <div class="container"id="about-info">
+          <h2>A propos</h2>
+          <div class="about-separator"></div>
+          <!--   <h2  class="ml2" data-text="A propos"></h2> -->    
+      
+          <!-- Conteneur du paragraphe de présentation -->
+          <div class="about-wrapper">
+            <div class="about-info">
+               <!-- Paragraphe de présentation -->
+              <p>Bonjour, je suis Steve, développeur web freelance passionné par la création de sites web dynamiques et fonctionnels. Avec une formation universitaire récemment terminée, je poursuis actuellement mes études pour continuer à développer mes compétences et rester à jour avec les dernières tendances en matière de développement web.
+              <br><br> J'ai acquis des compétences solides dans les langages <span>HTML</span>, <span>CSS</span>, <span>SCSS</span> et <span>JavaScript</span>, ainsi que dans les bases de données <span>SQL</span> et le développement logiciel par <span>UML</span> et <span>RUP</span>. De plus, j'ai une expérience pratique avec <span>Java</span>, <span>C++</span> et leurs bibliothèques associées.
+              <br><br> Passionné par l'interface utilisateur (<span>UI</span>) et l'expérience utilisateur (<span>UX</span>), je suis constamment à la recherche de nouveaux moyens de créer des designs modernes et esthétiques pour mes clients. Je m'efforce toujours de maintenir une communication ouverte et transparente avec mes clients pour m'assurer que leur vision est réalisée à la perfection.
+              <br><br> Je suis constamment à la recherche de nouveaux défis pour continuer à améliorer mes compétences et à offrir des solutions innovantes et personnalisées à mes clients. Si vous recherchez un développeur web passionné et motivé pour votre prochain projet, je serais ravi de discuter avec vous.</p>
+            </div> 
+            
+            <!-- Information de contact -->
+            <div class="contact-info">
+              <h4>Personal Information</h4>
+              <ul>
+                <li><strong>Nom:</strong> Steve Maltais</li>
+                <li><strong>Courriel:</strong> stevemaltais@icloud.com</li>
+                <li><strong>Téléphone:</strong> 438-525-5695</li>
+                <li><strong>Date de naissance:</strong> 08/07/1980</li>
+                <li><strong>Adresse:</strong> Sur la route en Amérique</li>
+                <li><strong>Nationalité:</strong> Canadien</li>
+                <li><strong>Profil professionnel:</strong> Développeur Web</li>
+              </ul>
+
+              <!-- Lien pour télécharger le CV -->
+              <a  href="#" class="btn" data-text="Télécharger mon CV" href="mon_cv.pdf" download>Télécharger mon CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Section des compétences -->
+      <section data-scroll-section class="wrapper">
+        <div class="title"id="competence">      
+          <h2  class="ml2" data-text="Compétences"></h2>
+          <h4 class="title-2">En Developpement.</h4>
+        </div>
+
+      
+      <section  data-scroll-section class="competences-web fade-in">
+          <div class="domaines">
+              <h2>Domaines de compétences</h2>
+              <ul class="fa-ul">
+              
+                <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>Développement Front-End</strong><br><em>HTML5, CSS3, SASS, Javascrip, React, Angular, jQuery, Bootstrap, Tailwind CSS</em> </li>
+                <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>DÉVELOPPEMENT BACK-END</strong><br><em>Java,C++, PHP, Swing, Spring, Lavarel</em> </li>
+                <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>BASES DE DONNÉES</strong><br><em>SQL, MySql, phpMyAdmin</em> </li>
+                <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>VERSIONING ET GESTION DE PROJET</strong><br><em>Git, GitHub, Scrum, Slack, Asana</em> </li>
+                <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>CONCEPTION ET GRAPHISME</strong><br><em>Suite Adobe, Figma</em> </li>
+                <li><span class="fa-li"><i class="fa-regular fa-square-check"></i></span><strong>RÉFÉRENCEMENT ET ANALYSE</strong><br><em>SEO : référencement naturel, optimisation de contenu, etc.<br>Analytics : Google Analytics, Mixpanel, etc.</em> </li>
+              
+              </ul>
+            </div>
+            <div class="developpement" id="dev-progress">
+              <h2>Compétences en développement</h2>
+              <ul>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%"  data-width="85"><span>Développement Front-End</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%" data-width="75"><span>Développement Back-End</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%" data-width="95"><span>Bases de données</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%"  data-width="70"><span>Versioning et Gestion de projets</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%"  data-width="65"><span>Conception et Graphisme</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%"  data-width="50"><span>Référencement et Analyse</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 0%"  data-width="75"><span>Gestion de projets</span></div>
+                  </div>
+                </li>
+              </ul>
+              </div>
+
+                </section>
+                </section>
+            
+        <!-- Section 'Mon CV' -->
+        <section data-scroll-section id="travail">
+          <div class="container"id="about-info">
+            <h2>Mon CV.</h2>
+            <div class="about-separator"></div>
+          <!-- Contenu de la section Où j'ai travaillé -->
+        </section>
+
+        <!-- Section 'Projets' -->
+        <section data-scroll-section id="projets">
+          <!-- Contenu de la section Autres projets -->
+        </section>
+
+        <!-- Section 'Contact' -->
+        <section data-scroll-section class= title id="contact">
+  
+          <h2 class="ml2" data-text="Contact"></h2>
+      
+            <div class="contact"> 
+              <p>Je vous remercie de l'intérêt que vous portez à mon profil. Si vous souhaitez en savoir plus sur mes compétences, 
+                discuter de vos projets ou échanger sur des opportunités, n'hésitez pas à me contacter. Je suis à votre disposition pour 
+                répondre à toutes vos questions et évaluer ensemble comment nous pouvons travailler en synergie.
+                La méthode la plus simple et efficace pour me joindre est par courriel. Vous trouverez ci-dessous mon adresse e-mail. 
+                N'hésitez pas à me fournir des détails sur votre entreprise, vos besoins et les objectifs que vous souhaitez atteindre. 
+                Je m'engage à vous répondre dans les meilleurs délais.         
+                Je suis impatient de discuter avec vous et d'explorer ensemble les possibilités de collaboration pour réaliser de
+                grandes choses. N'hésitez pas à me solliciter pour toute information complémentaire. À très bientôt !</p>
+
+                <!-- Bouton pour ouvrir le formulaire de contact -->
+                <a href="#" class="btn" data-text="Dites moi Bonjour!" onclick="openModal()">Dites moi Bonjour!</a>
+              
+
+              </div>
+        </section>
+      </div>
+      <!-- Modal pour le formulaire de contact -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+       <!-- Formulaire de contact -->
+<div class="form-contact">
+  <h2 class="form-title">Dites moi Bonjour!</h2>
+  <form>
+    <!-- Conteneur pour les champs de formulaire -->
+    <div class="container">
+      <!-- Conteneur pour les champs Nom et Prénom -->
+      <div class="form-row">
+        <!-- Champ Nom -->
+        <input class="input__field" type="text" id="name" name="name" placeholder="Nom" required>
+        <!-- Champ Prénom -->
+        <input class="input__field" type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+      </div>
+      <!-- Conteneur pour les champs Email et Téléphone -->
+      <div class="form-row">
+        <!-- Champ Email -->
+        <input class="input__field" type="text" id="email" name="email" placeholder="Email" required>
+        <!-- Champ Téléphone -->
+        <input class="input__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Téléphone" required>
+      </div>
+      <!-- Champ Message -->
+      <textarea class="input__field" id="message" name="message" placeholder="Message"></textarea>
+      <!-- Bouton Envoyer -->
+      <button class="btn" data-text="Envoyer" type="submit">Envoyer</button>
+    </div>
+  </form>
+</div>
+
+          </div>
+    </main>
+
+    <footer>
+
+      <div id="menu-container">
+        <div class="fa fa-cog" id="menu-toggle">
+          </div>
+        <div id="menu">
+          <h3>Style Theme</h3>
+          <input type="checkbox" id="dark-mode">
+          <label class="theme-label" for="dark-mode"></label>
+          <hr>
+          <h4>Couleurs Theme</h4>
+          <div id="color-palette">
+            <div class="color" id="color-1" data-color="var(--greenFluo)"></div>
+            <div class="color" id="color-2" data-color="var(--pinkFluo)"></div>
+            <div class="color" id="color-3" data-color="var(--purpleFluo)"></div>
+            <div class="color" id="color-4" data-color="var(--yellowFluo)"></div>
+    
+
+            <!-- Ajoutez les couleurs appropriées pour les autres divs .color -->
+          
+            <a href="#"id="reset-button" class="btn" data-text="Reset !">Reset !</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="vertical-line-right"></div>
-    <a class="fixed-email" href="mailto:stevemaltais@icloud.com">stevemaltais@icloud.com</a>
-  </footer>
-  <script src="/Script/textWrapper.js"></script>
-  <script src="/Script/progressBare.js"></script>
-  <script src="/Script/navBar.js"></script>
-  <script src="/Script/oberver.js"></script>
-  <script src="/Script/setupPage.js"></script>
-  <script src="/Script/textScriptor.js"></script>
-  <script src="/Script/loadingPage.js"></script>
-  <script src="/Script/menu.js"></script>
-  <script src="/Script/modalForm.js"></script>
+      <div class="vertical-line-right"></div>
+      <a class="fixed-email" href="mailto:stevemaltais@icloud.com">stevemaltais@icloud.com</a>
+    </footer>
+    <script src="/Script/index.js"></script>
+    <script src="/Script/textWrapper.js"></script>
+    <script src="/Script/progressBare.js"></script>
+    <script src="/Script/navBar.js"></script>
+    <script src="/Script/oberver.js"></script>
+    <script src="/Script/setupPage.js"></script>
+    <script src="/Script/textScriptor.js"></script>
+    <!--<script src="/Script/menu.js"></script>--> 
+    <script src="/Script/modalForm.js"></script>
 
-</section>
-</body>
-</html>
+
+
+  </section>
+  </body>
+  </html>

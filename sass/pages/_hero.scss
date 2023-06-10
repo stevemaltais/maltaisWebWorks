@@ -28,15 +28,15 @@
 
 .content {
     display: bloc;
-    padding-right: 6rem;
+    padding-right: 1rem;
     align-items: center;
     @include breakpoint-down('small') {
       padding-right: 0rem;
     }
   }
    
-.developer img {
-    width: 25%;
+/*.developer img {
+    width: 35%;
     height: auto;
     border-radius: $radius-std;
     border: 10px solid $lightGray;
@@ -48,8 +48,33 @@
       width: 75%;
       border: 8px solid $lightGray;
     }
-  }
+  }*/
+.developer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
 
+.content {
+  flex: 1;
+}
+
+.el {
+
+  flex: 1;
+  height: 550px;
+  background-image: url(/images/9.jpg);
+  background-size: 40%;
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  mask-image: url(/images/pngkit_grunge-frame-png_988055.png);
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
 .container .text{
     text-transform: uppercase;
     font-size: $font-xg;

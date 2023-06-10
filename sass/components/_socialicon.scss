@@ -55,8 +55,9 @@
     z-index: 2;
     
     @include breakpoint-down('small') {
-        
-       display: none;
+        right: 18px; /* Décalez la ligne vers la droite */
+        height: 350px;
+ 
       }
 
 }
@@ -74,8 +75,8 @@
     writing-mode: vertical-rl;
   
     @include breakpoint-down('small') {
-      top: 41%;
-      right: 12px;
+      top: 33%;
+      right: 8px;
     }
   }
 
