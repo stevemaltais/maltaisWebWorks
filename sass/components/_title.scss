@@ -3,10 +3,8 @@
     color: $darkGrey;
     text-align: center;
     margin-top: -10px;
-
-    @include breakpoint-down('small') {
-        font-size: 34px;
-     
     }
-}
+  
+
+    
 

@@ -1,7 +1,7 @@
 .wrapp{
-    padding-top: 20rem;
+    margin-top: 20rem;
     @include breakpoint-down(small) {
-      margin: 5rem 14px 0px 14px;
+      margin: 15rem 14px 0px 14px;
       
     }  
   }
@@ -15,24 +15,22 @@
     }
 .wrapper{
     padding: 6rem 0rem;
-
-    @include breakpoint-down(small) {
-      padding: 0rem;
-
-     }
 }
 
 .ml2{
     z-index: -1;
 }
 .home-section{
-  
-   margin-top: 30rem;
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    top: 0;
+    left: 16rem;
+    width: calc(100% - 78px);
     transition: all 0.5s ease;
     z-index: 2;
 
     @include breakpoint-down(small) {
-      margin-top: 3rem;
      left: 0;
      width: calc(100% - 0px);
       max-width: 370px;
@@ -48,10 +46,3 @@ main {
       
     }
   }
-
-#travail{
-  @include breakpoint-down(small) {
-    margin: 12rem 3rem 3rem 2rem;
-    
-  }
-}  

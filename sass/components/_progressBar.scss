@@ -1,13 +1,7 @@
 .competences-web h2 {
-    margin-bottom: 6rem;
+    margin-bottom: 60px;
     text-align: center;
     font-size: 28px;
-    @include breakpoint-down(small) {
-      margin-bottom: 3rem;
-      font-size:$font-std;
-
-     }
-
 
   }
   
@@ -18,10 +12,6 @@
     margin-bottom: 25px;
     overflow: hidden;
     position: relative;
-
-    @include breakpoint-down(small) {
-      width: 95%;
-     }
   }
   
   .progress {
@@ -44,10 +34,6 @@
     position: absolute; /* ajouter une position absolute */
     top: 50%; /* placer le texte au milieu */
     transform: translateY(-50%); /* centrer verticalement */
-
-    @include breakpoint-down(small) {
-      font-size: $font-xs;
-     }
   }
   .competences-web {
     padding: 80px 0px;
@@ -55,14 +41,7 @@
      justify-content: space-between;
      align-items: flex-start;
      
-     @include breakpoint-down(small) {
-   
-      display: flex;
-      flex-direction: column;
-      transform: translateX(0px);
-      margin: 2rem 3rem 3rem 2rem;
-     }
-
+    
    }
    .competences-software {
      padding: 0px 50px;
@@ -76,10 +55,7 @@
    .developpement {
      width: 45%;
  
-     @include breakpoint-down(small) {
-      width: 100%;
- 
-     }
+
      
    }
    .competences-web ul {
@@ -92,15 +68,12 @@
    .competences-web li {
     font-size: 20px;
      margin-bottom: 20px;
-     @include breakpoint-down(small) {
-      font-size: $font-xs;  
-     }
+     
    }
 
    .competences-web li strong{
     text-transform: uppercase;
- 
-  
+
      
    }
    
@@ -115,16 +88,13 @@
    
    .competences-software li {
         margin-bottom: 20px;
+    
       
    }
   
    .domaines em{
  
     font-size: 18px;
-
-    @include breakpoint-down(small) {
-      font-size: $font-xs;
-     }
    }
    .domaines {
     animation: slideInLeft 1s ease-in-out;

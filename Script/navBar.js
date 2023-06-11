@@ -1,4 +1,4 @@
-const nav = document.querySelector(".sidebar");
+const nav = document.querySelector("nav");
 let lastScrollTop = 0;
 
 const handleScroll = () => {

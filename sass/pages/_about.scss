@@ -2,10 +2,6 @@
 margin-top: 40rem;
 
 
-@include breakpoint-down('small') {
- 
-    margin: 12rem 3rem 3rem 2rem;
-}
 
 
 }
@@ -13,7 +9,6 @@ margin-top: 40rem;
 #about section {
 margin: 5rem auto;
 width: 80%;
-
 }
 
 #about section ul {
@@ -38,15 +33,8 @@ font-size: 1.2rem;
 margin-bottom: 2rem;
 }
 
-#about-info .about-separator{
-    @include breakpoint-down('small') {
-        width: 95%;
-    }
-}
 .container{
 display: block;
-
-
 }
 
 .about-wrapper {
@@ -54,28 +42,18 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-
-@include breakpoint-down('small') {
-    flex-direction: column;
-    text-align: center;
-}
 }
 
 .about-info {
 width: 65%;
 font-family: (--title-font-stack);
-@include breakpoint-down('small') {
-    width: 100%;
 
-}
 }
 
 ul {
 list-style: none;
 padding: 0;
 margin: 0;
-
-
 }
 
 li {
@@ -83,11 +61,6 @@ margin-bottom: 3rem;
 font-size: $font-md;
 color: $verylightgray;
 font-weight: 100;
-
-@include breakpoint-down('small') {
-   margin-bottom: 2rem;
-   font-size: $font-xs;
- }
 
 }
 
@@ -97,33 +70,18 @@ font-weight: 100;
 font-size: $font-md;
 margin-right: 2rem;
 text-align: justify;
-
-@include breakpoint-down('small') {
-    font-size: $font-xs;
-    margin-right: 0rem;
-  
-  }
 }
 
 
 .container h2{
 font-size: $font-title-xs;
 margin-bottom: -1rem;
-
-@include breakpoint-down('small') {
-    font-size: $font-lg;
-    margin-bottom: -0.5rem;
-
-}
-
 }
 
 .about-separator{
 
 border: 1px solid var(--accent-color) ;
-margin-bottom: 2rem;
-
-
+margin-bottom: 4rem;
 }
 
 
@@ -131,21 +89,7 @@ margin-bottom: 2rem;
 .contact-info h4{
 margin-bottom: 4rem;
 font-size: $font-lg;
-@include breakpoint-down('small') {
-   margin: 3rem 0rem;
-   font-size:$font-std;
 }
-}
-
-.contact-info ul{
-
-    @include breakpoint-down('small') {
-    text-align: left;
-    
-    }
-    }
-
-
 
 .about-info span{
 color: var(--accent-color);

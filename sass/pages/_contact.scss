@@ -1,19 +1,14 @@
-#contact {
+#contact h2 {
   text-align: center;
-  @include breakpoint-down(small) {
-    margin: 2rem 3rem 3rem 2rem;
-   
-  } 
+
 }
 
-
-
 #contact p{
+  margin-top: 2rem;
   text-align: center;
   font-size: $font-std;
-  line-height: $fontHeight-med;
 
-  
+  line-height: $fontHeight-med;
 }
 
 
@@ -30,12 +25,7 @@
     font-size: 22px;
     z-index: 999;
     opacity: 0;
-    @include breakpoint-down(small) {
-      font-size: $font-xs;
-      margin-top: -0px;
-      text-align: justify;
-
-     }
+   
   }
   #contact p.animate {
     animation: fadeIn 1s ease 2s forwards;
