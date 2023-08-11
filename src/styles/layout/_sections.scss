@@ -1,0 +1,64 @@
+.wrapp{
+    padding-top: 20rem;
+    @include breakpoint-down(small) {
+      margin: 5rem 14px 0px 14px;
+      
+    }  
+  }
+  
+.numNav{ 
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primeColor);
+    
+
+    }
+.wrapper{
+    padding: 6rem 0rem;
+
+    @include breakpoint-down(small) {
+      padding: 0rem;
+
+     }
+}
+
+.ml2{
+    z-index: -1;
+}
+.home-section{
+ 
+  margin-top: 15rem;
+    transition: all 0.5s ease;
+    z-index: 2;
+
+    @include breakpoint-down(small) {
+      margin-top: 3rem;
+ 
+    }
+    @include breakpoint-down(medium) {
+      margin-top: 7.8rem;
+ 
+    }
+  }
+  /* Style du contenu principal */
+main {
+ 
+   margin: 0rem 20rem;
+    transition: all 0.5s ease;
+    
+    @include breakpoint-down(medium) {
+      margin: 0rem 0rem 0rem 7.8rem;
+      
+    }
+    @include breakpoint-down(small) {
+      margin: 0rem 0rem;
+      
+    }
+  }
+
+#travail{
+  @include breakpoint-down(small) {
+    margin: 12rem 3rem 3rem 2rem;
+    
+  }
+}  

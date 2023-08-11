@@ -1,0 +1,35 @@
+/* Style pour l'image par-dessus le fond noir */
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Empilement au-dessus du contenu principal */
+    @include breakpoint-down('small') {
+      
+  }
+
+  @include breakpoint-down('medium') {
+    margin-top: -280px;
+    width: 90%;
+    height: 84%;
+  }
+  }
+  
+  .underlay {
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+   
+    opacity: 0.2;
+
+    @include breakpoint-down('medium') {
+      width: 88%;
+      height: 80%;
+      margin-left: 197px;
+    }
+  }
+  
+
+  

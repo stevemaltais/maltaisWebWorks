@@ -1,0 +1,115 @@
+// -----------------------------------------------------------------------------
+// Styles du formulaire de contact
+// -----------------------------------------------------------------------------
+
+// Styles pour les champs de formulaire
+input[type=text],
+select,
+textarea {
+
+margin-bottom: 12px;
+
+
+}
+
+
+
+// Styles pour le champ de saisie
+.input__field {
+  height: 4rem;
+  padding: .8rem;
+  font-size: $font-xs;
+  text-align: left;
+  background-color: $titleColor;
+  color: $White;
+  border: .5px solid #999;
+  border-radius: .6rem;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 1;
+}
+form .btn{
+  margin-top: 0rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// Styles pour le champ de saisie
+#message {
+  height: 10rem;
+}
+
+// Styles pour les labels
+.input__label {
+  font-weight: 500;
+  top: .7px;
+  font-size: $font-md;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  z-index: 0;
+}
+
+label {
+
+
+}
+
+// Structure pour le formulaire de contact
+.form-contact {
+
+}
+
+// Styles pour le titre du formulaire
+.form-title {
+  font-size: 30px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+// Structure pour le conteneur du formulaire
+form .container {
+
+
+}
+
+input::placeholder, textarea::placeholder{
+  color: black;
+}
+
+/* Pour Firefox */
+input::-moz-placeholder {
+  color: black;
+}
+
+/* Pour Chrome, Safari, Opera */
+input::-webkit-input-placeholder {
+  color:black;
+}
+
+/* Pour IE et Edge */
+input:-ms-input-placeholder {
+  color: black;
+}
+
+input::-ms-input-placeholder {
+  color: black;
+}
+
+/* Pour les rangées du formulaire */
+.form-row {
+  display: flex; 
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* Pour les champs de formulaire */
+.input__field {
+  width: 48%; /* Par défaut, tous les champs occupent la moitié de l'espace disponible */
+}
+
+/* Le texte du champ 'message' sera différent */
+#message {
+  width: 100%; /* Le champ Message prendra toute la largeur disponible */
+}
+
