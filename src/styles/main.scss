@@ -1,0 +1,53 @@
+// Abstracts
+@import "abstracts/colors", "abstracts/mixins","abstracts/variables";
+
+// Base
+@import 'base/base',
+        'base/normalize', 
+        'base/reset';
+
+
+
+// Components
+
+@import "components/button";
+@import "components/competences";
+
+@import "components/form";
+
+@import "components/modal";
+@import "components/navbar";
+@import "components/socialicon";
+@import "components/succes-poppup";
+
+@import "components/progressBar";
+@import "components/title";
+
+// Layout
+@import "layout/footer";
+@import "layout/header";
+@import "layout/sections";
+@import "layout/sidebar";
+
+// Pages
+@import "pages/about";
+@import "pages/blog-single";
+@import "pages/blog";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/login";
+@import "pages/product-single";
+@import "pages/products";
+@import "pages/signup";
+@import "pages/hero";
+
+// Themes
+@import "themes/dark-theme";
+@import "themes/flat-theme";
+@import "themes/light-theme";
+@import "themes/material-theme";
+
+// Vendors
+@import "vendors/locomotive-scroll";
+@import "vendors/owl-carousel";
+

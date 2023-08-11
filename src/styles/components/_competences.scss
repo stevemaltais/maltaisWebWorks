@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// Styles pour les titres animés
+// -----------------------------------------------------------------------------
+h4.title-2 {
+  color: $White;
+  position: relative;
+  font-size: $font-title-xl;
+  margin-top: -13.5rem;
+  opacity: 0;
+  @include breakpoint-down('small') {
+    font-size: $font-lg;
+    margin-top: -3rem;
+ 
+}
+}
+
+// Animation fadeIn
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Application de l'animation fadeIn au titre animé
+h4.title-2.animate {
+  animation: fadeIn 1s ease 2s forwards;
+}

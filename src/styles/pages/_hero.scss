@@ -1,0 +1,121 @@
+.profile-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ 
+  @include breakpoint-down('medium') {
+    flex-direction: column;
+    
+  }
+}
+.profile-section__content {
+  flex: 1;
+  padding-right: 1rem;
+  align-items: center;
+
+  @include breakpoint-down('small') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -40px;
+  }
+  @include breakpoint-down('medium') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -20px;
+  }
+}
+ .profile-section span {
+   font-weight: 300;
+ }
+.profile-section__image {
+  flex: 1;
+  height: 520px;
+  
+  background-size: 70vw; /* Ajuster la taille du background */
+  background-position: 50vw; /* Ajuster la position du background */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @include breakpoint-down('small') {
+    height: 90vw;
+    margin-top: 2rem;
+    }
+    @include breakpoint-down('medium') {
+    
+      margin-top: 4rem;
+      }
+   }
+
+
+.profile-section__animated-container .text{
+    text-transform: uppercase;
+    font-size: $font-xg;
+  
+    @include breakpoint-down('small') {
+     font-size: $font-sm;
+
+    }
+   
+  }
+  .profile-section__name{
+    font-size: $font-title-xxl;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    line-height: 90%;
+    font-weight: 700;
+    margin-top: -30px;
+   
+    @include breakpoint-down('small') {
+      font-size: 9rem;
+    
+      line-height: 70%;
+      margin-top: 0px;
+    }
+  }
+
+
+
+  .profile-section__name span{
+    font-size: $font-xxl;
+    text-transform: uppercase;
+   
+    color: $verylightgray;
+    font-weight: 400;
+    @include breakpoint-down('small') {
+      font-size: 5rem;
+   
+
+    }
+  }
+.profile-section__fname{
+    font-size: $font-xxl;
+    text-transform: uppercase;
+  
+    color: $verylightgray;
+    font-weight: 400;
+    @include breakpoint-down('small') {
+      font-size: 5rem;
+   
+
+    }
+  }
+  .profile-section__animated-text {
+    font-size: 42px;
+    margin-top: 2rem;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-thickness: .2rem;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 1.2rem;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+
+    @include breakpoint-down(small) {
+      font-size: 2rem;
+      text-underline-offset: .5rem;
+    }
+  }
+  

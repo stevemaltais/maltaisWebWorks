@@ -1,0 +1,207 @@
+#about  {
+margin-top: 40rem;
+
+
+@include breakpoint-down('small') {
+ 
+    margin: 55rem 3rem 3rem 2rem;
+}
+@include breakpoint-down('medium') {
+ 
+    margin: 20rem 2rem 3rem 1rem;
+}
+
+}
+
+#about section {
+margin: 5rem auto;
+width: 80%;
+
+}
+
+#about section ul {
+list-style: none;
+margin-bottom: 5rem;
+}
+
+.about section li {
+margin-bottom: 20rem;
+}
+
+#about section label {
+display: inline-block;
+width: 1.5rem;
+font-size: 1.2rem;
+font-weight: bold;
+margin-right: 2rem;
+}
+
+#about section p {
+font-size: 1.2rem;
+margin-bottom: 2rem;
+
+
+}
+
+#about-info .about-separator{
+    @include breakpoint-down('small') {
+        width: 95%;
+    }
+    @include breakpoint-down('medium') {
+        width: 90%;
+    }
+}
+.container{
+display: block;
+
+
+}
+
+.about-wrapper {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+@include breakpoint-down('small') {
+    flex-direction: column;
+    text-align: center;
+}
+@include breakpoint-down('medium') {
+    display: block;
+    
+}
+}
+
+.about-info {
+width: 65%;
+font-family: (--title-font-stack);
+@include breakpoint-down('small') {
+    width: 100%;
+
+}
+@include breakpoint-down('medium') {
+    
+    width: 95%;
+}
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+
+
+}
+
+li {
+margin-bottom: 3rem;
+font-size: $font-md;
+color: $verylightgray;
+font-weight: 100;
+
+@include breakpoint-down('small') {
+   margin-bottom: 2rem;
+   font-size: $font-xs;
+ }
+
+}
+
+.about-info p{
+color: $verylightgray;
+font-weight: 100;
+font-size: $font-md;
+margin-right: 2rem;
+text-align: justify;
+
+@include breakpoint-down('small') {
+    font-size: $font-xs;
+    margin-right: 0rem;
+  
+  }
+}
+
+
+.container h2{
+font-size: $font-title-xs;
+margin-bottom: -1rem;
+
+@include breakpoint-down('small') {
+    font-size: $font-lg;
+    padding-top: 7rem;
+    
+}
+
+}
+
+.about-separator{
+
+border: 1px solid var(--accent-color) ;
+margin-bottom: 2rem;
+
+@include breakpoint-down('small') {
+    margin-bottom: 0rem;
+    
+ }
+
+}
+
+.contact-info{
+
+    @include breakpoint-down('medium') {
+        text-align: center;
+    }
+}
+
+.contact-info h4{
+margin-bottom: 4rem;
+font-size: $font-lg;
+@include breakpoint-down('small') {
+   margin: 3rem 0rem;
+   font-size:$font-std;
+   padding-top: 7rem;
+}
+
+}
+
+.contact-info ul{
+
+    @include breakpoint-down('small') {
+    text-align: left;
+   
+    }
+   
+    }
+
+   
+
+.about-info span{
+color: var(--accent-color);
+font-weight: 400;
+}
+
+.about_email:hover{
+
+    color: var(--accent-color);
+    font-weight: 300;
+}
+.about_tel:hover{
+
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+.about_email:visited {
+    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  }
+
+  .about_tel:visited {
+    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  }
+
+  .about_email {
+    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  }
+  .about_tel {
+    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  }

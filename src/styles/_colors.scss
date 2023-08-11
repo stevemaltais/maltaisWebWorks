@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// Ce fichier contient toutes les couleurs Sass de l'application.
+// -----------------------------------------------------------------------------
+ 
+  
+  // Couleurs principales
+$darkGrey: #2b2c30;
+$black: black; // Couleur d'arrière-plan foncé
+$primeColor: #64d8ff; // (titres, boutons, couleur d'accentuation)
+$primeColorProgressBar: #f58f7c; // Couleur de la barre de progression
+$titleColor: rgb(129, 129, 129);
+
+// Couleurs neutres
+$White: #fff;
+$lightGray: #d6d6d6;
+$verylightgray: #f4f1f1; // (titres, paragraphes)
+
+// Variables CSS personnalisées pour les couleurs principales
+:root {
+  --primary-color: #{$darkGrey};
+  --secondary-color: #{$primeColorProgressBar};
+  --accent-color: #{$primeColor};
+}
+
+// Variables CSS personnalisées pour les couleurs neutres
+:root {
+  --light-gray: #{$lightGray}; // (paragraphes)
+  --very-light-gray: #{$verylightgray}; // (titres, boutons)
+  --white: #{$White};
+}
+
+// Variables CSS personnalisées supplémentaires
+:root {
+  /* Ajoutez d'autres variables ici */
+  --btn-text-color: #64d8ff;
+  --btn-border-color: #64d8ff;
+}
+
+// Couleurs modifiées
+$greenFluo: #64ff6e;
+$pinkFluo: #ff64f5;
+$purpleFluo: #6464ff;
+$yellowFluo: #e8ff64;
