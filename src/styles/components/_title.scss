@@ -4,9 +4,13 @@
     text-align: center;
     margin-top: -10px;
 
-    @include breakpoint-down('small') {
+    @include breakpoint-down('sm') {
+        font-size: 50px;
+        padding-top: 2em;
+    }
+    @include breakpoint-down('xs') {
         font-size: 34px;
-        padding-top: 7em;
+       
     }
 }
 

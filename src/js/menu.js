@@ -14,11 +14,14 @@ closeBtn.addEventListener("click", ()=>{
 });
 
 function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
- }
+  let body = document.querySelector('body');
+  if (sidebar.classList.contains("open")) {
+    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+    body.style.overflow = 'hidden'; // Désactive le défilement lorsque le menu est ouvert
+  } else {
+    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    body.style.overflow = 'auto'; // Réactive le défilement lorsque le menu est fermé
+  }
 }
 }
 export default menu;

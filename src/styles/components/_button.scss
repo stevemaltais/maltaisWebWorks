@@ -16,7 +16,14 @@
   cursor: pointer;
   overflow: hidden;
 
+  @include breakpoint-down('sm') {
+    font-size: $font-lg;
 
+}
+@include breakpoint-down('xs') {
+  font-size: $font-std;
+
+}
 }
 
 /* Effet au survol */

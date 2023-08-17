@@ -1,9 +1,6 @@
 .wrapp{
     padding-top: 20rem;
-    @include breakpoint-down(small) {
-      margin: 5rem 14px 0px 14px;
-      
-    }  
+  
   }
   
 .numNav{ 
@@ -16,12 +13,7 @@
 .wrapper{
     padding: 6rem 0rem;
 
-    @include breakpoint-down(small) {
-      padding: 0rem;
-
-     }
 }
-
 .ml2{
     z-index: -1;
 }
@@ -31,12 +23,12 @@
     transition: all 0.5s ease;
     z-index: 2;
 
-    @include breakpoint-down(small) {
-      margin-top: 3rem;
+    @include breakpoint-down(md) {
+      margin-top: 14rem;
  
     }
-    @include breakpoint-down(medium) {
-      margin-top: 7.8rem;
+    @include breakpoint-down(sm) {
+      margin-top: 8rem;
  
     }
   }
@@ -45,20 +37,21 @@ main {
  
    margin: 0rem 20rem;
     transition: all 0.5s ease;
-    
-    @include breakpoint-down(medium) {
-      margin: 0rem 0rem 0rem 7.8rem;
+
+    @include breakpoint-down(md) {
+      margin: 0rem 8rem 0rem 15.8rem;
       
     }
-    @include breakpoint-down(small) {
-      margin: 0rem 0rem;
+    
+    @include breakpoint-down(sm) {
+      margin: 0rem 1rem;
+      
+    }
+    @include breakpoint-down(xs) {
+      margin: 0rem 1rem;
       
     }
   }
 
-#travail{
-  @include breakpoint-down(small) {
-    margin: 12rem 3rem 3rem 2rem;
-    
-  }
-}  
+
+

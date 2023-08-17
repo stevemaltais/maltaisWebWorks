@@ -1,14 +1,17 @@
 #about  {
 margin-top: 40rem;
 
-
-@include breakpoint-down('small') {
+@include breakpoint-down('md') {
  
-    margin: 55rem 3rem 3rem 2rem;
+    margin: 5rem 3rem 3rem 2rem;
 }
-@include breakpoint-down('medium') {
+@include breakpoint-down('sm') {
  
-    margin: 20rem 2rem 3rem 1rem;
+    margin: 5rem 3rem 3rem 2rem;
+}
+@include breakpoint-down('xs') {
+ 
+    margin: 7rem 2rem 3rem 1rem;
 }
 
 }
@@ -44,10 +47,14 @@ margin-bottom: 2rem;
 }
 
 #about-info .about-separator{
-    @include breakpoint-down('small') {
+    @include breakpoint-down('md') {
+        width: 100%;
+    }
+
+    @include breakpoint-down('sm') {
         width: 95%;
     }
-    @include breakpoint-down('medium') {
+    @include breakpoint-down('xs') {
         width: 90%;
     }
 }
@@ -63,24 +70,21 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 
-@include breakpoint-down('small') {
+@include breakpoint-down('md') {
     flex-direction: column;
     text-align: center;
 }
-@include breakpoint-down('medium') {
-    display: block;
-    
-}
+
 }
 
 .about-info {
 width: 65%;
 font-family: (--title-font-stack);
-@include breakpoint-down('small') {
+@include breakpoint-down('md') {
     width: 100%;
 
 }
-@include breakpoint-down('medium') {
+@include breakpoint-down('xs') {
     
     width: 95%;
 }
@@ -100,7 +104,7 @@ font-size: $font-md;
 color: $verylightgray;
 font-weight: 100;
 
-@include breakpoint-down('small') {
+@include breakpoint-down('sm') {
    margin-bottom: 2rem;
    font-size: $font-xs;
  }
@@ -114,8 +118,18 @@ font-size: $font-md;
 margin-right: 2rem;
 text-align: justify;
 
-@include breakpoint-down('small') {
-    font-size: $font-xs;
+@include breakpoint-down('md') {
+ 
+    margin-right: 0rem;
+  
+  }
+@include breakpoint-down('sm') {
+    font-size: $font-md;
+    margin-right: 2rem;
+  
+  }
+  @include breakpoint-down('xs') {
+    font-size: $font-sm;
     margin-right: 0rem;
   
   }
@@ -126,12 +140,15 @@ text-align: justify;
 font-size: $font-title-xs;
 margin-bottom: -1rem;
 
-@include breakpoint-down('small') {
+@include breakpoint-down('sm') {
     font-size: $font-lg;
     padding-top: 7rem;
     
 }
-
+@include breakpoint-down('xs') {
+       padding-top: 1rem;
+    
+}
 }
 
 .about-separator{
@@ -139,7 +156,7 @@ margin-bottom: -1rem;
 border: 1px solid var(--accent-color) ;
 margin-bottom: 2rem;
 
-@include breakpoint-down('small') {
+@include breakpoint-down('sm') {
     margin-bottom: 0rem;
     
  }
@@ -148,7 +165,7 @@ margin-bottom: 2rem;
 
 .contact-info{
 
-    @include breakpoint-down('medium') {
+    @include breakpoint-down('sm') {
         text-align: center;
     }
 }
@@ -156,24 +173,39 @@ margin-bottom: 2rem;
 .contact-info h4{
 margin-bottom: 4rem;
 font-size: $font-lg;
-@include breakpoint-down('small') {
-   margin: 3rem 0rem;
-   font-size:$font-std;
-   padding-top: 7rem;
+@include breakpoint-down('sm') {
+   
+   font-size:$font-title-xs;
+   margin-top: 12rem;
 }
-
+@include breakpoint-down('xs') {
+   
+    font-size:$font-lg;
+    margin-top: 8rem;
+   
+ }
 }
 
 .contact-info ul{
 
-    @include breakpoint-down('small') {
+    @include breakpoint-down('sm') {
     text-align: left;
    
     }
    
     }
 
-   
+    .contact-info li{
+
+        @include breakpoint-down('sm') {
+        font-size: $font-lg;
+       
+        }
+        @include breakpoint-down('xs') {
+            font-size: $font-sm;
+           
+            }
+        }
 
 .about-info span{
 color: var(--accent-color);

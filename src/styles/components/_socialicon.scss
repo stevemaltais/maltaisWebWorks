@@ -44,12 +44,11 @@
     height: 200px;
     background-color: $lightGray;
     z-index: 2;
-    
-    @include breakpoint-down('small') {
-        right: 18px; /* Décalez la ligne vers la droite */
-        height: 220px;
+ @include breakpoint-down('sm') {
+        display: none;
  
-      }
+      }    
+   
 
 }
 
@@ -65,11 +64,10 @@
     top: 35%;
     writing-mode: vertical-rl;
   
-    @include breakpoint-down('small') {
-      top: 33.5%;
-      right: 8px;
-      letter-spacing: 8.6px;
-    }
+ 
+    @include breakpoint-down('sm') {
+       display: none;
+      }
   }
 
 .fixed-email:hover{

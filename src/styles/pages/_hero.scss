@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
  
-  @include breakpoint-down('medium') {
+  @include breakpoint-down('md') {
     flex-direction: column;
     
   }
@@ -14,17 +14,17 @@
   padding-right: 1rem;
   align-items: center;
 
-  @include breakpoint-down('small') {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  @include breakpoint-down('md') {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
     margin-top: -40px;
+    padding-right: 0rem;
+
   }
-  @include breakpoint-down('medium') {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: -20px;
+  @include breakpoint-down('xs') {
+    padding-right: 0rem;
+    margin-top: 2rem;
   }
 }
  .profile-section span {
@@ -32,32 +32,36 @@
  }
 .profile-section__image {
   flex: 1;
-  height: 520px;
+  height: 40vw;
   
-  background-size: 70vw; /* Ajuster la taille du background */
+  background-size: cover; /* Ajuster la taille du background */
   background-position: 50vw; /* Ajuster la position du background */
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  @include breakpoint-down('small') {
-    height: 90vw;
-    margin-top: 2rem;
-    }
-    @include breakpoint-down('medium') {
-    
-      margin-top: 4rem;
-      }
+  @include breakpoint-down('md') {
+    height: 60vh; /* Exemple d'ajustement pour les écrans plus petits */
+  }
+  @include breakpoint-down('sm') {
+    height: 100vw; /* Exemple d'ajustement pour les écrans plus petits */
+  }
    }
+ 
+   
 
 
 .profile-section__animated-container .text{
     text-transform: uppercase;
     font-size: $font-xg;
-  
-    @include breakpoint-down('small') {
-     font-size: $font-sm;
+
+   
+    @include breakpoint-down('md') {
+     font-size: $font-lg;
 
     }
+    @include breakpoint-down('xs') {
+      font-size: $font-sm;
+       }
    
   }
   .profile-section__name{
@@ -67,13 +71,24 @@
     line-height: 90%;
     font-weight: 700;
     margin-top: -30px;
+    
+
+    @include breakpoint-down('md') {
+      font-size: 14rem;
+    
+      line-height: 70%;
+      margin-top: 0px;
+    }
    
-    @include breakpoint-down('small') {
+    @include breakpoint-down('sm') {
       font-size: 9rem;
     
       line-height: 70%;
       margin-top: 0px;
     }
+    @include breakpoint-down('xs') {
+      font-size: 8rem;
+       }
   }
 
 
@@ -84,11 +99,11 @@
    
     color: $verylightgray;
     font-weight: 400;
-    @include breakpoint-down('small') {
-      font-size: 5rem;
    
-
+    @include breakpoint-down('sm') {
+      font-size: 5rem;
     }
+
   }
 .profile-section__fname{
     font-size: $font-xxl;
@@ -96,11 +111,13 @@
   
     color: $verylightgray;
     font-weight: 400;
-    @include breakpoint-down('small') {
+    @include breakpoint-down('md') {
+      font-size: 7rem;
+       }
+    @include breakpoint-down('sm') {
       font-size: 5rem;
-   
-
-    }
+       }
+    
   }
   .profile-section__animated-text {
     font-size: 42px;
@@ -113,9 +130,13 @@
     font-weight: 700 !important;
     text-transform: uppercase;
 
-    @include breakpoint-down(small) {
-      font-size: 2rem;
+    @include breakpoint-down(md) {
+      font-size:$font-lg;
       text-underline-offset: .5rem;
     }
+    @include breakpoint-down('xs') {
+      font-size:$font-sm;
+      text-underline-offset: .5rem;
+     }
   }
   

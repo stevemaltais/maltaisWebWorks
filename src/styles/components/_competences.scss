@@ -7,10 +7,15 @@ h4.title-2 {
   font-size: $font-title-xl;
   margin-top: -13.5rem;
   opacity: 0;
-  @include breakpoint-down('small') {
-    font-size: $font-lg;
-    margin-top: -3rem;
+  @include breakpoint-down('sm') {
+    font-size: $font-xg;
+    margin-top: -5rem;
  
+}
+@include breakpoint-down('sm') {
+  font-size: $font-lg;
+  margin-top: -4rem;
+
 }
 }
 

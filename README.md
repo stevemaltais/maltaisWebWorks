@@ -1,4 +1,4 @@
-# In Progress
+# In Progress 🚧
 
 <!-- TO DO: add more details about me later -->
 
@@ -14,19 +14,26 @@ This repository contains the source code of my CV website, which showcases my sk
 - Projects section with detailed descriptions and links to online projects
 - Professional experience section with a list of companies I've worked for and descriptions of tasks performed
 - Contact form for potential employers
+- API integration for database management
+- Integration with Mailchimp for email notifications
+
 ## Technologies Used
 1. HTML
 2. CSS (SASS)
 3. JavaScript
-4. Anime.js
+4. Node.js
+5. Webpack
+6. MySQL (with Sequelize)
+7. Mailchimp
+8. Locomotive Scroll
 
 ## How to Use This Repository
-- Clone the repository to your computer using git clone.
-- Install dependencies using npm install.
+- Clone the repository to your computer using `git clone`.
+- Install dependencies using `npm install`.
 - Configure configuration files for your own website.
 - Deploy the website to your server.
 - How to Contribute
--- Contributions to this project are welcome! If you would like to contribute, please create a pull request with a detailed description of the changes you would like to make.
+  - Contributions to this project are welcome! If you would like to contribute, please create a pull request with a detailed description of the changes you would like to make.
 
 ## Author
 Steve Maltais (MeZorD)
@@ -36,7 +43,7 @@ This project is licensed under the MIT License.
 
 # En Francais
 ## Mon Site Web CV
-Ce dépôt contient le code source de mon site Web CV, qui présente mes compétences, mon expérience professionnelle, mes projets et d'autres informations pertinentes pour les employeurs potentiels.
+Ce dépôt contient le code source de mon site Web CV, qui présente mes compétences, mon expérience professionnelle, mes projets, et d'autres informations pertinentes pour les employeurs potentiels.
 
 ## Fonctionnalités
 - Page d'accueil avec une présentation courte
@@ -44,25 +51,30 @@ Ce dépôt contient le code source de mon site Web CV, qui présente mes compét
 - Section de projets avec des descriptions détaillées et des liens vers les projets en ligne
 - Section d'expérience professionnelle avec une liste des entreprises pour lesquelles j'ai travaillé et des descriptions des tâches effectuées
 - Formulaire de contact pour les employeurs potentiels
+- API intégrée pour la gestion des données
+- Intégration avec Mailchimp pour les notifications par e-mail
+
 ## Technologies utilisées
 1. HTML
 2. CSS (SASS)
 3. JavaScript
-4. Anime.js
+4. Node.js
+5. Webpack
+6. MySQL (avec Sequelize)
+7. Mailchimp
+8. Locomotive Scroll
 
 ## Comment utiliser ce dépôt
-- Clonez le dépôt sur votre ordinateur en utilisant git clone.
-- Installez les dépendances en utilisant npm install.
+- Clonez le dépôt sur votre ordinateur en utilisant `git clone`.
+- Installez les dépendances en utilisant `npm install`.
 - Configurez les fichiers de configuration pour votre propre site Web.
 - Déployez le site Web sur votre serveur.
-- Comment contribuer
--- Les contributions à ce projet sont les bienvenues ! Si vous souhaitez contribuer, veuillez créer une demande de fusion (pull request) en fournissant une description détaillée des changements que vous souhaitez apporter.
+
+## Comment contribuer
+- Les contributions à ce projet sont les bienvenues ! Si vous souhaitez contribuer, veuillez créer une demande de fusion (pull request) en fournissant une description détaillée des changements que vous souhaitez apporter.
 
 ## Auteur
-Steve Maltais (MeZorD) 
+Steve Maltais (MeZorD)
+
 ## Licence
 Ce projet est sous licence MIT.
-
-
-
-
