@@ -1,14 +1,14 @@
 #about  {
 margin-top: 40rem;
-
+@include breakpoint-down('lg') {
+ 
+    margin: 20rem 3rem 3rem 2rem;
+}
 @include breakpoint-down('md') {
  
     margin: 5rem 3rem 3rem 2rem;
 }
-@include breakpoint-down('sm') {
- 
-    margin: 5rem 3rem 3rem 2rem;
-}
+
 @include breakpoint-down('xs') {
  
     margin: 7rem 2rem 3rem 1rem;
@@ -69,7 +69,10 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-
+@include breakpoint-down('lg') {
+    flex-direction: row-reverse;
+    text-align: left;
+}
 @include breakpoint-down('md') {
     flex-direction: column;
     text-align: center;
@@ -80,6 +83,10 @@ align-items: center;
 .about-info {
 width: 65%;
 font-family: (--title-font-stack);
+@include breakpoint-down('lg') {
+    width: 75%;
+
+}
 @include breakpoint-down('md') {
     width: 100%;
 
@@ -118,13 +125,17 @@ font-size: $font-md;
 margin-right: 2rem;
 text-align: justify;
 
-@include breakpoint-down('md') {
+@include breakpoint-down('lg') {
  
+    font-size: $font-std;
+  
+  }
+@include breakpoint-down('md') {
+    font-size: $font-md;
     margin-right: 0rem;
   
   }
 @include breakpoint-down('sm') {
-    font-size: $font-md;
     margin-right: 2rem;
   
   }
@@ -139,6 +150,7 @@ text-align: justify;
 .container h2{
 font-size: $font-title-xs;
 margin-bottom: -1rem;
+
 
 @include breakpoint-down('sm') {
     font-size: $font-lg;
@@ -196,6 +208,11 @@ font-size: $font-lg;
     }
 
     .contact-info li{
+
+        @include breakpoint-down('lg') {
+            font-size: $font-std;
+           
+            }
 
         @include breakpoint-down('sm') {
         font-size: $font-lg;

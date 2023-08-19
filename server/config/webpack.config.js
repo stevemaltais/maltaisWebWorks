@@ -6,11 +6,12 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         bundle: path.resolve(__dirname, '../../src/js/index.js'),
     },
     output: {
+        publicPath: '/',
         path: path.resolve(__dirname, '../../dist'),
         filename: 'js/[name][contenthash].js',
         clean: true,

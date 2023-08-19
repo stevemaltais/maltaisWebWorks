@@ -5,13 +5,13 @@
 
     @include breakpoint-down(md) {
       margin-bottom: 3rem;
-      font-size:$font-xxl;
-      
+      font-size:$font-lg;
+      text-align: left;
      }
     @include breakpoint-down(sm) {
       margin-bottom: 3rem;
       font-size:$font-xg;
-      
+      text-align: center;
      }
      @include breakpoint-down(xs) {
       
@@ -27,6 +27,10 @@
     margin-bottom: 25px;
     overflow: hidden;
     position: relative;
+
+    @include breakpoint-down(md) {
+      width: 100%;
+     }
 
     @include breakpoint-down(sm) {
       width: 95%;
@@ -69,7 +73,20 @@
      display: flex;
      justify-content: space-between;
      align-items: flex-start;
+
+     @include breakpoint-down(lg) {
      
+      justify-content: space-evenly;
+     
+     }
+
+     
+     @include breakpoint-down(md) {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+     
+     }
      @include breakpoint-down(sm) {
       padding: 20px 0px;
       display: flex;
@@ -90,6 +107,10 @@
    .domaines,
    .developpement {
      width: 45%;
+     @include breakpoint-down(md) {
+      width: 100%;
+ 
+     }
  
      @include breakpoint-down(sm) {
       width: 95%;
@@ -111,6 +132,11 @@
    .competences-web li {
     font-size: 20px;
      margin-bottom: 20px;
+
+     @include breakpoint-down(md) {
+      font-size: $font-sm;  
+      
+     }
      @include breakpoint-down(sm) {
       font-size: $font-std;  
      }
@@ -144,6 +170,10 @@
  
     font-size: 18px;
 
+    @include breakpoint-down(md) {
+      font-size: $font-xs;
+     }
+
     @include breakpoint-down(sm) {
       font-size: $font-std;
      }
@@ -153,7 +183,7 @@
    }
    .domaines {
     animation: slideInLeft 1s ease-in-out;
-    @include breakpoint-down(sm) {
+    @include breakpoint-down(md) {
       margin-bottom: 4rem;
      }
   }

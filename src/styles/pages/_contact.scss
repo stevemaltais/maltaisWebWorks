@@ -32,12 +32,13 @@
       font-size: $font-md;
       margin-top: -8rem ;
       text-align: justify;
-      margin-bottom: 8rem;
+      margin-bottom: 0rem;
      
      }
     @include breakpoint-down(sm) {
       font-size: $font-md;
-      margin-top: -6rem ;
+      margin-top: -6rem;  
+      margin-bottom: 8rem;
     
      
      }
@@ -72,7 +73,7 @@
 
     @include breakpoint-down(md) {
 
-      font-size: $font-title-xxl;
+      font-size: $font-xxl;
   
      }
     
