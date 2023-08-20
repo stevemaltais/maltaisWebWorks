@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = {
     mode: 'production',
@@ -11,7 +10,7 @@ module.exports = {
         bundle: path.resolve(__dirname, '../../src/js/index.js'),
     },
     output: {
-        publicPath: '/',
+        publicPath: '', // Assurez-vous que publicPath est une chaîne vide pour éviter le préfixe /
         path: path.resolve(__dirname, '../../dist'),
         filename: 'js/[name][contenthash].js',
         clean: true,
@@ -19,14 +18,6 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-
-        proxy: {
-            '/api': createProxyMiddleware({
-              target: 'http://localhost:3001', 
-              changeOrigin: true,
-            }),
-
-            },
         static: {
             directory: path.resolve(__dirname, 'dist'),
         },
@@ -35,24 +26,18 @@ module.exports = {
         hot: true,
         compress: true,
         historyApiFallback: true,
-
-    
     },
-  
-
     optimization: {
         minimize: true,
         minimizer: [
             new TerserPlugin({
-                extractComments: false, // Empêcher la création du fichier LICENSE.txt
+                extractComments: false,
             }),
-            new CssMinimizerPlugin(), // Ajout de la minimisation CSS
+            new CssMinimizerPlugin(),
         ],
     },
- 
-    
     performance: {
-        maxAssetSize: 1000000, // 1 MiB
+        maxAssetSize: 1000000,
         maxEntrypointSize: 400000,
     },
     module: {

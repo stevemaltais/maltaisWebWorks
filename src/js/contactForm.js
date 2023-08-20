@@ -41,15 +41,16 @@ export function initContactForm() {
         phone: contactForm.elements.phone.value,
       };
 
-      // Envoi de la requête POST au serveur
-      try {
-        const response = await fetch('http://localhost:3001/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
+     // Envoi de la requête POST au serveur PHP
+  try {
+    // Assurez-vous que cette URL pointe vers le script PHP qui traitera le formulaire
+    const response = await fetch('./server/index.php?action=contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
 
         if (!response.ok) {
           throw new Error('Échec de la requête');
