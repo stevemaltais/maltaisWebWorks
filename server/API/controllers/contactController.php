@@ -1,5 +1,8 @@
 <?php
-require_once '../maltaisWebWorks/server/API/models/contactModel.php';
+require_once __DIR__ . '/../models/contactModel.php';
+
+
+
 
 class ContactController
 {

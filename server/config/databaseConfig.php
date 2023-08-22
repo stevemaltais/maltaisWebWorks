@@ -1,14 +1,16 @@
 <?php
-$envPath = __DIR__ . '/../../.env';
-echo "Chemin vers le fichier .env: " . realpath($envPath);
+$envPath = 'C:/xampp/htdocs/maltaisWebWorks/.env';
+
+
+echo "Chemin vers le fichier .env: " . realpath($envPath) . "<br>";
 
 if (file_exists($envPath)) {
-    $envLines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($envLines as $line) {
-        if (strpos(trim($line), '#') === 0) continue; // Ignorer les commentaires
-        list($name, $value) = explode('=', $line, 2);
-        putenv("$name=$value");
-    }
+    $envContent = file_get_contents($envPath);
+    echo "<pre>" . htmlspecialchars($envContent) . "</pre><br>"; // Affiche le contenu du fichier .env
+    
+    // Le reste du code pour charger les variables d'environnement...
+} else {
+    echo "Fichier .env non trouvé.<br>";
 }
 
 $host = getenv('DB_HOST');
