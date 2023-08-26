@@ -27,6 +27,11 @@
       }
  
 }
+
+
+
+
+
 /* Style de la barre latérale ouverte */
 .sidebar.open {
   width: 25rem;
@@ -36,7 +41,7 @@
     display: block;
     background-color: #17181B;
     width: 100%;
-        
+
  
       }
   
@@ -52,10 +57,15 @@
   @include breakpoint-down('sm') {
   
     height: 9rem;
+    @include breakpoint-height-down('short'){
+      height: 5rem;
+  
+    }
    }
    @include breakpoint-down('xs') {
   
     height: 5rem;
+  
    }
 }
 
@@ -85,10 +95,15 @@
   @include breakpoint-down('sm') {
   
     font-size: $font-xg;
+    @include breakpoint-height-down('short'){
+      font-size: $font-std;
+  
+    }
    }
   @include breakpoint-down('xs') {
   
     font-size: $font-md;
+  
    }
 }
 
@@ -107,6 +122,10 @@
 
   @include breakpoint-down('sm') {
     font-size: $font-title-xx;
+    @include breakpoint-height-down('short'){
+      font-size: $font-lg;
+  
+    }
    
    }
    @include breakpoint-down('xs') {
@@ -138,7 +157,12 @@
   height: 100%;
   @include breakpoint-down('sm') {
    display: none;
-   margin-top: 12rem;
+   margin-top: 4rem;
+
+   @include breakpoint-height-down('short'){
+    margin-top: 2rem;
+    
+  }
       }
     
 }
@@ -150,7 +174,9 @@
   list-style: none;
   @include breakpoint-down('sm') {
     margin: 0rem;
-       
+    @include breakpoint-height-down('short'){
+      height: 3rem;
+    }
        }
 }
 
@@ -233,6 +259,14 @@
     margin: 1rem;
     padding: 1rem;
     width: auto;
+    @include breakpoint-height-down('short'){
+      //display: inline;
+      
+      width: auto;
+      margin:4px;
+      padding: 2px;
+      
+    }
    
    }
    
@@ -254,8 +288,14 @@
   pointer-events: none;
   transition: 0.4s;
   @include breakpoint-down('sm') {
-    font-size: $font-title-xx;
+    font-size: $font-md;
     font-weight: 200;
+
+    @include breakpoint-height-down('short'){
+      font-size: $font-sm;
+      font-weight: 200;
+  
+    }
    
    }
    @include breakpoint-down('xs') {
@@ -286,6 +326,10 @@
 
   @include breakpoint-down('sm') {
     margin-right: 4rem;
+    @include breakpoint-height-down('short'){
+      margin-right: 1rem;
+    
+    }
    }
    @include breakpoint-down('xs') {
     margin-right: 2rem;
@@ -296,8 +340,11 @@
 
 
   @include breakpoint-down('sm') {
-   font-size: $font-xg; 
-  
+   font-size: $font-lg; 
+   @include breakpoint-height-down('short'){
+    font-size: $font-sm; 
+
+  }
    }
    @include breakpoint-down('xs') {
     font-size: $font-std;
@@ -311,14 +358,18 @@
   height: 6rem;
   width: 7.8rem;
   left: 0;
-  bottom: -.8rem;
+  bottom: -3%;
   padding: 1rem 1.4rem;
   transition: all 0.5s ease;
   overflow: hidden;
   @include breakpoint-down('sm') {
     width: 100%;
     height: auto;
-   
+    @include breakpoint-height-down('short'){
+
+     
+  
+    }
    }
 }
 /* Style du profil lorsque la barre latérale est ouverte */
@@ -372,7 +423,12 @@
   opacity: 1;
   white-space: nowrap;
   @include breakpoint-down('sm') {
-    font-size: $font-lg;
+    font-size: $font-sm;
+    @include breakpoint-height-down('short'){
+      font-size: 12px;
+  
+    }
+  
    }
    @include breakpoint-down('xs') {
       font-size: $font-sm;
@@ -382,11 +438,7 @@
 
 
 
-/* Style du métier du profil */
-.sidebar li.profile .job {
-  //font-size: 12px;
-  
-}
+
 
 
 
@@ -476,14 +528,18 @@ section {
   @include breakpoint-down('sm') {
     width: 6rem;
   height: 6rem;
+    @include breakpoint-height-down('short'){
+      width: 3rem;
+      height: 3rem;
 
+    }
        
        }
        @include breakpoint-down('xs') {
         width: 4rem;
       height: 4rem;
-    
-           
+        
+  
            }
 }
 
@@ -506,18 +562,20 @@ section {
 }
 
 
-
 /* Styles par défaut pour tous les navigateurs */
 .sidebar .nav-list .social-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 3vh;
+  bottom: 1%;
   @include breakpoint-down('sm') {
-    margin-top: 8vh;
+    bottom: 1%;
+    @include breakpoint-height-down('short'){
+      bottom: 4%;
+   }
    
    }
    @include breakpoint-down('xs') {
-    margin-top: 2vh;
+    bottom: 5%;
    
    }
 }
@@ -543,7 +601,8 @@ section {
     margin-bottom: 3vh;
     @include breakpoint-down('sm') {
       margin-bottom: 3vh;
-     
+      @include breakpoint-height-down('short'){
+        margin-bottom: 3vh;
      }
      @include breakpoint-down('xs') {
       margin-bottom: 8vh;
@@ -551,7 +610,7 @@ section {
      }
   }
 }
-
+}
 .sidebar .nav-list .social-icons a {
   color: #fff;
 }
@@ -564,8 +623,12 @@ section {
   min-width: 4rem ;
   color: $titleColor;
   @include breakpoint-down('sm') {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 2rem;
+    @include breakpoint-height-down('short'){
+      font-size: 2rem;
+      margin: 1rem;
+    }
    }
    @include breakpoint-down('xs') {
     font-size: 2rem;

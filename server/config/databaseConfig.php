@@ -1,6 +1,5 @@
 <?php
-$envPath = 'C:/xampp/htdocs/maltaisWebWorks/.env';
-
+$envPath = __DIR__ . '/../../.env';
 
 echo "Chemin vers le fichier .env: " . realpath($envPath) . "<br>";
 

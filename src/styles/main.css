@@ -385,6 +385,11 @@ body.modal-open {
     height: 9rem;
   }
 }
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar .logo-details {
+    height: 5rem;
+  }
+}
 @media (max-width: 35.9375em) {
   .sidebar .logo-details {
     height: 5rem;
@@ -418,6 +423,12 @@ body.modal-open {
     font-size: 3.9rem;
   }
 }
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar.open .logo-details .icon,
+  .sidebar.open .logo-details .logo_name {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 35.9375em) {
   .sidebar.open .logo-details .icon,
   .sidebar.open .logo-details .logo_name {
@@ -441,6 +452,11 @@ body.modal-open {
 @media (max-width: 47.9375em) {
   .sidebar .logo-details #btn {
     font-size: 4rem;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar .logo-details #btn {
+    font-size: 2.6rem;
   }
 }
 @media (max-width: 35.9375em) {
@@ -472,7 +488,12 @@ body.modal-open {
 @media (max-width: 47.9375em) {
   .sidebar .nav-list {
     display: none;
-    margin-top: 12rem;
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar .nav-list {
+    margin-top: 2rem;
   }
 }
 
@@ -485,6 +506,11 @@ body.modal-open {
 @media (max-width: 47.9375em) {
   .sidebar li {
     margin: 0rem;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar li {
+    height: 3rem;
   }
 }
 
@@ -572,6 +598,13 @@ body.modal-open {
     width: auto;
   }
 }
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar li a {
+    width: auto;
+    margin: 4px;
+    padding: 2px;
+  }
+}
 
 /* Style des liens de la liste de navigation au survol */
 .sidebar li a:hover {
@@ -590,7 +623,13 @@ body.modal-open {
 }
 @media (max-width: 47.9375em) {
   .sidebar li a .links_name {
-    font-size: 4rem;
+    font-size: 2.2rem;
+    font-weight: 200;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar li a .links_name {
+    font-size: 1.8rem;
     font-weight: 200;
   }
 }
@@ -625,6 +664,11 @@ body.modal-open {
     margin-right: 4rem;
   }
 }
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar li i {
+    margin-right: 1rem;
+  }
+}
 @media (max-width: 35.9375em) {
   .sidebar li i {
     margin-right: 2rem;
@@ -633,7 +677,12 @@ body.modal-open {
 
 @media (max-width: 47.9375em) {
   .sidebar li i::before {
-    font-size: 3.9rem;
+    font-size: 2.6rem;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar li i::before {
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 35.9375em) {
@@ -648,7 +697,7 @@ body.modal-open {
   height: 6rem;
   width: 7.8rem;
   left: 0;
-  bottom: -0.8rem;
+  bottom: -3%;
   padding: 1rem 1.4rem;
   transition: all 0.5s ease;
   overflow: hidden;
@@ -659,7 +708,6 @@ body.modal-open {
     height: auto;
   }
 }
-
 /* Style du profil lorsque la barre latérale est ouverte */
 .sidebar.open li.profile {
   width: 25rem;
@@ -710,7 +758,13 @@ body.modal-open {
 @media (max-width: 47.9375em) {
   .sidebar.open li.profile .name,
   .sidebar.open li.profile .job {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar.open li.profile .name,
+  .sidebar.open li.profile .job {
+    font-size: 12px;
   }
 }
 @media (max-width: 35.9375em) {
@@ -720,7 +774,6 @@ body.modal-open {
   }
 }
 
-/* Style du métier du profil */
 /* Style de la section principale */
 .home-section {
   left: 7.8rem;
@@ -806,6 +859,12 @@ section {
     height: 6rem;
   }
 }
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .logo_name {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 @media (max-width: 35.9375em) {
   .logo_name {
     width: 4rem;
@@ -834,16 +893,21 @@ section {
 .sidebar .nav-list .social-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 3vh;
+  bottom: 1%;
 }
 @media (max-width: 47.9375em) {
   .sidebar .nav-list .social-icons {
-    margin-top: 8vh;
+    bottom: 1%;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar .nav-list .social-icons {
+    bottom: 4%;
   }
 }
 @media (max-width: 35.9375em) {
   .sidebar .nav-list .social-icons {
-    margin-top: 2vh;
+    bottom: 5%;
   }
 }
 
@@ -873,7 +937,12 @@ section {
       margin-bottom: 3vh;
     }
   }
-  @media (max-width: 35.9375em) {
+  @media (max-width: 47.9375em) and (max-height: 39.9375em) {
+    .sidebar .nav-list .social-icons {
+      margin-bottom: 3vh;
+    }
+  }
+  @media (max-width: 47.9375em) and (max-width: 35.9375em) {
     .sidebar .nav-list .social-icons {
       margin-bottom: 8vh;
     }
@@ -893,8 +962,14 @@ section {
 }
 @media (max-width: 47.9375em) {
   .sidebar .nav-list .social-icons i {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 2rem;
+  }
+}
+@media (max-width: 47.9375em) and (max-height: 39.9375em) {
+  .sidebar .nav-list .social-icons i {
+    font-size: 2rem;
+    margin: 1rem;
   }
 }
 @media (max-width: 35.9375em) {

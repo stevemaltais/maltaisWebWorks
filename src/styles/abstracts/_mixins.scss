@@ -56,12 +56,14 @@ $breakpoints-down: (
 
 // Points de rupture pour la hauteur
 $breakpoints-height-up: (
+  'very-short': 20em, // 320px
   'short': 40em,   // 640px
   'medium': 60em,  // 960px
   'tall': 80em     // 1280px
 );
 
 $breakpoints-height-down: (
+  'very-short': 19.9375em, // 319px
   'short': 39.9375em,  // 639px
   'medium': 59.9375em, // 959px
   'tall': 79.9375em    // 1279px

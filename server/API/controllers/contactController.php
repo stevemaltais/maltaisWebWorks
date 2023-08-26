@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '/../models/contactModel.php';
-
+require_once '/../models/contactModel.php';
 
 
 

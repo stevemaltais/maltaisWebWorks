@@ -7,7 +7,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry: {
-        bundle: path.resolve(__dirname, '../../src/js/index.js'),
+        index: path.resolve(__dirname, '../../src/js/index.js'),
+        cv: path.resolve(__dirname, '../../src/js/cv-entry.js'),
     },
     output: {
         publicPath: '', // Assurez-vous que publicPath est une chaîne vide pour éviter le préfixe /
@@ -91,8 +92,16 @@ module.exports = {
             title: 'Webpack App',
             filename: 'index.html',
             template: 'src/template.html',
+            chunks: ['index'], // Utilise seulement le bundle index pour cette page
             minify: false,
-        }), 
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Mon CV',
+            filename: 'cv.html',
+            template: 'src/cv-template.html',
+            chunks: ['cv'], // Utilise seulement le bundle cv pour cette page
+            minify: false,
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
         }),
