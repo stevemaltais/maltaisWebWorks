@@ -34,42 +34,45 @@
     color: var(--light-pink);
 }
 
-
-.vertical-line-right {
+.side__StyledSideElement {
+     width: 40px;
     position: fixed;
-    right: 52px; /* Décalez la ligne vers la droite */
-    top: 100%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 200px;
-    background-color: $lightGray;
-    z-index: 2;
- @include breakpoint-down('sm') {
-        display: none;
- 
-      }    
-   
-
-}
-
-.fixed-email {
-    position: fixed;
-    right: 42px;
-    z-index: 2;
-    font-size: 16px;
-    text-orientation: mixed;
-    letter-spacing: 8px;
-    color: $lightGray;
+    bottom: 0px;
+    right: 22px;
+    left: auto;
+    z-index: 10;
   
-    top: 35%;
-    writing-mode: vertical-rl;
-  
- 
     @include breakpoint-down('sm') {
        display: none;
       }
   }
 
-.fixed-email:hover{
+/* Email fixe coté droite */
+
+.email__StyledLinkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email__StyledLinkContainer .email__StyledText {
+    margin: 20px auto;
+    padding: 10px;
+    font-size: $font-sm;
+    writing-mode: vertical-rl;
+
+    letter-spacing: 0.5em;
+}
+
+.email__StyledText:hover{
     color: var(--accent-color);
+}
+
+.email__StyledLinkContainer::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80px;
+    margin: 0px auto;
+    background-color: white;
 }

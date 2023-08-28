@@ -16,12 +16,20 @@
   cursor: pointer;
   overflow: hidden;
 
-  @include breakpoint-down('sm') {
+  @include breakpoint-down('lg') {
     font-size: $font-lg;
-
+    margin-bottom: 12px;
+    margin-top: 7rem;
+}
+  @include breakpoint-down('sm') {
+    margin-top: 2rem;
+    font-size: $font-lg;
+    margin-bottom: 22px;
 }
 @include breakpoint-down('xs') {
+  margin-top: 1rem;
   font-size: $font-std;
+  margin-bottom: 12px;
 
 }
 }

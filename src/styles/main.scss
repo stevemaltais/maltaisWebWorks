@@ -2,52 +2,22 @@
 @import "abstracts/colors", "abstracts/mixins","abstracts/variables";
 
 // Base
-@import 'base/base',
-        'base/normalize', 
-        'base/reset';
-
-
+@import 'base/base','base/normalize','base/reset';
 
 // Components
-
-@import "components/button";
-@import "components/competences";
-
-@import "components/form";
-
-@import "components/modal";
-@import "components/navbar";
-@import "components/socialicon";
-@import "components/succes-poppup";
-
-@import "components/progressBar";
-@import "components/title";
+@import "components/button","components/competences","components/form","components/modal",
+        "components/navbar","components/socialicon","components/progressBar","components/title";
 
 // Layout
-@import "layout/footer";
-@import "layout/header";
-@import "layout/sections";
-@import "layout/sidebar";
+@import "layout/footer","layout/sections";
 
 // Pages
-@import "pages/about";
-@import "pages/folio";
-
-@import "pages/contact";
-@import "pages/home";
-@import "pages/login";
-@import "pages/product-single";
-@import "pages/products";
-@import "pages/signup";
-@import "pages/hero";
+@import "pages/about","pages/folio","pages/contact",
+        "pages/home","pages/hero";
 
 // Themes
-@import "themes/dark-theme";
-@import "themes/flat-theme";
-@import "themes/light-theme";
-@import "themes/material-theme";
+@import "themes/dark-theme","themes/flat-theme","themes/light-theme";
 
 // Vendors
-@import "vendors/locomotive-scroll";
-@import "vendors/owl-carousel";
+@import "vendors/locomotive-scroll","vendors/owl-carousel";
 

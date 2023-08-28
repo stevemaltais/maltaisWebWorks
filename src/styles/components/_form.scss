@@ -8,11 +8,7 @@ select,
 textarea {
 
 margin-bottom: 12px;
-
-
 }
-
-
 
 // Styles pour le champ de saisie
 .input__field {
@@ -50,15 +46,6 @@ form .btn{
   z-index: 0;
 }
 
-label {
-
-
-}
-
-// Structure pour le formulaire de contact
-.form-contact {
-
-}
 
 // Styles pour le titre du formulaire
 .form-title {
@@ -67,11 +54,6 @@ label {
   text-align: center;
 }
 
-// Structure pour le conteneur du formulaire
-form .container {
-
-
-}
 
 input::placeholder, textarea::placeholder{
   color: black;

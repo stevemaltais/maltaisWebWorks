@@ -1,8 +1,8 @@
 #contact {
   text-align: center;
+
   @include breakpoint-down(md) {
     margin: 0rem 4rem;
-   
   } 
 }
 
@@ -11,14 +11,11 @@
     margin-top: -150px;
     font-weight: 100;
     z-index: 444;
+
     @include breakpoint-down(sm) {
-
       margin-top: 4rem;
- 
-
      }
 }
-
 
 #contact p{
   text-align: center;
@@ -33,23 +30,19 @@
       margin-top: -8rem ;
       text-align: justify;
       margin-bottom: 0rem;
-     
      }
     @include breakpoint-down(sm) {
       font-size: $font-md;
       margin-top: -6rem;  
-      margin-bottom: 8rem;
-    
-     
+      margin-bottom: 8rem;     
      }
      @include breakpoint-down(xs) {
       font-size: $font-xs;
       margin-top: -5rem ;
-      text-align: justify;
-
-     
+      text-align: justify;     
      }
   }
+
   #contact p.animate {
     animation: fadeIn 1s ease 2s forwards;
   }
@@ -66,41 +59,24 @@
 #animated-text {
     position: relative;
     z-index: -1;
-
   }
 
   #contact .ml2 {
-
     @include breakpoint-down(md) {
-
       font-size: $font-xxl;
-  
      }
-    
     @include breakpoint-down(sm) {
-
-      font-size: $font-xxl;
-  
-  
+      font-size: $font-xxl;  
      }
      @include breakpoint-down(xs) {
-
-      font-size: $font-title-xl;
-  
-  
+      font-size: $font-title-xl;  
      }
-   
   }
-
 
   .ml2 {
     position: relative;
-    display: inline-block;
-    white-space: nowrap;
-
-   
+    display: inline-block;   
   }
-
   
   .ml2 .letter {
     display: inline-block;

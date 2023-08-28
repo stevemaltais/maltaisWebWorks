@@ -43,7 +43,7 @@ export function initContactForm() {
 
      // Envoi de la requête POST au serveur PHP
   try {
-    // Assurez-vous que cette URL pointe vers le script PHP qui traitera le formulaire
+   
     const response = await fetch('./server/index.php?action=contact', {
       method: 'POST',
       headers: {

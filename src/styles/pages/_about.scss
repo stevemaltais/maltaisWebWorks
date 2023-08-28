@@ -1,25 +1,21 @@
 #about  {
 margin-top: 40rem;
-@include breakpoint-down('lg') {
- 
-    margin: 20rem 3rem 3rem 2rem;
-}
-@include breakpoint-down('md') {
- 
-    margin: 5rem 3rem 3rem 2rem;
-}
 
-@include breakpoint-down('xs') {
- 
-    margin: 7rem 2rem 3rem 1rem;
-}
+    @include breakpoint-down('lg') {
+        margin: 30rem 3rem 3rem 2rem;
+    }
+    @include breakpoint-down('md') {
+        margin: 5rem 3rem 3rem 2rem;
+    }
 
+    @include breakpoint-down('xs') {
+        margin: 7rem 2rem 3rem 1rem;
+    }
 }
 
 #about section {
 margin: 5rem auto;
 width: 80%;
-
 }
 
 #about section ul {
@@ -42,8 +38,6 @@ margin-right: 2rem;
 #about section p {
 font-size: 1.2rem;
 margin-bottom: 2rem;
-
-
 }
 
 #about-info .about-separator{
@@ -60,8 +54,6 @@ margin-bottom: 2rem;
 }
 .container{
 display: block;
-
-
 }
 
 .about-wrapper {
@@ -69,40 +61,38 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-@include breakpoint-down('lg') {
-    flex-direction: row-reverse;
-    text-align: left;
-}
-@include breakpoint-down('md') {
-    flex-direction: column;
-    text-align: center;
-}
+margin-bottom: 3rem;
+
+    @include breakpoint-down('lg') {
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+    @include breakpoint-down('md') {
+        flex-direction: column;
+        text-align: center;
+    }
 
 }
 
 .about-info {
 width: 65%;
 font-family: (--title-font-stack);
-@include breakpoint-down('lg') {
-    width: 75%;
 
-}
-@include breakpoint-down('md') {
-    width: 100%;
-
-}
-@include breakpoint-down('xs') {
-    
-    width: 95%;
-}
+    @include breakpoint-down('lg') {
+        width: 75%;
+    }
+    @include breakpoint-down('md') {
+        width: 100%;
+    }
+    @include breakpoint-down('xs') { 
+        width: 95%;
+    }
 }
 
 ul {
 list-style: none;
 padding: 0;
 margin: 0;
-
-
 }
 
 li {
@@ -111,11 +101,10 @@ font-size: $font-md;
 color: $verylightgray;
 font-weight: 100;
 
-@include breakpoint-down('sm') {
-   margin-bottom: 2rem;
-   font-size: $font-xs;
- }
-
+    @include breakpoint-down('sm') {
+    margin-bottom: 2rem;
+    font-size: $font-xs;
+    }
 }
 
 .about-info p{
@@ -125,25 +114,20 @@ font-size: $font-md;
 margin-right: 2rem;
 text-align: justify;
 
-@include breakpoint-down('lg') {
- 
-    font-size: $font-std;
-  
-  }
-@include breakpoint-down('md') {
-    font-size: $font-md;
-    margin-right: 0rem;
-  
-  }
-@include breakpoint-down('sm') {
-    margin-right: 2rem;
-  
-  }
-  @include breakpoint-down('xs') {
-    font-size: $font-sm;
-    margin-right: 0rem;
-  
-  }
+    @include breakpoint-down('lg') {
+        font-size: $font-std;
+    }
+    @include breakpoint-down('md') {
+        font-size: $font-md;
+        margin-right: 0rem;
+    }
+    @include breakpoint-down('sm') {
+        margin-right: 2rem;
+    }
+    @include breakpoint-down('xs') {
+        font-size: $font-sm;
+        margin-right: 0rem;
+    }
 }
 
 
@@ -151,32 +135,25 @@ text-align: justify;
 font-size: $font-title-xs;
 margin-bottom: -1rem;
 
-
-@include breakpoint-down('sm') {
-    font-size: $font-lg;
-    padding-top: 7rem;
-    
-}
-@include breakpoint-down('xs') {
-       padding-top: 1rem;
-    
-}
+    @include breakpoint-down('sm') {
+        font-size: $font-lg;
+        padding-top: 7rem;
+    }
+    @include breakpoint-down('xs') {
+        padding-top: 1rem; 
+    }
 }
 
 .about-separator{
-
 border: 1px solid var(--accent-color) ;
 margin-bottom: 2rem;
 
-@include breakpoint-down('sm') {
-    margin-bottom: 0rem;
-    
- }
-
+    @include breakpoint-down('sm') {
+        margin-bottom: 0rem;  
+    }
 }
 
 .contact-info{
-
     @include breakpoint-down('sm') {
         text-align: center;
     }
@@ -185,44 +162,35 @@ margin-bottom: 2rem;
 .contact-info h4{
 margin-bottom: 4rem;
 font-size: $font-lg;
-@include breakpoint-down('sm') {
-   
-   font-size:$font-title-xs;
-   margin-top: 12rem;
-}
-@include breakpoint-down('xs') {
-   
-    font-size:$font-lg;
-    margin-top: 8rem;
-   
- }
+
+    @include breakpoint-down('sm') {
+    font-size:$font-title-xs;
+    margin-top: 12rem;
+    }
+    @include breakpoint-down('xs') {
+        font-size:$font-lg;
+        margin-top: 8rem;
+    
+    }
 }
 
 .contact-info ul{
-
     @include breakpoint-down('sm') {
     text-align: left;
-   
     }
-   
+}
+
+.contact-info li{
+    @include breakpoint-down('lg') {
+        font-size: $font-std;
     }
-
-    .contact-info li{
-
-        @include breakpoint-down('lg') {
-            font-size: $font-std;
-           
-            }
-
-        @include breakpoint-down('sm') {
-        font-size: $font-lg;
-       
-        }
-        @include breakpoint-down('xs') {
-            font-size: $font-sm;
-           
-            }
-        }
+    @include breakpoint-down('sm') {
+    font-size: $font-lg;
+    }
+    @include breakpoint-down('xs') {
+        font-size: $font-sm;
+    }
+}
 
 .about-info span{
 color: var(--accent-color);
@@ -230,7 +198,6 @@ font-weight: 400;
 }
 
 .about_email:hover{
-
     color: var(--accent-color);
     font-weight: 300;
 }
@@ -241,16 +208,16 @@ font-weight: 400;
 }
 
 .about_email:visited {
-    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+    color: white; 
   }
 
   .about_tel:visited {
-    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+    color: white; 
   }
 
   .about_email {
-    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+    color: white;
   }
   .about_tel {
-    color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+    color: white; 
   }

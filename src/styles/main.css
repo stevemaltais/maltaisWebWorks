@@ -111,14 +111,25 @@ a:hover {
   cursor: pointer;
   overflow: hidden;
 }
-@media (max-width: 47.9375em) {
+@media (max-width: 74.9375em) {
   .btn {
     font-size: 2.6rem;
+    margin-bottom: 12px;
+    margin-top: 7rem;
+  }
+}
+@media (max-width: 47.9375em) {
+  .btn {
+    margin-top: 2rem;
+    font-size: 2.6rem;
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 35.9375em) {
   .btn {
+    margin-top: 1rem;
     font-size: 2rem;
+    margin-bottom: 12px;
   }
 }
 
@@ -358,6 +369,7 @@ body.modal-open {
     left: auto;
     right: 0;
     background-color: transparent;
+    display: none;
   }
 }
 
@@ -1048,129 +1060,46 @@ section {
   color: var(--light-pink);
 }
 
-.vertical-line-right {
+.side__StyledSideElement {
+  width: 40px;
   position: fixed;
-  right: 52px; /* Décalez la ligne vers la droite */
-  top: 100%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 200px;
-  background-color: #d6d6d6;
-  z-index: 2;
+  bottom: 0px;
+  right: 22px;
+  left: auto;
+  z-index: 10;
 }
 @media (max-width: 47.9375em) {
-  .vertical-line-right {
+  .side__StyledSideElement {
     display: none;
   }
 }
 
-.fixed-email {
-  position: fixed;
-  right: 42px;
-  z-index: 2;
-  font-size: 16px;
-  text-orientation: mixed;
-  letter-spacing: 8px;
-  color: #d6d6d6;
-  top: 35%;
+/* Votre CSS pour .side__StyledSideElement et .email__StyledLinkWrapper reste le même */
+.email__StyledLinkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email__StyledLinkContainer .email__StyledText {
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1.8rem;
   writing-mode: vertical-rl;
-}
-@media (max-width: 47.9375em) {
-  .fixed-email {
-    display: none;
-  }
+  letter-spacing: 0.5em;
 }
 
-.fixed-email:hover {
+.email__StyledText:hover {
   color: var(--accent-color);
 }
 
-#formation {
-  background-color: #2b2c30;
-  height: 100vh;
-}
-
-.timeline-container {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 25px;
-  display: grid;
-  grid-template-columns: 1fr 3px 1fr;
-  font-family: "Fira Sans", sans-serif;
-  color: #ffffff;
-}
-
-.timeline-component {
-  margin: 0 60px 20px 60px;
-  position: relative;
-}
-
-.timeline-caret {
-  position: absolute;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid rgba(255, 255, 255, 0.2);
-}
-
-.timeline-caret-right {
-  right: -15px;
-  transform: translateY(-100%) rotate(270deg);
-}
-
-.timeline-caret-left {
-  left: -15px;
-  transform: translateY(-50%) rotate(-190deg);
-}
-
-.timeline-bg {
-  padding: 1.5em;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.timeline-bottom {
-  margin-bottom: 0;
-}
-
-.timeline-middle {
-  position: relative;
-  background: #ffffff;
-}
-
-.timeline-point {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border: 12px solid #2b2c30;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  background: #ffffff;
-  border-radius: 50%;
-}
-
-.timeline-point-bottom {
-  top: initial;
-  bottom: 0;
-}
-
-.timeline-date-right {
-  text-align: right;
-  margin: -10px;
-}
-
-.timeline-title {
-  margin: 0;
-  font-size: 1.15em;
-  font-weight: bold;
-}
-
-.timeline-text {
-  line-height: 1.5;
+.email__StyledLinkContainer::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 80px;
+  margin: 0px auto;
+  background-color: white;
 }
 
 .competences-web h2 {
@@ -1489,18 +1418,28 @@ section {
 }
 
 .home-section {
-  margin-top: 15rem;
+  margin-top: 20rem;
   transition: all 0.5s ease;
   z-index: 2;
 }
+@media (max-width: 89.9375em) {
+  .home-section {
+    margin-top: 30rem;
+  }
+}
+@media (max-width: 74.9375em) {
+  .home-section {
+    margin-top: 30rem;
+  }
+}
 @media (max-width: 61.9375em) {
   .home-section {
-    margin-top: 14rem;
+    margin-top: 9rem;
   }
 }
 @media (max-width: 47.9375em) {
   .home-section {
-    margin-top: 8rem;
+    margin-top: 14rem;
   }
 }
 
@@ -1509,7 +1448,7 @@ main {
   margin: 0rem 20rem;
   transition: all 0.5s ease;
 }
-@media (max-width: 74.9375em) {
+@media (max-width: 89.9375em) {
   main {
     margin: 0rem 10rem;
   }
@@ -1535,7 +1474,7 @@ main {
 }
 @media (max-width: 74.9375em) {
   #about {
-    margin: 20rem 3rem 3rem 2rem;
+    margin: 30rem 3rem 3rem 2rem;
   }
 }
 @media (max-width: 61.9375em) {
@@ -1913,6 +1852,16 @@ li {
   height: 100%;
   z-index: 0; /* Empilement au-dessus du contenu principal */
 }
+@media (max-width: 74.9375em) {
+  .image-overlay {
+    height: auto;
+  }
+}
+@media (max-width: 47.9375em) {
+  .image-overlay {
+    height: 100%;
+  }
+}
 
 .underlay {
   width: 120%;
@@ -1920,7 +1869,18 @@ li {
   object-fit: contain;
   opacity: 0.2;
 }
-
+@media (max-width: 74.9375em) {
+  .underlay {
+    top: 0;
+  }
+}
+@media (max-width: 47.9375em) {
+  .underlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .profile-section {
   display: flex;
   flex-direction: row;
@@ -1960,20 +1920,21 @@ li {
 
 .profile-section__image {
   flex: 1;
-  height: 40vw;
-  background-size: cover; /* Ajuster la taille du background */
-  background-position: 50vw; /* Ajuster la position du background */
+  height: 35vw;
+  background-size: cover;
+  background-position: 50vw;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 @media (max-width: 61.9375em) {
   .profile-section__image {
-    height: 60vh; /* Exemple d'ajustement pour les écrans plus petits */
+    height: 60vh;
+    margin-top: 20px;
   }
 }
 @media (max-width: 47.9375em) {
   .profile-section__image {
-    height: 100vw; /* Exemple d'ajustement pour les écrans plus petits */
+    height: 100vw;
   }
 }
 
@@ -1981,7 +1942,7 @@ li {
   text-transform: uppercase;
   font-size: 3.9rem;
 }
-@media (max-width: 74.9375em) {
+@media (max-width: 89.9375em) {
   .profile-section__animated-container .text {
     font-size: 2.6rem;
   }
@@ -2057,7 +2018,7 @@ li {
   font-weight: 700 !important;
   text-transform: uppercase;
 }
-@media (max-width: 74.9375em) {
+@media (max-width: 89.9375em) {
   .profile-section__animated-text {
     font-size: 2.6rem;
     text-underline-offset: 0.5rem;

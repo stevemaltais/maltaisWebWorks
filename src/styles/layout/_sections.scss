@@ -1,60 +1,59 @@
 .wrapp{
     padding-top: 20rem;
-  
   }
   
 .numNav{ 
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--primeColor);
-    
-
     }
 .wrapper{
     padding: 6rem 0rem;
-
 }
 .ml2{
     z-index: -1;
 }
 .home-section{
- 
-  margin-top: 15rem;
+  margin-top: 10rem;
     transition: all 0.5s ease;
     z-index: 2;
 
+    @include breakpoint-down(xxl) {
+      margin-top: 10rem;
+    }
+    @include breakpoint-down(xl) {
+      margin-top: 30rem;
+    }
+
+    @include breakpoint-down(lg) {
+      margin-top: 30rem;
+    }
+
     @include breakpoint-down(md) {
-      margin-top: 14rem;
- 
+      margin-top: 9rem;
     }
     @include breakpoint-down(sm) {
-      margin-top: 8rem;
- 
+      margin-top: 14rem;
     }
   }
   /* Style du contenu principal */
 main {
- 
    margin: 0rem 20rem;
     transition: all 0.5s ease;
 
-    @include breakpoint-down(lg) {
+    @include breakpoint-down(xl) {
       margin: 0rem 10rem;
-      
     }
 
     @include breakpoint-down(md) {
       margin: 0rem 8rem 0rem 15.8rem;
-      
     }
     
     @include breakpoint-down(sm) {
       margin: 0rem 1rem;
-      
     }
     @include breakpoint-down(xs) {
       margin: 0rem 1rem;
-      
     }
   }
 

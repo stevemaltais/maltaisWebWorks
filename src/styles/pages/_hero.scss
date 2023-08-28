@@ -6,21 +6,20 @@
  
   @include breakpoint-down('md') {
     flex-direction: column;
-    
   }
 }
+
 .profile-section__content {
   flex: 1;
   padding-right: 1rem;
   align-items: center;
 
   @include breakpoint-down('md') {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top: -40px;
     padding-right: 0rem;
-
   }
   @include breakpoint-down('xs') {
     padding-right: 0rem;
@@ -32,38 +31,33 @@
  }
 .profile-section__image {
   flex: 1;
-  height: 40vw;
-  
-  background-size: cover; /* Ajuster la taille du background */
-  background-position: 50vw; /* Ajuster la position du background */
+  height: 35vw;
+  background-size: cover; 
+  background-position: 50vw; 
   background-repeat: no-repeat;
   background-attachment: fixed;
 
   @include breakpoint-down('md') {
-    height: 60vh; /* Exemple d'ajustement pour les écrans plus petits */
+    height: 60vh; 
+    margin-top: 20px
   }
   @include breakpoint-down('sm') {
-    height: 100vw; /* Exemple d'ajustement pour les écrans plus petits */
+    height: 100vw; 
   }
-   }
+}
  
-   
-
-
 .profile-section__animated-container .text{
     text-transform: uppercase;
     font-size: $font-xg;
-
      
-    @include breakpoint-down('lg') {
+    @include breakpoint-down('xl') {
      font-size: $font-lg;
-
     }
     @include breakpoint-down('xs') {
       font-size: $font-sm;
        }
-   
   }
+
   .profile-section__name{
     font-size: $font-title-xxl;
     text-transform: uppercase;
@@ -76,7 +70,6 @@
       line-height: 70%;
       margin-top: 0px;
     }
-   
     @include breakpoint-down('sm') {
       font-size: 9rem;
     }
@@ -85,34 +78,29 @@
        }
   }
 
-
-
   .profile-section__name span{
     font-size: $font-xxl;
     text-transform: uppercase;
-   
     color: $verylightgray;
     font-weight: 400;
-   
     
     @include breakpoint-down('sm') {
       font-size: 5rem;
     }
-
   }
+
 .profile-section__fname{
     font-size: $font-xxl;
     text-transform: uppercase;
-  
     color: $verylightgray;
     font-weight: 400;
+
     @include breakpoint-down('md') {
       font-size: 7rem;
        }
     @include breakpoint-down('sm') {
       font-size: 5rem;
        }
-    
   }
   .profile-section__animated-text {
     font-size: 42px;
@@ -124,9 +112,8 @@
     text-underline-offset: 1.2rem;
     font-weight: 700 !important;
     text-transform: uppercase;
-
   
-    @include breakpoint-down(lg) {
+    @include breakpoint-down(xl) {
       font-size:$font-lg;
       text-underline-offset: .5rem;
     }

@@ -30,7 +30,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,900,900italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
-<script defer src="js/index21f815d29fce9c5fc9af.js"></script><link href="css/index.d7d70a55f94360ecb862.css" rel="stylesheet"></head>
+<script defer src="js/indexab20d14a250871c979b7.js"></script><link href="css/index.bd150026b4eefb02ba42.css" rel="stylesheet"></head>
   <body data-scroll-container>
     <div data-scroll-section class="image-overlay">
       <!-- Div pour la superposition semi-transparente -->
@@ -53,7 +53,7 @@
         <!-- Section de navigation Accueil -->
         <ul>
           <li>
-            <a href="#">
+            <a href="#home"data-scroll-to>
               <i class='bx bx-home'></i>
               <span class="links_name">Accueil</span>
             </a>
@@ -62,7 +62,7 @@
   
           <!-- Section de navigation À propos -->
           <li>
-            <a href="#">
+            <a href="#about-info"data-scroll-to>
               <i class="bx bx-user"></i>
               <span class="links_name">À propos</span>
             </a>
@@ -71,7 +71,7 @@
   
           <!-- Section de navigation Curriculum -->
           <li>
-            <a href="#">
+            <a href="#competence"data-scroll-to>
               <i class='bx bx-news'></i>
               <span class="links_name">Curriculum</span>
             </a>
@@ -80,7 +80,7 @@
   
           <!-- Section de navigation Portfolio -->
           <li>
-            <a href="#">
+            <a href="#folio"data-scroll-to>
               <i class='bx bx-briefcase-alt'></i>
               <span class="links_name">Portfolio</span>
             </a>
@@ -89,7 +89,7 @@
   
           <!-- Section de navigation Contact -->
           <li>
-            <a href="#contact">
+            <a href="#contact"data-scroll-to>
               <i class='bx bx-envelope'></i>
               <span class="links_name">Contact</span>
             </a>
@@ -98,7 +98,7 @@
   
           <!-- Section de navigation Paramètres -->
           <li>
-            <a href="#">
+            <a href="">
               <i class='bx bx-cog' id="menu-toggle"></i>
               <span class="links_name">Paramètres</span>
             </a>
@@ -130,7 +130,7 @@
     <main>
       <!-- Section d'accueil -->
       <section class="home-section">
-          <div class="profile-section" data-scroll-section>
+          <div id="home" class="profile-section" data-scroll-section>
             <div class="profile-section__content">
               <!-- Titre de la page -->
               <span class="profile-section__fname" data-scroll data-scroll-speed="4" data-scroll-position="top">STEVE</span>
@@ -143,7 +143,7 @@
             </div>
               <!-- Image de profil -->
               <a href="https://www.linkedin.com/in/steve-maltais/" target=blank>
-                <img class="profile-section__image" src="assets/profilePicture.jpg" data-scroll data-scroll-speed="2" alt="Photo de profil de [Steve Maltai]"> 
+                <img class="profile-section__image" src="assets/profilePicture.jpg" data-scroll data-scroll-speed="2" alt="Photo de profil de [Steve Maltais]"> 
               </a>
           </div>
       
@@ -153,12 +153,11 @@
         <div data-scroll-section class="container" id="about-info">
           <h2 data-scroll data-scroll-direction="vertical" data-scroll-speed="1">A propos</h2>
           <div data-scroll data-scroll-direction="vertical" data-scroll-speed="1" class="about-separator"></div>
-          <!--   <h2  class="ml2" data-text="A propos"></h2> -->
-
+      
           <!-- Conteneur du paragraphe de présentation -->
           <div  class="about-wrapper">
             <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"  class="about-info">
-              <!-- Paragraphe de présentation -->
+       
               <p data-scroll data-scroll-direction="vertical" data-scroll-speed="1">Bonjour, je suis Steve, développeur web freelance passionné par la création de sites web dynamiques et fonctionnels. Avec une formation universitaire récemment terminée, je poursuis actuellement mes études pour continuer à développer mes compétences et rester à jour avec les dernières tendances en matière de développement web.
                 <br><br> J'ai acquis des compétences solides dans les langages <span>HTML</span>, <span>CSS</span>, <span>SCSS</span> et <span>JavaScript</span>, ainsi que dans les bases de données <span>SQL</span> et le développement logiciel par <span>UML</span> et <span>RUP</span>. De plus, j'ai une expérience pratique avec <span>Java</span>, <span>C++</span> et leurs bibliothèques associées.
                 <br><br> Passionné par l'interface utilisateur (<span>UI</span>) et l'expérience utilisateur (<span>UX</span>), je suis constamment à la recherche de nouveaux moyens de créer des designs modernes et esthétiques pour mes clients. Je m'efforce toujours de maintenir une communication ouverte et transparente avec mes clients pour m'assurer que leur vision est réalisée à la perfection.
@@ -209,7 +208,7 @@
 
             </ul>
           </div>
-          
+           <!-- Barres de progression -->
           <div class="developpement" id="dev-progress">
             <h2>Compétences en développement</h2>
             <ul data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">
@@ -253,15 +252,15 @@
         </div>
       </section>
     </div>
-      <!-- Section 'Mon CV' -->
+      <!-- Section 'Porte Folio' -->
       <div class="scroll-section" data-scroll-section>
       <section id="folio">
         <div class="container" id="about-info">
           <h2>Portefolio</h2>
           
           <div class="about-separator"></div>
-          <!-- Contenu de la section Où j'ai travaillé -->
-          <p>A venir.....</p>
+          <!-- Contenu de la section -->
+          <p>Cette section est présentement en construction ...</p>
         </div>
       </section>
     </div>
@@ -320,7 +319,7 @@
         </div>
         <!-- Champ Message -->
         <textarea class="input__field" id="message" name="message" placeholder="Message" required></textarea>
-        <!-- Bouton Envoyer -->
+          <!-- Bouton Envoyer -->
           <div id="error-message" style="color: red;"></div>
         <button class="btn" data-text="Envoyer" type="submit">Envoyer</button>
       </div>
@@ -331,7 +330,7 @@
     </main>
 
     <footer>
-
+      <!-- Fenêtre de configuration du siteWeb -->
       <div id="menu-container">
         <div class="fa fa-cog" id="menu-toggle">
           </div>
@@ -347,15 +346,20 @@
             <div class="color" id="color-3" data-color="var(--purpleFluo)"></div>
             <div class="color" id="color-4" data-color="var(--yellowFluo)"></div>
     
-
-            <!-- Ajoutez les couleurs appropriées pour les autres divs .color -->
-          
+            <!-- Bouton pour remise a zéro -->
             <a href="#"id="reset-button" class="btn" data-text="Reset !">Reset !</a>
           </div>
         </div>
       </div>
-      <div class="vertical-line-right"></div>
-      <a class="fixed-email" href="mailto:stevemaltais@icloud.com">codingWith@stevemaltais.ca</a>
+
+         <!-- Email static -->
+      <div class="side__StyledSideElement">
+        <div class="email__StyledLinkWrapper">
+            <div class="email__StyledLinkContainer">
+                <a class="email__StyledText" href="mailto:stevemaltais@icloud.com">codingWith@stevemaltais.ca</a>
+            </div>
+        </div>
+      </div>
     </footer>
 
     

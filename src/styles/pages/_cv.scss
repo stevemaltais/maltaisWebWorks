@@ -9,15 +9,15 @@ body {
 }
 
 .icon-circle {
-    background-color: #f2f2f2; /* Couleur de fond du cercle */
-    border-radius: 0%; /* Rend le cercle parfait */
-    width: 30px; /* Largeur du cercle */
-    height: 30px; /* Hauteur du cercle */
+    background-color: #f2f2f2; 
+    border-radius: 0%; 
+    width: 30px; 
+    height: 30px; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px; /* Taille de l'icône */
-    color: #333; /* Couleur de l'icône */
+    font-size: 16px; 
+    color: #333; 
     margin-right: 2px;
     border: #333 solid 1px;
 }
@@ -60,29 +60,29 @@ left-column__img {
 }
 
 .left-column__img {
-    display: flex; /* Utilisation de Flexbox */
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
 }
 
 .left-column__img img {
     position: relative;
-    border-radius: 50%; /* Rend l'image ronde */
-    width: 140px; /* Largeur fixe */
-    height: 140px; /* Hauteur fixe */
-    object-fit: cover; /* Conserve le ratio d'aspect */
+    border-radius: 50%; 
+    width: 140px; 
+    height: 140px; 
+    object-fit: cover; 
     border: solid 4px white;
     z-index: 1;
 }
 
 .left-column-img__design{
     position: absolute;
-    height: 25px; /* Épaisseur de la ligne */
-    width: 100%; /* Largeur de la ligne */
-    background-color: white; /* Couleur de la ligne */
-    top: 8%; /* Centrage vertical */
+    height: 25px; 
+    width: 100%; 
+    background-color: white; 
+    top: 8%; 
     right: 20px;
-    z-index: 1; /* Met la ligne en arrière-plan */
+    z-index: 1;
 }
 
 /* Section Coordonnées */
@@ -92,15 +92,13 @@ left-column__img {
     width: 128px;
     background-color: white; 
     margin: 10px 0; 
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px; 
 }
+
 .left-column__contact i {
     color: white; 
     margin-right: 10px; 
 }
-
-
 
 /* Barres de Compétences */
 
@@ -115,17 +113,15 @@ left-column__img {
 /* Barres de progression */
 .progress-container {
     width: 95%;
-    height: 10px; /* Fixer la hauteur pour assurer la visibilité */
+    height: 10px; 
     background-color: #ddd;
     border-radius: 2px;
-   
 }
 
 .progress-bar {
     height: 10px;
     background-color: #34b15a;
     border-radius: 2px;
-   
 }
 
 .left-column__lag .left-column__separator{
@@ -133,14 +129,13 @@ left-column__img {
     width: 92px;
     background-color: white; 
     margin: 10px 0; 
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px; 
 }
+
 /* Colonne Droite */
 
-
 .right-column__title {
-    text-align: center; /* Centre le contenu */
+    text-align: center;
 }
 
 .right-column h1 {
@@ -148,25 +143,24 @@ left-column__img {
     font-weight: 400;
     font-size: 50px;
     margin-bottom: -20px;
-    text-transform:uppercase; /* Capitalise le texte */
-   
+    text-transform:uppercase; 
 }
 
 .title__role {
     font-family: Lato;
     font-weight: 400;
     font-size: 18px;
-    
-    letter-spacing: 8px; /* Supprimez l'espacement entre les lettres ou ajustez-le selon vos préférences */
-    text-transform: uppercase; /* Capitalise le texte */
+    letter-spacing: 8px; 
+    text-transform: uppercase;
     color: gray;
-    width: 100%; /* Prend la largeur complète du conteneur */
-    text-align: center; /* Centre le texte */
+    width: 100%; 
+    text-align: center;
 }
-.right-column p{
 
+.right-column p{
     text-align: justify;
 }
+
 .right-column .about{
     margin-top: 40px;
     font-size: 16px;
@@ -176,7 +170,6 @@ left-column__img {
 /* Sections supplémentaires */
 .section {
     margin-bottom: 30px;
-
 }
 
 .job-title, .dates {
@@ -186,7 +179,6 @@ left-column__img {
 @media print {
     body {
         size: A4; /* Dimension pour l'impression */
-     
     }
 }
 .left-column, .right-column {

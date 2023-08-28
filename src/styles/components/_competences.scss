@@ -7,26 +7,23 @@ h4.title-2 {
   font-size: $font-title-xl;
   margin-top: -13.5rem;
   opacity: 0;
+  
   @include breakpoint-down('lg') {
     font-size: $font-title-md;
     margin-top: -9rem;
- 
-}
+  }
   @include breakpoint-down('md') {
     font-size: $font-title-xs;
     margin-top: -5rem;
- 
-}
+  }
   @include breakpoint-down('sm') {
-    font-size: $font-xg;
+    font-size: $font-xg; 
+  }
+  @include breakpoint-down('sm') {
+    font-size: $font-lg;
+    margin-top: -4rem;
 
- 
-}
-@include breakpoint-down('sm') {
-  font-size: $font-lg;
-  margin-top: -4rem;
-
-}
+  }
 }
 
 // Animation fadeIn

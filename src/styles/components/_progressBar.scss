@@ -14,9 +14,7 @@
       text-align: center;
      }
      @include breakpoint-down(xs) {
-      
       font-size:$font-lg;
-      
      }
   }
   
@@ -31,13 +29,12 @@
     @include breakpoint-down(md) {
       width: 100%;
      }
-
     @include breakpoint-down(sm) {
       width: 95%;
      }
-     @include breakpoint-down(xs) {
+    @include breakpoint-down(xs) {
       width: 100%;
-     }
+    }
   }
   
   .progress {
@@ -52,7 +49,6 @@
   }
   
   .progress span{
-  
     font-size:  $font-std;
     font-weight: 500;
     margin-left: 10px;
@@ -69,23 +65,18 @@
      }
   }
   .competences-web {
-    padding: 80px 0px;
+     padding: 80px 0px;
      display: flex;
      justify-content: space-between;
      align-items: flex-start;
 
      @include breakpoint-down(lg) {
-     
       justify-content: space-evenly;
-     
      }
-
-     
      @include breakpoint-down(md) {
       justify-content: space-between;
       display: flex;
       flex-direction: column;
-     
      }
      @include breakpoint-down(sm) {
       padding: 20px 0px;
@@ -109,16 +100,12 @@
      width: 45%;
      @include breakpoint-down(md) {
       width: 100%;
- 
      }
- 
      @include breakpoint-down(sm) {
       width: 95%;
- 
      }
      @include breakpoint-down(xs) {
       width: 100%;
- 
      }
      
    }
@@ -127,8 +114,7 @@
      margin: 0;
      padding: 0;
    }
-   
-   
+     
    .competences-web li {
     font-size: 20px;
      margin-bottom: 20px;
@@ -146,41 +132,33 @@
    }
 
    .competences-web li strong{
-    text-transform: uppercase;
- 
-  
-     
+    text-transform: uppercase;     
    }
    
    .competences-software ul {
      list-style: none;
      margin: 0;
      padding: 0;
-     
    }
-   
-
-   
-   .competences-software li {
-        margin-bottom: 20px;
       
+   .competences-software li {
+        margin-bottom: 20px;   
    }
   
    .domaines em{
- 
     font-size: 18px;
 
     @include breakpoint-down(md) {
       font-size: $font-xs;
      }
-
     @include breakpoint-down(sm) {
       font-size: $font-std;
      }
-     @include breakpoint-down(xs) {
-      font-size: $font-sm;
-     }
+    @include breakpoint-down(xs) {
+    font-size: $font-sm;
+    }
    }
+
    .domaines {
     animation: slideInLeft 1s ease-in-out;
     @include breakpoint-down(md) {
@@ -190,7 +168,6 @@
   
   .developpement {
     animation: slideInRight 1s ease-in-out;
-  
   }
 
 
@@ -207,8 +184,7 @@
       transform: translateY(0);
     }
   }
-  
-  
+    
   @keyframes slideInUp {
     from {
       transform: translateY(100%);
@@ -217,8 +193,7 @@
       transform: translateY(0);
     }
   }
-  
-  
+    
   @keyframes slideInLeft {
     from {
       transform: translateX(-100%);
@@ -236,8 +211,7 @@
       transform: translateX(0);
     }
   }
-  
-  
+    
   .fade-in {
     animation: fadeIn 2s ease-in-out forwards;
     opacity: 0;

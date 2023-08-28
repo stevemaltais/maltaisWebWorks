@@ -5,48 +5,35 @@
 
 /* Style de la barre latérale */
 
-
-
 .sidebar {
   position: fixed;
   left: 0;
-  top: 0rem;
+  top: 0;
   height: 100vh;
   width: 7.8rem;
   background: #17181B;
-  padding: .6rem 1.4rem;
+  padding: 0.6rem 1.4rem;
   z-index: 9998;
   transition: all 0.5s ease;
-   @include breakpoint-down('sm') {
+
+  @include breakpoint-down('sm') {
     left: auto;
-     right: 0;
-     background-color: transparent;
-    
-     
- 
-      }
- 
+    right: 0;
+    background-color: transparent;
+    display: none;
+  }
 }
-
-
-
-
 
 /* Style de la barre latérale ouverte */
 .sidebar.open {
   width: 25rem;
 
-
   @include breakpoint-down('sm') {
+    width: 100%;
     display: block;
     background-color: #17181B;
-    width: 100%;
-
- 
-      }
-  
+  } 
 }
-
 
 /* Style du logo et détails de la barre latérale */
 .sidebar .logo-details {
@@ -55,17 +42,13 @@
   align-items: center;
   position: relative;
   @include breakpoint-down('sm') {
-  
     height: 9rem;
-    @include breakpoint-height-down('short'){
-      height: 5rem;
-  
-    }
+      @include breakpoint-height-down('short'){
+        height: 5rem;
+      }
    }
    @include breakpoint-down('xs') {
-  
     height: 5rem;
-  
    }
 }
 
@@ -73,7 +56,6 @@
 .sidebar .logo-details .icon {
   opacity: 0;
   transition: all 0.5s ease;
-
 }
 
 /* Style du nom du logo */
@@ -83,7 +65,6 @@
   font-weight: 900;
   opacity: 0;
   transition: all 0.5s ease;
- 
 }
 
 /* Style de l'icône et du nom du logo lorsque la barre latérale est ouverte */
@@ -93,17 +74,13 @@
   opacity: 1;
 
   @include breakpoint-down('sm') {
-  
     font-size: $font-xg;
-    @include breakpoint-height-down('short'){
-      font-size: $font-std;
-  
-    }
+      @include breakpoint-height-down('short'){
+        font-size: $font-std;
+      }
    }
   @include breakpoint-down('xs') {
-  
     font-size: $font-md;
-  
    }
 }
 
@@ -124,12 +101,9 @@
     font-size: $font-title-xx;
     @include breakpoint-height-down('short'){
       font-size: $font-lg;
-  
     }
-   
    }
    @include breakpoint-down('xs') {
-  
     font-size: $font-lg;
    }
 }
@@ -137,18 +111,16 @@
 /* Style du bouton lorsque la barre latérale est ouverte */
 .sidebar.open .logo-details #btn {
   text-align: right;
-
 }
 
 /* Style des icônes de la barre latérale */
 .sidebar i {
-  color: #fff;
   height: 6rem;
   min-width: 50px;
+  line-height: 6rem;
   font-size: $font-lg;
   text-align: center;
-  line-height: 6rem;
-  
+  color: #fff;
 }
 
 /* Style de la liste de navigation de la barre latérale */
@@ -158,13 +130,10 @@
   @include breakpoint-down('sm') {
    display: none;
    margin-top: 4rem;
-
    @include breakpoint-height-down('short'){
     margin-top: 2rem;
-    
-  }
-      }
-    
+    }
+  } 
 }
 
 /* Style des éléments de la liste */
@@ -177,7 +146,7 @@
     @include breakpoint-height-down('short'){
       height: 3rem;
     }
-       }
+  }
 }
 
 /* Style des infobulles */
@@ -186,15 +155,15 @@
   top: -2rem;
   left: calc(100% + 15px);
   z-index: 3;
-  background: $lightGray;
-  color: $darkGrey;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
   padding: .4rem .8rem;
   border-radius: .4rem;
   font-size: 1.2rem;
   font-weight: 400;
-  opacity: 0;
   white-space: nowrap;
+  background: $lightGray;
+  color: $darkGrey;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
   pointer-events: none;
   transition: 0s;
 }
@@ -259,18 +228,12 @@
     margin: 1rem;
     padding: 1rem;
     width: auto;
-    @include breakpoint-height-down('short'){
-      //display: inline;
-      
-      width: auto;
-      margin:4px;
-      padding: 2px;
-      
-    }
-   
+      @include breakpoint-height-down('short'){ 
+        width: auto;
+        margin:4px;
+        padding: 2px;  
+      }
    }
-   
-  
 }
 
 /* Style des liens de la liste de navigation au survol */
@@ -280,9 +243,9 @@
 
 /* Style des noms de liens de la liste de navigation */
 .sidebar li a .links_name {
-  color: $White;
   font-size: 1.5rem;
   font-weight: 400;
+  color: $White;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -290,18 +253,14 @@
   @include breakpoint-down('sm') {
     font-size: $font-md;
     font-weight: 200;
-
-    @include breakpoint-height-down('short'){
-      font-size: $font-sm;
-      font-weight: 200;
-  
-    }
-   
-   }
-   @include breakpoint-down('xs') {
-    font-size: $font-std;
-    
-       }
+      @include breakpoint-height-down('short'){
+        font-size: $font-sm;
+        font-weight: 200;
+      }
+  }
+  @include breakpoint-down('xs') {
+  font-size: $font-std;
+  }
 }
 
 /* Style des noms de liens lorsque la barre latérale est ouverte */
@@ -326,29 +285,23 @@
 
   @include breakpoint-down('sm') {
     margin-right: 4rem;
-    @include breakpoint-height-down('short'){
-      margin-right: 1rem;
-    
-    }
+      @include breakpoint-height-down('short'){
+        margin-right: 1rem;
+      }
    }
    @include breakpoint-down('xs') {
     margin-right: 2rem;
-    
        }
 }
 .sidebar li i::before {
-
-
   @include breakpoint-down('sm') {
    font-size: $font-lg; 
    @include breakpoint-height-down('short'){
     font-size: $font-sm; 
-
   }
    }
    @include breakpoint-down('xs') {
     font-size: $font-std;
-    
        }
 }
 
@@ -362,23 +315,19 @@
   padding: 1rem 1.4rem;
   transition: all 0.5s ease;
   overflow: hidden;
+
   @include breakpoint-down('sm') {
     width: 100%;
     height: auto;
-    @include breakpoint-height-down('short'){
-
-     
-  
-    }
    }
 }
 /* Style du profil lorsque la barre latérale est ouverte */
 .sidebar.open li.profile {
   width: 25rem;
   margin-bottom: 3rem;
+
   @include breakpoint-down('sm') {
     width: 100%;
-   
    }
 }
 
@@ -389,8 +338,6 @@
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
-  
-  
 }
 
 /* Style de l'image du profil */
@@ -412,7 +359,6 @@
   color: $White;
   opacity: 0;
   white-space: nowrap;
-  
 }
 
 .sidebar.open li.profile .name,
@@ -422,25 +368,17 @@
   color: $titleColor;
   opacity: 1;
   white-space: nowrap;
+
   @include breakpoint-down('sm') {
     font-size: $font-sm;
-    @include breakpoint-height-down('short'){
-      font-size: 12px;
-  
-    }
-  
+      @include breakpoint-height-down('short'){
+        font-size: 12px;
+      }
    }
    @include breakpoint-down('xs') {
       font-size: $font-sm;
    }
- 
 }
-
-
-
-
-
-
 
 /* Style de la section principale */
 .home-section {
@@ -452,9 +390,6 @@
 .sidebar.open ~ .home-section {
   left: 25rem;
   width: calc(100% - 25rem);
-
-  
-
 }
 
 /* Style du texte dans la section principale */
@@ -466,13 +401,9 @@
   margin-right: 1.8rem;
 
   @include breakpoint-down('lg') {
-    margin-right: .5rem;
-
-       
+    margin-right: .5rem;       
        }
-       
 }
-
 
 /* Style du contenu principal lorsque la barre latérale est ouverte */
 .sidebar.open + main {
@@ -525,22 +456,19 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+
   @include breakpoint-down('sm') {
     width: 6rem;
-  height: 6rem;
-    @include breakpoint-height-down('short'){
-      width: 3rem;
-      height: 3rem;
-
-    }
-       
-       }
-       @include breakpoint-down('xs') {
+    height: 6rem;
+      @include breakpoint-height-down('short'){
+        width: 3rem;
+        height: 3rem;
+      }
+  }
+      @include breakpoint-down('xs') {
         width: 4rem;
-      height: 4rem;
-        
-  
-           }
+        height: 4rem;  
+      }
 }
 
 /* Styles pour l'animation de rotation */
@@ -567,6 +495,7 @@ section {
   display: flex;
   justify-content: center;
   bottom: 1%;
+
   @include breakpoint-down('sm') {
     bottom: 1%;
     @include breakpoint-height-down('short'){
@@ -576,7 +505,6 @@ section {
    }
    @include breakpoint-down('xs') {
     bottom: 5%;
-   
    }
 }
 
@@ -586,11 +514,9 @@ section {
     margin-bottom: 3vh;
     @include breakpoint-down('sm') {
       margin-top: 8vh;
-     
      }
      @include breakpoint-down('xs') {
       margin-top: 2vh;
-     
      }
   }
 }
@@ -606,7 +532,6 @@ section {
      }
      @include breakpoint-down('xs') {
       margin-bottom: 8vh;
-     
      }
   }
 }
@@ -622,6 +547,7 @@ section {
   transition: 0.4s;
   min-width: 4rem ;
   color: $titleColor;
+
   @include breakpoint-down('sm') {
     font-size: 3rem;
     margin: 2rem;
@@ -636,9 +562,9 @@ section {
    }
 }
 .sidebar .nav-list .social-icons i:hover {
-
   color: var(--accent-color);
 }
+
 .sidebar.open .nav-list .social-icons i {
   opacity: 1;
   pointer-events: auto;
@@ -649,26 +575,8 @@ section {
  
 }
 
-
 .sidebar.open .nav-list li .sidebar__param{
   @include breakpoint-down('sm') {
     display: none;
-   
- 
-}
-}
-@include breakpoint-down('sm') {
-.nav-show {
-  opacity: 1;
-  transition: all 0.5s ease; /* Transition fluide pour l'effet de défilement */
-}
-.sidebar.nav-scrolled {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.sidebar.nav-hidden {
-  opacity: 0;
-  box-shadow: none; /* Ombre supprimée */
-  background-color: transparent; /* Fond transparent */
 }
 }

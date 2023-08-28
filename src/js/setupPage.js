@@ -47,7 +47,7 @@ function methode(){
     'rgb(255, 100, 245)': 'rgb(111, 136, 227)',
     'rgb(100, 100, 255)': 'rgb(111, 227, 223)',
     'rgb(232, 255, 100)': 'rgb(64, 163, 120)',
-    // Ajoutez les 8 autres correspondances pour les 8 autres couleurs sélectionnées
+  
   };
   
   colorPalette.addEventListener('click', function (event) {

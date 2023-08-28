@@ -6,15 +6,16 @@ function initializeScroll() {
     smooth: true,
     reloadOnContextChange: true,
     touchMultiplier: 2,
-    smoothMobile: 0,
+    smoothMobile:1,
     smartphone: {
         smooth: !0,
         breakpoint: 767,
     },
     tablet: {
-        smooth: !1,
-        breakpoint: 1024
+        smooth: !0,
+        breakpoint: 1024,
     },
+    offset: ["0", "50"],
   });
 
   new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
