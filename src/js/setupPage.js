@@ -1,4 +1,3 @@
-
 function methode(){
 
   document.addEventListener('DOMContentLoaded', function () {

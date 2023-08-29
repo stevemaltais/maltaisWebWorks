@@ -1,7 +1,3 @@
-
-
-
-
   function progessBar() {
   const devProgress = document.querySelector('#dev-progress');
 

@@ -17,6 +17,7 @@
   margin-top: 10rem;
     transition: all 0.5s ease;
     z-index: 2;
+    
 
     @include breakpoint-down(xxl) {
       margin-top: 10rem;
@@ -40,6 +41,7 @@
 main {
    margin: 0rem 20rem;
     transition: all 0.5s ease;
+  
 
     @include breakpoint-down(xl) {
       margin: 0rem 10rem;

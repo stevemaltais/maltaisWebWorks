@@ -1,5 +1,5 @@
 import menu from './menu';
-import initializeScroll from './scroll';  // Assurez-vous que le chemin est correct
+import initializeScroll from './scroll'; 
 import progessBar from './progressBare';
 import { initContactForm } from './contactForm';
 import textScriptor from './textScriptor';
@@ -17,7 +17,7 @@ function handleAnchorClick(event) {
     event.preventDefault();  // Empêche le comportement par défaut de l'ancrage
 
     const targetID = event.currentTarget.getAttribute('href').substring(1);  // Extrait l'ID cible de l'attribut href
-    const targetElement = document.getElementById(targetID);  // Trouve l'élément cible dans le DOM
+    const targetElement = document.getElementById(targetID);  
 
     const offset = 75; 
 

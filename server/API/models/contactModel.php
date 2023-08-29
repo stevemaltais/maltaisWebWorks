@@ -8,11 +8,11 @@ class Contact
         $this->db = $db;
     }
 
-    public function create($name, $prenom, $email, $phone)
+    public function create($name, $prenom, $email, $phone, $message)
     {
-        $sql = "INSERT INTO contacts (name, prenom, email, phone) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO contacts (name, prenom, email, phone, message) VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->db->prepare($sql);
-        $stmt->execute([$name, $prenom, $email, $phone]);
+        $stmt->execute([$name, $prenom, $email, $phone, $message]);
     }
 }
 ?>

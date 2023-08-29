@@ -1,6 +1,5 @@
 <?php
-require_once '/../models/contactModel.php';
-
+require_once __DIR__ . '/../models/contactModel.php';
 
 
 class ContactController
@@ -23,10 +22,11 @@ class ContactController
         $prenom = $input['prenom'];
         $email = $input['email'];
         $phone = $input['phone'];
+        $msg = $input['message'];
 
-        $this->contactModel->create($name, $prenom, $email, $phone);
+        $this->contactModel->create($name, $prenom, $email, $phone, $message);
 
-        echo json_encode(['success' => 'Formulaire envoyé avec succès']);
+        echo json_encode(['success' => 'Formulaire envoye avec succes']);
     }
 }
 ?>
