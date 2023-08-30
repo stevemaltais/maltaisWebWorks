@@ -24,6 +24,7 @@ margin-bottom: 12px;
   -o-transition: all .5s ease;
   transition: all .5s ease;
   z-index: 1;
+  margin-bottom: 12px;
 }
 form .btn{
   margin-top: 0rem;
@@ -33,6 +34,10 @@ form .btn{
 // Styles pour le champ de saisie
 #message {
   height: 10rem;
+  
+}
+#email{
+  width: 100%;
 }
 
 // Styles pour les labels
@@ -95,3 +100,31 @@ input::-ms-input-placeholder {
   width: 100%; /* Le champ Message prendra toute la largeur disponible */
 }
 
+.form__error {
+  color: rgb(192, 13, 13);
+  font-size: 11px;
+  padding-left: 5px;
+  margin-top: -8px;
+  
+}
+
+.email_wrapper {
+  width: 48%;
+  padding: 0;
+  margin: 0;
+}
+.email_wrapper input.input__field {
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.error{
+  border: 1px solid   red;
+  background-color: #ffe6e6;
+    
+  
+}
+#email.error{
+  border: 1px solid   red;
+  background-color: #ffe6e6 !important;
+}

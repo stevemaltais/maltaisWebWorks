@@ -237,6 +237,7 @@ textarea {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: 1;
+  margin-bottom: 12px;
 }
 
 form .btn {
@@ -246,6 +247,10 @@ form .btn {
 
 #message {
   height: 10rem;
+}
+
+#email {
+  width: 100%;
 }
 
 .input__label {
@@ -304,6 +309,34 @@ input::-ms-input-placeholder {
   width: 100%; /* Le champ Message prendra toute la largeur disponible */
 }
 
+.form__error {
+  color: rgb(192, 13, 13);
+  font-size: 11px;
+  padding-left: 5px;
+  margin-top: -8px;
+}
+
+.email_wrapper {
+  width: 48%;
+  padding: 0;
+  margin: 0;
+}
+
+.email_wrapper input.input__field {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+}
+
+#email.error {
+  border: 1px solid red;
+  background-color: #ffe6e6 !important;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -356,7 +389,7 @@ body.modal-open {
 .sidebar {
   position: fixed;
   left: 0;
-  top: 0rem;
+  top: 0;
   height: 100vh;
   width: 7.8rem;
   background: #17181B;
@@ -379,9 +412,9 @@ body.modal-open {
 }
 @media (max-width: 47.9375em) {
   .sidebar.open {
+    width: 100%;
     display: block;
     background-color: #17181B;
-    width: 100%;
   }
 }
 
@@ -484,12 +517,12 @@ body.modal-open {
 
 /* Style des icônes de la barre latérale */
 .sidebar i {
-  color: #fff;
   height: 6rem;
   min-width: 50px;
+  line-height: 6rem;
   font-size: 2.6rem;
   text-align: center;
-  line-height: 6rem;
+  color: #fff;
 }
 
 /* Style de la liste de navigation de la barre latérale */
@@ -532,15 +565,15 @@ body.modal-open {
   top: -2rem;
   left: calc(100% + 15px);
   z-index: 3;
-  background: #d6d6d6;
-  color: #2b2c30;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;
   font-size: 1.2rem;
   font-weight: 400;
-  opacity: 0;
   white-space: nowrap;
+  background: #d6d6d6;
+  color: #2b2c30;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
   pointer-events: none;
   transition: 0s;
 }
@@ -625,9 +658,9 @@ body.modal-open {
 
 /* Style des noms de liens de la liste de navigation */
 .sidebar li a .links_name {
-  color: #fff;
   font-size: 1.5rem;
   font-weight: 400;
+  color: #fff;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -720,6 +753,7 @@ body.modal-open {
     height: auto;
   }
 }
+
 /* Style du profil lorsque la barre latérale est ouverte */
 .sidebar.open li.profile {
   width: 25rem;
@@ -1010,20 +1044,6 @@ section {
   }
 }
 
-@media (max-width: 47.9375em) {
-  .nav-show {
-    opacity: 1;
-    transition: all 0.5s ease; /* Transition fluide pour l'effet de défilement */
-  }
-  .sidebar.nav-scrolled {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  .sidebar.nav-hidden {
-    opacity: 0;
-    box-shadow: none; /* Ombre supprimée */
-    background-color: transparent; /* Fond transparent */
-  }
-}
 .fixed-icon {
   position: fixed;
   left: 45px;
@@ -1074,7 +1094,7 @@ section {
   }
 }
 
-/* Votre CSS pour .side__StyledSideElement et .email__StyledLinkWrapper reste le même */
+/* Email fixe coté droite */
 .email__StyledLinkContainer {
   display: flex;
   flex-direction: column;
@@ -1418,9 +1438,14 @@ section {
 }
 
 .home-section {
-  margin-top: 20rem;
+  margin-top: 10rem;
   transition: all 0.5s ease;
   z-index: 2;
+}
+@media (max-width: 100em) {
+  .home-section {
+    margin-top: 10rem;
+  }
 }
 @media (max-width: 89.9375em) {
   .home-section {
@@ -1540,6 +1565,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3rem;
 }
 @media (max-width: 74.9375em) {
   .about-wrapper {
@@ -1710,19 +1736,19 @@ li {
 }
 
 .about_email:visited {
-  color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  color: white;
 }
 
 .about_tel:visited {
-  color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  color: white;
 }
 
 .about_email {
-  color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  color: white;
 }
 
 .about_tel {
-  color: white; /* Remplacez var(--accent-color) par la couleur que vous souhaitez utiliser pour les liens visités */
+  color: white;
 }
 
 @media (max-width: 47.9375em) {
@@ -1819,7 +1845,6 @@ li {
 .ml2 {
   position: relative;
   display: inline-block;
-  white-space: nowrap;
 }
 
 .ml2 .letter {
@@ -1850,7 +1875,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Empilement au-dessus du contenu principal */
+  z-index: 0;
 }
 @media (max-width: 74.9375em) {
   .image-overlay {
@@ -1881,6 +1906,7 @@ li {
     object-fit: cover;
   }
 }
+
 .profile-section {
   display: flex;
   flex-direction: row;

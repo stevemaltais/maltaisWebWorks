@@ -318,14 +318,17 @@
         <!-- Conteneur pour les champs Email et Téléphone -->
         <div class="form-row">
           <!-- Champ Email -->
-          <input class="input__field" type="email" id="email" name="email" placeholder="Email" required>
+          <div class="email_wrapper">
+            <input class="input__field" type="email" id="email" name="email" placeholder="Email" required>
+            <div class="form__error" id="error-message" >Email deja existant</div>
+          </div>
           <!-- Champ Téléphone -->
           <input class="input__field" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Téléphone" required>
         </div>
         <!-- Champ Message -->
         <textarea class="input__field" id="message" name="message" placeholder="Message" required></textarea>
           <!-- Bouton Envoyer -->
-          <div id="error-message" style="color: red;"></div>
+          
         <button class="btn" data-text="Envoyer" type="submit">Envoyer</button>
       </div>
     </form>
